@@ -1,0 +1,93 @@
+// Default
+/// @author Hemerson Vianna
+
+$color-primary--dark: #361f4e;
+$color-primary: #53386f;
+$color-primary--light: #e3e0ff;
+
+$color-secundary--dark: #686787;
+$color-secundary: #d5d2ef;
+$color-secundary--light: #f3f3f9;
+
+$color-contrast_dark: #000000;
+$color-contrast_light: #ffffff;
+$color-contrast_link: #e6be00;
+
+$color-typography--dark: #637a91;
+$color-typography: #576366;
+$color-typography--light: #d8d8d8;
+
+$color-typography--gray_light: #ccc8d4;
+
+$color-typography--link_dark: #61a7b9;
+$color-typography--link_light: #ffffff;
+
+$color-positive_dark: #cdd9a1;
+$color-positive_light: #f6f8ee;
+
+$color-negative_dark: #d9a1aa;
+$color-negative_light: #f8eeef;
+
+
+$color-shield-prime: #f06292;
+$color-shield-resource: #dce775;
+$color-shield-doc: #7986cb;
+$color-shield-knowledge: #4DD0e1;
+$color-shield-test: #81c784;
+$color-shield-crud: #ba68c8;
+$color-shield-game: #ff8a65;
+$color-shield-experiment: #ffd54f;
+$color-shield-language: #e0e0e0;
+$color-shield-math: #4db6ac;
+$color-shield-algorithm: #90a4ae;
+$color-shield-system: #a1887f;
+$color-shield-uml: #64b5f6;
+$color-shield-brazilian: #026837;
+
+
+// Base layout
+// --------------------------------------------------------------------------
+$base-background-color: #fff;
+$base-font-family     : 'Open Sans', sans-serif;
+$base-font-color      : $color-typography;
+$base-font-weight     : 400;
+
+
+// Buttons
+// --------------------------------------------------------------------------
+$button-tiny   : 4px 5px !default;
+$button-small  : 10px 22px !default;
+$button-medium : 12px 52px !default;
+$button-large  : 15px 72px !default;
+
+$button-font-family    : $base-font-family !default;
+$button-font-color     : #fff !default;
+$button-font-color-alt : #333 !default;
+$button-font-tiny      : 12px !default;
+$button-font-small     : 14px !default;
+$button-font-medium    : 16px !default;
+$button-font-large     : 20px !default;
+$button-font-weight    : 700 !default;
+$button-font-align     : center !default;
+
+
+// Typograph
+// --------------------------------------------------------------------------
+// 4.2em = 42px/67.2px
+$font-size-xxx-large: 4.8;
+$font-line-height-xxx-large: 1.4;
+// 2.5em = 25px/36px
+$font-size-xx-large: 4;
+$font-line-height-xx-large: 1.4;
+// 2.1em = 21px/24px
+$font-size-x-large: 3.5;
+$font-line-height-x-large: 1.4;
+// 1.7em = 17px/30px
+$font-size-large: 2.8;
+$font-line-height-large: 1.4;
+// 1.5em = 15px/24px
+$font-size-regular: 2.0;
+$font-line-height-regular: 1.4;
+// 1.3em = 13px/22.5px
+$font-size-small: 1.7;
+$font-line-height-small: 1.4;

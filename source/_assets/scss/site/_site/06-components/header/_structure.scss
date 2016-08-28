@@ -1,0 +1,60 @@
+// Structure
+.header {
+  @include x-clearfix;
+  background: $color-primary--dark;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @media(min-width:$screen-desktop) {
+    position: fixed;
+    top: 0;
+    z-index: 2
+  }
+}
+
+.header-core { @extend %row; }
+
+body,.header-top { transition: all 0.6s ease-in; }
+
+.header-top {
+  @include x-clearfix;
+  height: 100%;
+  position: fixed;
+  left: -100%;
+  width: 0;
+
+	@media(min-width:$screen-desktop) {
+    background: $color-primary;
+    margin-top: 0.1em;
+		padding: 0.5em 0;
+    position: static;
+    left: auto;
+    width: auto;
+  }
+}
+
+.header-bottom {
+  @include x-clearfix;
+	padding: 1em;
+}
+
+// Logotype
+// --------------------------------------------------------------------------
+.logotype {
+  @include x-rem-fallback(font-size, $font-size-regular);
+  color: $color-typography--link_light;
+  float: left;
+  font-weight: 700;
+  line-height: 1;
+  padding-top: 2px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.logotype-link {
+	color: $color-typography--link_light;
+	text-decoration: none;
+}
+
+

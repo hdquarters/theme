@@ -1,0 +1,55 @@
+// Structure
+
+.footer {
+  @include x-clearfix;
+  margin-top: 1em;
+
+  @media(min-width:$screen-desktop) {
+    box-shadow: 0 0 1em 1em #f6f4ff;
+    border-top: 1px solid #f6f4ff;
+  }
+}
+
+.footer-core {
+  @extend %row;
+  @include x-clearfix;
+
+  @media(min-width:$screen-desktop) {
+    padding-top: 20px;
+  }
+}
+
+.footer-bottom {
+  @include x-clearfix;
+  @include x-rem-fallback(font-size, $font-size-small);
+  background: $color-primary--dark;
+  clear: both;
+  color: $color-typography--light;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+.footer-links {
+  @include x-clearfix;
+
+  @media(min-width:$screen-desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-links-title {
+  @include x-rem-fallback(font-size,$font-size-large);
+  background: $color-primary--dark;
+  border-bottom: 1px solid $color-secundary;
+  color: $color-typography--link_light;
+  font-weight: 700;
+  padding: 0.5em;
+
+  @media(min-width:$screen-desktop) {
+    @include x-rem-fallback(font-size,$font-size-small);
+    background: none;
+    color: $color-typography--dark;
+    margin: 0 0 20px 0;
+    padding: 0 0 5px 0;
+  }
+}

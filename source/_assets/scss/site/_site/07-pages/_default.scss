@@ -1,0 +1,50 @@
+// Default
+%row {
+  @media(min-width:$screen-desktop) {
+    max-width: $screen-desktop;
+    margin: 0 auto;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+
+  @media(min-width:$screen-desktop) {
+    padding-top: 75px;
+  }
+}
+
+.content {
+  @include x-clearfix;
+  margin: 0;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.container {
+  @include x-clearfix;
+  @extend %row;
+  margin: 0 auto;
+  overflow: inherit;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: relative;
+
+  @media(min-width:$screen-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.page-article .article {
+  @media(min-width:$screen-desktop) {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+}
+
+.article-content li {
+  list-style-position: inside;
+  list-style-type: initial;
+}

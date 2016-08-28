@@ -1,0 +1,69 @@
+<%- partial('_partial/head') %>
+  <body class="page-<%- page.name %>">
+    <div class="search" id="site_search">
+      <p>
+        <input class="search-input" type="text" id="local-search-input" name="q" results="0" placeholder="Pesquisar por.." autocomplete="off">
+        <button class="search-close" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100"><path fill-rule="evenodd" clip-rule="evenodd" d="M82.18 0h5.427c.554.303 1.133.568 1.66.912 9.256 6.02 14.774 14.166 3.984 23.845-7.775 6.977-14.865 14.72-22.248 22.134-.876.88-1.673 1.84-2.67 2.94 9.204 9.19 18.193 18.088 27.088 27.08 5.198 5.256 5.117 11.024-.024 16.363-.627.65-1.27 1.287-1.917 1.92-5.64 5.523-11.33 5.58-16.91.047-7.98-7.913-15.893-15.895-23.845-23.837-.975-.974-2.013-1.885-3.108-2.905-.993.908-1.77 1.567-2.488 2.282-8.32 8.308-16.58 16.673-24.96 24.916-4.96 4.884-10.89 4.96-15.753.075C4.003 93.35 2.122 90.397 0 87.683V82.25c3.427-3.96 6.685-8.08 10.316-11.84 6.693-6.932 13.605-13.65 20.708-20.74C22.63 41.276 14.482 33.244 6.49 25.06 4.104 22.616 2.15 19.746 0 17.07v-5.43C2.604 6.486 6.482 2.608 11.63 0h5.426c3.767 3.25 7.7 6.327 11.267 9.78 7.108 6.883 14.018 13.973 21.164 21.132 1.21-1.117 2.167-1.94 3.056-2.83 7.39-7.38 14.707-14.836 22.183-22.13C76.99 3.745 79.683 1.973 82.18 0z"/></svg>
+        </button>
+      </p>
+      <div class="search-results" id="local-search-result"></div>
+    </div>
+    <%- partial('_partial/google-analytics') %>
+    <div class="wrapper">
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+
+      <div class="content">
+        <div class="container">
+          <div class="breadcrumb">
+            <button class="search-button" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="263.357 349.874 100 100"><path d="M332.588 392.182c0-7.412-2.634-13.752-7.903-19.02s-11.608-7.903-19.02-7.903c-7.413 0-13.753 2.633-19.022 7.9-5.268 5.27-7.902 11.61-7.902 19.022s2.635 13.752 7.903 19.02c5.27 5.27 11.61 7.903 19.02 7.903 7.413 0 13.753-2.634 19.022-7.902s7.903-11.61 7.903-19.02zm30.77 50c0 2.083-.762 3.887-2.285 5.41-1.522 1.52-3.325 2.282-5.41 2.282-2.163 0-3.965-.762-5.408-2.283l-20.613-20.553c-7.172 4.97-15.165 7.452-23.98 7.452-5.728 0-11.207-1.112-16.435-3.336-5.23-2.224-9.736-5.23-13.522-9.015s-6.79-8.294-9.014-13.522-3.334-10.707-3.334-16.437 1.112-11.207 3.335-16.436 5.23-9.735 9.015-13.52 8.293-6.792 13.522-9.015c5.228-2.225 10.707-3.336 16.436-3.336 5.73 0 11.208 1.112 16.437 3.335 5.228 2.223 9.735 5.227 13.52 9.013s6.792 8.293 9.016 13.52c2.223 5.23 3.335 10.708 3.335 16.438 0 8.815-2.483 16.808-7.45 23.98l20.612 20.613c1.484 1.483 2.225 3.286 2.225 5.41z"/></svg>
+            </button>
+            <strong class="breadcrumb-title">Você está na página: </strong>
+            <ul class="breadcrumb-list">
+              <li class="breadcrumb-item">
+                <% if (!is_home()){ %>
+                <a class="breadcrumb-link" href="/">Início</a>
+                <svg class="breadcrumb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="141.887 206 100 100"><path d="M173.48 206h-26.563l31.314 50-31.313 50h26.562l31.314-50"/><path d="M206.572 206H180.01l31.313 50-31.313 50h26.56l31.317-50"/></svg>
+                <% } else { %>
+                Início
+                <% } %>
+              </li>
+              <% if (is_post()){ %>
+              <li class="breadcrumb-item">
+                <a class="breadcrumb-link" href="/articles/">Artigos</a>
+                <svg class="breadcrumb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="141.887 206 100 100"><path d="M173.48 206h-26.563l31.314 50-31.313 50h26.562l31.314-50"/><path d="M206.572 206H180.01l31.313 50-31.313 50h26.56l31.317-50"/></svg>
+              </li>
+              <% } %>
+              <% if (!is_home() && !is_category()){ %>
+              <li class="breadcrumb-item"><%- page.title %></li>
+              <% } %>
+              <% if (is_category()){ %>
+              <li class="breadcrumb-item">
+                <a class="breadcrumb-link" href="/articles/">Artigos</a>
+                <svg class="breadcrumb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="141.887 206 100 100"><path d="M173.48 206h-26.563l31.314 50-31.313 50h26.562l31.314-50"/><path d="M206.572 206H180.01l31.313 50-31.313 50h26.56l31.317-50"/></svg>
+              </li>
+              <li class="breadcrumb-item"><%- page.category %></li>
+              <% } %>
+            </ul>
+          </div>
+          <%- body %>
+        </div>
+      </div>
+
+      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    </div>
+    <% if (is_post()){ %>
+      <%- partial('_partial/scripts') %>
+    <% } %>
+    <%- js('assets/js/site/scripts.min') %>
+    <script type="text/javascript">
+      var search_path = "<%= config.search.path %>";
+      if (search_path.length == 0) {
+        search_path = "search.xml";
+      }
+      var path = "<%= config.root %>" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+  </body>
+</html>

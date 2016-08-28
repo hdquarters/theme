@@ -1,0 +1,13 @@
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: inherit;
+}
+
+a {
+  cursor: pointer;
+  outline: none;
+}

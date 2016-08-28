@@ -1,0 +1,21 @@
+<meta itemprop="author" content="Hemerson Vianna">
+<meta itemprop="image" content="http://hemersonvianna.com/assets/css/img/site/global/image-shared.jpg">
+<meta itemprop="name" content="<%- post.title %>">
+<meta itemprop="publisher" content="Hemerson Vianna">
+<meta itemprop="dateModified" content="<%- post.date %>">
+<meta itemprop="mainEntityOfPage" content="Hemerson Vianna">
+<meta itemprop="logo" content="Hemerson Vianna">
+<article class="article" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="article-title" itemprop="headline"><%- post.title %></h1>
+    <p class="article-meta"><time itemprop="datePublished" content="<%- page.date %>"><%- date(post.date, config.date_format) %></time></p>
+  </header>
+
+  <div class="article-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <%- post.content %>
+  </div>
+
+  <% if (!index && post.comments && theme.disqus_shortname){ %>
+    <div id="disqus_thread"></div>
+  <% } %>
+</article>

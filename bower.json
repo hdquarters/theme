@@ -1,0 +1,14 @@
+{
+  "name": "hemersonvianna",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Hemerson Vianna <hemerson.lourenco@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "dependencies": {
+    "prime-itcss": "https://github.com/prime-solutions/prime-itcss.git"
+  }
+}

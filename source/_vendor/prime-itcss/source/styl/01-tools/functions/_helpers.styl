@@ -1,0 +1,10 @@
+// Prefix
+///
+x-prefix-property(property, prefixes = (webkit moz o ms))
+ vendor-prefixed-properties = (transform background-clip background-size)
+ result = ()
+ for prefix in prefixes
+  if property in vendor-prefixed-properties
+   property = unquote('-'+prefix+'-'+property)
+  push(result, property)
+ result

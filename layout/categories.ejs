@@ -1,0 +1,51 @@
+<h1 class="page-title">Artigos</h1>
+
+<div>
+    <% if (site.categories.length) { %>
+        <% site.categories.sort('name').each(function(item){ %>
+        <div class="js-load_more-container">
+  		    <h2 class="page-subtitle--section"><%= item.name %> <span class="articles-count">- <%= item.posts.length %> artigo<% if (item.posts.length > 1) { %>s<% } %></span></h2>
+  		    <div class="articles">
+		        <% site.posts.sort('date', -1).forEach(function(it){ %>
+			        <% if (it.categories.length == 1 && it.categories.data[0]._id == item._id){ %>
+		   	        <article class="box--article js-load_more-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost" role="article">
+                  <div class="box--article-content">
+                    <header class="box--article-header">
+                      <meta itemprop="author" content="Hemerson Vianna">
+                      <meta itemprop="image" content="http://hemersonvianna.com/assets/css/img/site/global/image-shared.jpg">
+                      <meta itemprop="name" content="<%- it.title %>">
+                      <meta itemprop="publisher" content="Hemerson Vianna">
+                      <meta itemprop="dateModified" content="<%- it.date %>">
+                      <meta itemprop="mainEntityOfPage" content="Hemerson Vianna">
+                      <meta itemprop="logo" content="Hemerson Vianna">
+                      <time class="box--article-date" datetime="<%- moment(it.date).format() %>" content="<%- it.date %>" itemprop="datePublished">
+                        <%- date(it.date, config.date_format) %>
+                      </time>
+                    </header>
+                    <div class="box--article-body">
+                      <a class="box--article-link" href="<%- url_for(it.path) %>">
+                        <strong class="box--article-title" itemprop="headline"><%- it.title %></strong>
+                        <strong class="box--article-description" itemprop="articleBody">
+                          <% if (it.excerpt){ %>
+                            <%- it.excerpt %>...
+                          <% } else { %>
+                            <%- it.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 90) %>...
+                          <% } %>
+                        </strong>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+			        <% } %>
+  		        <% }); %>
+  		   </div>
+         <% if (site.posts.length > 9) { %>
+         <p><button class="button-load_more js-load_more" type="button">Carregar mais</button></p>
+         <% } %>
+       </div>
+	   <% }); %>
+	   <% if (page.total > 1){ %>
+	   	<%- partial('_partial/pagination') %>
+	   <% } %>
+    <% } %>
+</div>

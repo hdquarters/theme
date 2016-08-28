@@ -1,0 +1,38 @@
+<article class="box--article js-load_more-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost" role="article">
+  <div class="box--article-content">
+    <header class="box--article-header">
+      <meta itemprop="author" content="Hemerson Vianna">
+      <meta itemprop="image" content="http://hemersonvianna.com/assets/css/img/site/global/image-shared.jpg">
+      <meta itemprop="name" content="<%- post.title %>">
+      <meta itemprop="publisher" content="Hemerson Vianna">
+      <meta itemprop="dateModified" content="<%- post.date %>">
+      <meta itemprop="mainEntityOfPage" content="Hemerson Vianna">
+      <meta itemprop="logo" content="Hemerson Vianna">
+      <time class="box--article-date" datetime="<%- moment(post.date).format() %>" content="<%- post.date %>" itemprop="datePublished">
+        <%- date(post.date, config.date_format) %>
+      </time>
+      <em class="box--article-category">
+        <% if (post.categories && post.categories.length){ %>
+          <%- list_categories(post.categories, {
+            show_count: false,
+            class: 'box--article-category',
+            style: 'none',
+            separator: ''
+          }) %>
+        <% } %>
+      </em>
+    </header>
+    <div class="box--article-body">
+      <a class="box--article-link" href="<%- url_for(post.path) %>">
+      	<strong class="box--article-title" itemprop="headline"><%- post.title %></strong>
+      	<strong class="box--article-description" itemprop="articleBody">
+      		<% if (post.excerpt){ %>
+      			<%- post.excerpt %>...
+      		<% } else { %>
+      			<%- post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 90) %>...
+      		<% } %>
+      	</strong>
+      </a>
+    </div>
+  </div>
+</article>

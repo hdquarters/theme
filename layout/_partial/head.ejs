@@ -1,0 +1,78 @@
+<%
+  var title = page.title;
+  if(is_home()) {
+    title = theme.home_title;
+  } else if (is_category()){
+    title = page.category;
+    page.name = 'category';
+  } else if (is_tag()){
+    title = page.tag;
+  }
+
+  var description = page.description;
+  if(is_home()) {
+    description = theme.home_description;
+  } else if (is_post()){
+    page.name = 'article';
+    description = page.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 100) + '...' ;
+  }
+
+  var image = theme.theme_url + '/assets/css/img/site/global/image-shared.jpg';
+%>
+<!DOCTYPE html>
+<html class="no-js" lang="pt-BR" xml:lang="pt-BR" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <title><%- title %> | <%- config.title %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=1">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="referrer" content="origin">
+  <meta name="description" content="<%- description %>">
+
+  <!-- facebook -->
+  <meta property="og:site_name" content="<%- theme.site_name %>">
+  <meta property="og:title" content="<%- title %> | <%- config.title %>">
+  <meta property="og:type"  content="website">
+  <meta property="og:url" content="<%- url %>">
+  <meta property="og:description" content="<%- description %>">
+  <meta property="og:image" content="<%- image %>">
+
+  <link rel="image_src" href="<%- image %>">
+
+  <!-- component schema.org -->
+  <meta itemprop="name" content="<%- theme.site_name %>">
+  <meta itemprop="description" content="<%- description %>">
+  <meta itemprop="image" content="<%- image %>">
+  <meta itemprop="url" content="<%- url %>">
+
+  <meta name="geo.country" content="BR">
+  <meta name="geo.region" content="RJ">
+  <meta name="geo.placename" content="Rio de Janeiro">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" href="/assets/css/img/site/global/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/css/img/site/global/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/css/img/site/global/favicon.ico" type="image/x-icon">
+
+  <!-- canonical -->
+  <% if (is_home()){ %>
+  <link rel="canonical" href="<%- theme.theme_url %>">
+  <% } else { %>
+  <link rel="canonical" href="<%- url %>">
+  <% } %>
+  <% if (theme.rss){ %>
+    <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600' rel='stylesheet' type='text/css'>
+  <%- css('assets/css/site/style') %>
+  <% if (page.name && page.name === 'styleguide'){ %>
+    <link rel="stylesheet" href="/assets/css/site/styleguide.css">
+  <% } %>
+  <script type="text/javascript">
+    // para identificação se o javascript está ativo
+    var tagHtml = document.getElementsByTagName("html")[0];
+        tagHtml.className = tagHtml.className.replace('no-js', 'js');
+  </script>
+</head>

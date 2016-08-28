@@ -1,0 +1,157 @@
+@import "../../../_vendor/prime-itcss/source/scss/00-settings/_variables";
+@import "../../../_vendor/prime-itcss/source/scss/00-settings/_placeholders";
+
+@import "../../../_vendor/prime-itcss/source/scss/01-tools/_functions";
+@import "../../../_vendor/prime-itcss/source/scss/01-tools/_mixins";
+
+@import "_site/00-settings/_variables";
+@import "_site/00-settings/_placeholders";
+
+.styleguide-panel {
+    margin-top: 1em;
+    &:first-child {margin-top: 0;}
+}
+
+.styleguide-panel-header {border-bottom: 0.1em solid #e8e8e8;}
+.styleguide-panel-title {
+    color: #444444;
+    font-size: 2.8em;
+}
+.styleguide-panel-subtitle {
+    color: #444444;
+    font-size: 1.8em;
+    padding-bottom: 0.2em;
+}
+.styleguide-panel-content {padding: 1em 0;}
+
+.styleguide-panel-core {@include x-clearfix;}
+
+.styleguide-box-colors {
+    background: #fff;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.styleguide-box-colors i {
+    box-shadow: 1px 1px 1px #f5f5f5;
+    display: block;
+    height: 5em;
+    width: 100%;
+}
+.styleguide-color-title {
+    color: #212121;
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    padding: 0.3em 0;
+}
+
+.styleguide-color-code {@include x-clearfix;}
+
+.styleguide-color-rgb {
+    color: #9999a6;
+    font-size: 1.4em;
+    float: left;
+}
+.styleguide-color-hex {
+    color: #727272;
+    font-size: 1.4em;
+    float: right;
+}
+.styleguide-color-variable {
+    color: #b8b8c0;
+    display: block;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding-top: 0.3em;
+}
+
+.styleguide-menu_main {}
+.styleguide-menu_main-list {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+.styleguide-submenu_main-list {padding-left: 1em;}
+.styleguide-menu_main-item,
+.styleguide-submenu_main-item {
+    margin-bottom: 0.5em;
+}
+.styleguide-menu_main-link,
+.styleguide-submenu_main-link {
+    color: #2196F3;
+    font-size: 1.4em;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.styleguide-menu_main-title {
+    color: #b6b6b6;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+//  Colors
+.color-primary--dark {background: $color-primary--dark;}
+.color-primary {background: $color-primary;}
+.color-primary--light {background: $color-primary--light;}
+
+.color-secundary--dark {background: $color-secundary--dark;}
+.color-secundary {background: $color-secundary;}
+.color-secundary--light {background: $color-secundary--light;}
+
+.color-contrast_dark {background: $color-contrast_dark;}
+.color-contrast_light {background: $color-contrast_light;}
+.color-contrast_link {background: $color-contrast_link;}
+
+.color-typography--dark {background: $color-typography--dark;}
+.color-typography {background: $color-typography;}
+.color-typography--light {background: $color-typography--light;}
+
+.color-typography--link_dark {background: $color-typography--link_dark;}
+.color-typography--link_light {background: $color-typography--link_light;}
+
+.color-positive_dark {background: $color-positive_dark;}
+.color-positive_light {background: $color-positive_light;}
+
+.color-negative_dark {background: $color-negative_dark;}
+.color-negative_light {background: $color-negative_light;}
+
+// Font
+.font-light {font-weight: 300;}
+.font-regular {font-weight: 400;}
+.font-bold {font-weight: 700}
+
+// Typograph- Titles
+.h1 {@extend %heading-1;}
+.h2 {@extend %heading-2;}
+.h3 {@extend %heading-3;}
+.h4 {@extend %heading-4;}
+.h5 {@extend %heading-5;}
+.h6 {@extend %heading-6;}
+
+// Typograph- Texto
+.font-text {@extend %text;}
+
+[class*="font-"] {
+    color: $color-typography;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.grid [class*="col-"] {
+    background: $color-secundary--light;
+    border: 1px solid $color-secundary;
+    height: 3em;
+    margin-bottom: 1em;
+}
+
+[class="icon"] {
+    color: $color-typography--light;
+    font-size: 4em;
+    margin-left: 0.2em;
+}
