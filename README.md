@@ -1,7 +1,7 @@
 # Blog theme
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
-[![issues](https://img.shields.io/github/issues/headquarters-solutions/blogtheme.svg?style=flat-square)](https://github.com/headquarters-solutions/blogtheme/issues)
+[![issues](https://img.shields.io/github/issues/descco-headquarters/blogtheme.svg?style=flat-square)](https://github.com/descco-headquarters/blogtheme/issues)
 
 ## Contributing
 
@@ -13,7 +13,7 @@
 
 ## Log
 
-Check [Releases](https://github.com/headquarters-solutions/blogtheme/releases) for detailed changelog.
+Check [Releases](https://github.com/descco-headquarters/blogtheme/releases) for detailed changelog.
 
 ## License
 
