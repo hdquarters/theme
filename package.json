@@ -3,16 +3,16 @@
   "version": "1.0.1",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/org-descco/nc-twitter-bot.git"
+    "url": "git+https://github.com/org-descco/blogtheme.git"
   },
   "keywords": [
     "scss"
   ],
   "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://nerdcalistenico.com.br)",
   "bugs": {
-    "url": "https://github.com/org-descco/nc-twitter-bot/issues"
+    "url": "https://github.com/org-descco/blogtheme/issues"
   },
-  "homepage": "https://github.com/org-descco/nc-twitter-bot#readme",
+  "homepage": "https://github.com/org-descco/blogtheme#readme",
   "devDependencies": {
     "prime-itcss": "1.1.3"
   },

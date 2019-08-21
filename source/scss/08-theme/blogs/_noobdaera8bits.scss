@@ -1,0 +1,57 @@
+.noobdaera8bits {
+  .header {
+    background: $noobdaera8bits-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $noobdaera8bits-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $noobdaera8bits-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $noobdaera8bits-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $noobdaera8bits-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $noobdaera8bits-color-primary--dark;
+
+    svg { fill: $noobdaera8bits-color-primary--dark; }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $noobdaera8bits-color-social;
+    }
+  }
+
+  .box--article-title {
+    color: $noobdaera8bits-color-article-title;
+  }
+
+  .banner {
+    background: $noobdaera8bits-color-primary--dark;
+
+    svg { fill: $noobdaera8bits-color-primary--dark-plus; }
+  }
+
+  .banner-description {
+    background: $noobdaera8bits-color-primary--dark-plus;
+
+    p {
+      color: $noobdaera8bits-color-primary--light;
+    }
+  }
+}

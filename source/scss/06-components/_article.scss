@@ -23,16 +23,23 @@
 }
 
 .article-meta {
-  @include x-rem-fallback(font-size,$font-size-regular);
+  @include x-rem-fallback(font-size,$font-size-small);
   @include x-rem-fallback(margin-top,1);
   @include x-rem-fallback(margin-bottom,2);
 
-  color: $color-typography--gray_light;
+  color: #9a9c9c;
   line-height: $font-line-height-regular;
 }
 
+.article-meta-date {
+  color: #ccc8d4;
+  text-transform: lowercase;
+}
+
 .article-meta-read {
-  @include x-rem-fallback(font-size,$font-size-small);
+  @include x-rem-fallback(font-size,1.4);
+
+  color: #ccc8d4;
 }
 
 .article-content {
