@@ -1,0 +1,57 @@
+.sonusetrhythmus {
+  .header {
+    background: $sonusetrhythmus-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $sonusetrhythmus-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $sonusetrhythmus-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $sonusetrhythmus-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $sonusetrhythmus-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $sonusetrhythmus-color-primary--dark;
+
+    svg { fill: $sonusetrhythmus-color-primary--dark; }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $sonusetrhythmus-color-social;
+    }
+  }
+
+  .box--article-title {
+    color: $sonusetrhythmus-color-article-title;
+  }
+
+  .banner {
+    background: $sonusetrhythmus-color-primary--dark;
+
+    svg { fill: $sonusetrhythmus-color-primary--dark-plus; }
+  }
+
+  .banner-description {
+    background: $sonusetrhythmus-color-primary--dark-plus;
+
+    p {
+      color: $sonusetrhythmus-color-primary--light;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+// Typograph
+
+// Titulos
+// --------------------------------------------------------------------------
+.page-title {
+  @extend %heading-1;
+  margin-bottom: 0.5em;
+  text-shadow: 3px 3px $color-secundary--light;
+}
+
+.page-title--section {
+  @extend .page-title;
+  box-shadow: 1px 2px 2px 0 $color-secundary--light;
+  border-radius: 0 0 4px 0;
+  text-shadow: 3px 3px $color-secundary--light;
+}
+
+.page-subtitle {
+  @extend %heading-2;
+  margin-bottom: 0.5em;
+}
+
+.page-subtitle--section {
+  @extend .page-subtitle;
+  box-shadow: 1px 2px 2px 0 $color-secundary--light;
+  border-radius: 0 0 4px 0;
+  text-transform: capitalize;
+}
+
+.page-subtitle--section-link {
+  @extend %heading-2;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+// Texto
+// --------------------------------------------------------------------------
+.text {
+    @extend %text;
+	margin-bottom: 0.5em;
+}
+
+.text--hl {
+	@extend .text;
+	font-weight: 700;
+}

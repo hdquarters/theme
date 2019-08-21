@@ -1,0 +1,57 @@
+.imhomovies {
+  .header {
+    background: $imhomovies-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $imhomovies-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $imhomovies-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $imhomovies-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $imhomovies-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $imhomovies-color-primary--dark;
+
+    svg { fill: $imhomovies-color-primary--dark; }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $imhomovies-color-social;
+    }
+  }
+
+  .box--article-title {
+    color: $imhomovies-color-article-title;
+  }
+
+  .banner {
+    background: $imhomovies-color-primary--dark;
+
+    svg { fill: $imhomovies-color-primary--dark-plus; }
+  }
+
+  .banner-description {
+    background: $imhomovies-color-primary--dark-plus;
+
+    p {
+      color: $imhomovies-color-primary--light;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.foconocapital {
+  .header {
+    background: $foconocapital-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $foconocapital-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $foconocapital-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $foconocapital-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $foconocapital-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $foconocapital-color-primary--dark;
+
+    svg { fill: $foconocapital-color-primary--dark; }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $foconocapital-color-social;
+    }
+  }
+
+  .box--article-title {
+    color: $foconocapital-color-article-title;
+  }
+
+  .banner {
+    background: $foconocapital-color-primary--dark;
+
+    svg { fill: $foconocapital-color-primary--dark-plus; }
+  }
+
+  .banner-description {
+    background: $foconocapital-color-primary--dark-plus;
+
+    p {
+      color: $foconocapital-color-primary--light;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.saborinstintivo {
+  .header {
+    background: $saborinstintivo-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $saborinstintivo-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $saborinstintivo-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $saborinstintivo-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $saborinstintivo-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $saborinstintivo-color-primary--dark;
+
+    svg { fill: $saborinstintivo-color-primary--dark; }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $saborinstintivo-color-social;
+    }
+  }
+
+  .box--article-title {
+    color: $saborinstintivo-color-article-title;
+  }
+
+  .banner {
+    background: $saborinstintivo-color-primary--dark;
+
+    svg { fill: $saborinstintivo-color-primary--dark-plus; }
+  }
+
+  .banner-description {
+    background: $saborinstintivo-color-primary--dark-plus;
+
+    p {
+      color: $saborinstintivo-color-primary--light;
+    }
+  }
+}

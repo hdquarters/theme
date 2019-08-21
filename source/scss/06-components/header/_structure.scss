@@ -1,0 +1,116 @@
+// Structure
+.header {
+  @include x-clearfix;
+  border-bottom: 2px solid $color-white;
+  box-shadow: 0 1px 2px 0 #ccc;
+  position: relative;
+  width: 100%;
+
+  @media(min-width:$screen-desktop) {
+    border-bottom: none;
+  }
+}
+
+.page-home .header {
+  box-shadow: none;
+
+  @media(min-width:$screen-desktop) {
+    border-bottom: none;
+  }
+}
+
+body, .header { transition: all 0.6s ease-in; }
+
+.header-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @media(min-width:$screen-desktop) {
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+}
+
+.header-top {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  min-height: 70px;
+  max-height: 70px;
+  max-width: 100%;
+  transition: left 200ms ease-in-out;
+  z-index: 3;
+
+  @media(min-width:$screen-desktop) {
+    padding: 4px 0;
+    box-shadow: none;
+    min-height: inherit;
+    max-height: inherit;
+    position: static;
+    left: auto;
+    text-align: center;
+  }
+}
+
+.header-bottom {
+  padding: 10px 0;
+
+  @media(min-width:$screen-desktop) {
+    padding: 0;
+  }
+}
+
+.button-menu_main {
+  align-items: center;
+  background: $color-white;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  outline: none;
+  padding-top: 7px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-transform: uppercase;
+
+  @media(min-width:$screen-desktop) {
+		display: none;
+	}
+}
+
+
+// Logotype
+// --------------------------------------------------------------------------
+.logotype {
+  @include x-rem-fallback(font-size, 2.4);
+  color: $color-typography--link_light;
+  float: left;
+  line-height: 1;
+  padding: 0 1rem;
+  padding-top: 2px;
+  text-align: left;
+  text-transform: uppercase;
+
+  @media(min-width:$screen-desktop) {
+    align-self: center;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
+}
+
+.logotype-link {
+	color: $color-typography--link_light;
+	text-decoration: none;
+
+  path {
+    fill: $color-primary;
+
+    @media(min-width:$screen-desktop) {
+      fill: #ececec;
+    }
+  }
+}

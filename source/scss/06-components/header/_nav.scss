@@ -1,0 +1,173 @@
+// Navigation
+
+// Support Menu
+// --------------------------------------------------------------------------
+.supportMenu {
+  display: none;
+
+  @media(min-width:$screen-desktop) {
+    display: inherit;
+  }
+}
+
+.supportMenu-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.supportMenu-item {
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.supportMenu-link {
+  text-decoration: none;
+}
+
+.supportMenu-text {
+  @include x-rem-fallback(font-size,$font-size-small);
+
+  color: #fff;
+  line-height: 24px;
+}
+
+// Social Menu
+// --------------------------------------------------------------------------
+.socialMenu {
+  display: none;
+
+  @media(min-width:$screen-desktop) {
+    display: inherit;
+  }
+}
+
+.socialMenu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.socialMenu-list--second {
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  width: 100%;
+
+  @media(min-width:$screen-desktop) {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.socialMenu-item {
+  margin-left: 15px;
+
+  @media(min-width:$screen-desktop) {
+    margin-left: 20px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.socialMenu-link {
+  text-decoration: none;
+}
+
+.socialMenu-text {
+  @include x-rem-fallback(font-size,$font-size-small);
+
+  color: $color-white;
+  line-height: 24px;
+}
+
+// Manin Menu
+// --------------------------------------------------------------------------
+.mainMenu {
+  background: $color-white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  max-width: 100%;
+  padding-top: 70px;
+  transition: left 200ms ease-in-out;
+  z-index: 2;
+
+  @media(min-width:$screen-desktop) {
+    flex-direction: column-reverse;
+    box-shadow: none;
+    padding-top: 0;
+    position: static;
+    left: auto;
+    width: 100%;
+  }
+}
+
+.mainMenu-list {
+  @media(min-width:$screen-desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 6px;
+  }
+}
+
+.mainMenu-list--other {
+  @media(min-width:$screen-desktop) {
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+
+.mainMenu-item {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.mainMenu-link {
+  display: flex;
+  text-decoration: none;
+
+  svg {
+    fill: #ececec;
+  }
+
+  &:hover {
+    svg {
+      fill: $color-primary--dark;
+    }
+  }
+}
+
+.mainMenu-link.on {
+  svg {
+    fill: $color-primary--dark;
+  }
+}
+
+.mainMenu-text {
+  @include x-rem-fallback(font-size, 1.2);
+
+  color: #9697ae;
+  text-transform: uppercase;
+}
+
+.mainMenu-link.on .mainMenu-text,
+.mainMenu-link:hover .mainMenu-text  { color: #343544; }
+
+.on .mainMenu-link.on .mainMenu-text,
+.on .mainMenu-link:hover .mainMenu-text { color: $color-white; }

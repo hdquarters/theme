@@ -1,0 +1,57 @@
+.hemersonvianna {
+  .header {
+    background: $hemersonvianna-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $hemersonvianna-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $hemersonvianna-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $hemersonvianna-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $hemersonvianna-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $hemersonvianna-color-primary--dark;
+
+    svg { fill: $hemersonvianna-color-primary--dark; }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $hemersonvianna-color-social;
+    }
+  }
+
+  .box--article-title {
+    color: $hemersonvianna-color-article-title;
+  }
+
+  .banner {
+    background: $hemersonvianna-color-primary--dark;
+
+    svg { fill: $hemersonvianna-color-primary--dark-plus; }
+  }
+
+  .banner-description {
+    background: $hemersonvianna-color-primary--dark-plus;
+
+    p {
+      color: $hemersonvianna-color-primary--light;
+    }
+  }
+}

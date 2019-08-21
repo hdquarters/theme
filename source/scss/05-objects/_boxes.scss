@@ -1,0 +1,15 @@
+// Boxes
+.box {
+  margin: 1em 0 2em 0;
+  &:first-child { margin-top: 0; }
+}
+
+// Home
+// --------------------------------------------------------------------------
+.description-highlight {
+  @include x-rem-fallback(font-size,$font-size-large);
+  color: $color-typography--dark;
+  line-height: $font-line-height-xx-large;
+  margin: 1em 0;
+  text-align: center;
+}

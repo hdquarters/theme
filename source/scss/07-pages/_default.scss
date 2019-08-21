@@ -1,0 +1,246 @@
+// Default
+%row {
+  @media(min-width:$screen-desktop) {
+    max-width: $screen-desktop;
+    margin: 0 auto;
+  }
+}
+
+.banner {
+  padding: 20px;
+  text-align: center;
+}
+
+.banner-description {
+  padding: 5px 10px;
+  text-align: center;
+
+  p {
+    @include x-rem-fallback(font-size, 1.7);
+
+    margin: 0;
+    opacity: 0.4;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.content {
+  @include x-clearfix;
+  margin: 0;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.container {
+  @include x-clearfix;
+  @extend %row;
+  margin: 0 auto;
+  overflow: inherit;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @media(min-width:$screen-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// ON
+.on {
+  .wrapper {
+    overflow: inherit;
+  	position: fixed;
+    top: 0;
+  }
+
+  .socialMenu {
+    display: inherit;
+  }
+
+  .button-menu_main {
+    background: rgba(255,255,255,0.9);
+    color: $color-primary--dark;
+    height: 100%;
+    position: fixed;
+    left: inherit;
+    right: 0;
+    top: 0;
+    padding: 0;
+    width: 15%;
+    z-index: 2;
+
+    svg {
+      fill: $color-primary--dark;
+      margin-top: 7px;
+    }
+  }
+
+  .button-menu_main-text {
+    display: block;
+    padding-top: 10px;
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-elements {
+    padding: 5px 0 0;
+  }
+
+  .header-top,
+  .mainMenu {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    left: 0;
+    transition: left 200ms ease-in-out;
+    width: 85%;
+  }
+
+  .mainMenu-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  .mainMenu-item {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    width: x-gridsystem-width(6);
+
+    @media(min-width:$screen-tablet-portrait) {
+      width: x-gridsystem-width(4);
+    }
+  }
+
+  .mainMenu-link {
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .mainMenu-list--other {
+    .mainMenu-link {
+      background: #f9f9f9;
+      border: 1px solid $color-white;
+
+      &.on,
+      &:hover {
+        background: $color-primary--dark;
+        color: $color-white;
+      }
+    }
+  }
+
+  .socialMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .socialMenu-list {
+    justify-content: flex-end;
+  }
+
+  .socialMenu-list--second {
+    margin: 0;
+    margin-top: 10px;
+  }
+}
+
+// Snackbar
+.snackbar {
+  @include x-rem-fallback(font-size, 2);
+
+  visibility: hidden;
+  min-width: 250px;
+  max-width: 94%;
+  margin-left: -47%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 15px 22px;
+  position: fixed;
+  z-index: 9;
+  left: 50%;
+  bottom: 30px;
+
+  @media(min-width:$screen-tablet-portrait) {
+    margin-left: -235px;
+  }
+}
+
+.snackbar--full {
+  @include x-rem-fallback(font-size, 1.7);
+
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 22px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+
+  @media(min-width:$screen-tablet-portrait) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+
+.snackbar--full.show {
+  visibility: visible;
+}
+
+.snackbar-privacy-close {
+  cursor: pointer;
+  fill: #fff;
+  margin-top: 10px;
+
+  @media(min-width:$screen-tablet-portrait) {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
