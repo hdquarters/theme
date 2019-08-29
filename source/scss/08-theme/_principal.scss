@@ -1,0 +1,57 @@
+.nerdcalistenico {
+  .header {
+    background: $nerdcalistenico-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $nerdcalistenico-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media(min-width:$screen-desktop) {
+      box-shadow: 0 4px 0 $nerdcalistenico-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $nerdcalistenico-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $nerdcalistenico-color-primary--dark;
+
+    @media(min-width:$screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $nerdcalistenico-color-primary--dark;
+
+    svg { fill: $nerdcalistenico-color-primary--dark; }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $nerdcalistenico-color-social;
+    }
+  }
+
+  .box--article-title {
+    color: $nerdcalistenico-color-article-title;
+  }
+
+  .banner {
+    background: $nerdcalistenico-color-primary--dark;
+
+    svg { fill: $nerdcalistenico-color-primary--dark-plus; }
+  }
+
+  .banner-description {
+    background: $nerdcalistenico-color-primary--dark-plus;
+
+    p {
+      color: $nerdcalistenico-color-primary--light;
+    }
+  }
+}

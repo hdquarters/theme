@@ -138,3 +138,134 @@
   text-align: center;
   width: 25px;
 }
+
+// *** Site Principal
+.organizations {
+  .default-list {
+    @media(min-width:$screen-desktop) {
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+    }
+  }
+
+  .default-item {
+    .default-link {
+      @media(min-width:$screen-desktop) {
+        min-height: 134px;
+      }
+    }
+
+    .default-item {
+      .default-link {
+        @media(min-width:$screen-desktop) {
+          min-height: 85px;
+        }
+      }
+
+      @media(min-width:$screen-desktop) {
+        padding-left: 10px;
+      }
+    }
+
+    @media(min-width:$screen-desktop) {
+      width: x-gridsystem-width(4);
+    }
+  }
+
+  .default-item--full {
+    @media(min-width:$screen-desktop) {
+      width: x-gridsystem-width(12);
+    }
+  }
+}
+
+.projects {
+  .default-item {
+    .default-title { margin-bottom: 10px; }
+    .default-description { margin-top: 10px; }
+
+    .default-link {
+      align-items: flex-start;
+
+      @media(min-width:$screen-desktop) {
+        display: block;
+        min-height: 330px;
+      }
+    }
+
+    .default-item {
+      .default-link {
+        @media(min-width:$screen-desktop) {
+          min-height: 85px;
+        }
+      }
+
+      @media(min-width:$screen-desktop) {
+        padding-left: 10px;
+      }
+    }
+
+    @media(min-width:$screen-desktop) {
+      width: x-gridsystem-width(4);
+    }
+  }
+
+  .default-figure {
+    border-radius: 4px;
+    box-shadow: 0 1px 1px #ccc;
+    float: none;
+    overflow: hidden;
+    position: relative;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+
+  .default-image {
+    max-width: inherit;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -496px;
+    height: 150px;
+  }
+}
+
+// Social Profile
+// --------------------------------------------------------------------------
+.socialProfile {
+  padding-top: 10px;
+}
+
+.socialProfile-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.socialProfile-item {
+  margin-left: 15px;
+
+  @media(min-width:$screen-desktop) {
+    margin-left: 20px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.socialProfile-link {
+  text-decoration: none;
+
+  svg {
+    fill: $color-primary--light;
+  }
+}
+
+.socialProfile-text {
+  @include x-rem-fallback(font-size,$font-size-small);
+
+  color: $color-white;
+  line-height: 24px;
+}
