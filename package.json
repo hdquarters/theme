@@ -24,6 +24,9 @@
   "dependencies": {
     "prime-itcss": "1.1.3"
   },
+  "peerDependencies": {
+    "prime-itcss": "1.1.3"
+  },
   "release-it": {
     "github": {
       "release": true
