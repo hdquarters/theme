@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/org-descco/blogtheme#readme",
   "devDependencies": {
-    "prime-itcss": "1.1.3",
     "release-it": "12.3.6"
+  },
+  "dependencies": {
+    "prime-itcss": "1.1.3"
   },
   "release-it": {
     "github": {
