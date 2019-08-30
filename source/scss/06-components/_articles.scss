@@ -169,3 +169,21 @@
   margin-top: 1px;
   width: 18px;
 }
+
+.box--article-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.box--article-tag {
+  background: rgba(0,0,0,0.8);
+  border-radius: 2px 2px 0 0;
+  color: $color-white;
+  margin-right: 5px;
+  padding: 2px 5px;
+  text-transform: uppercase;
+}
