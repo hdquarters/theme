@@ -1,3 +1,13 @@
+.videos { @include x-clearfix; }
+
+.video-item {
+  @include x-column(12);
+
+  @media(min-width:$screen-tablet-portrait) {
+    width: x-gridsystem-width(6);
+  }
+}
+
 .clipes {
   @include x-clearfix;
 
