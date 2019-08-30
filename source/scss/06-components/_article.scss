@@ -247,3 +247,34 @@
     }
   }
 }
+
+// lightbox
+.article-content a.lightbox {
+  display: none;
+
+	position: fixed;
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.article-content a.lightbox img {
+	width: auto;
+  height: auto;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.article-content a.lightbox:target {
+	outline: none;
+	display: block;
+}
