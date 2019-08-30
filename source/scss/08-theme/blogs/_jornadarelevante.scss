@@ -84,4 +84,8 @@
   .article-content h4 { color: $jornadarelevante-color-primary--dark; }
 
   .author-description h3 { color: $jornadarelevante-color-primary--dark; }
+
+  .search-button {
+    path { fill: $jornadarelevante-color-primary--dark-plus; }
+  }
 }

@@ -84,4 +84,8 @@
   .article-content h4 { color: $saborinstintivo-color-primary--dark; }
 
   .author-description h3 { color: $saborinstintivo-color-primary--dark; }
+
+  .search-button {
+    path { fill: $saborinstintivo-color-primary--dark-plus; }
+  }
 }
