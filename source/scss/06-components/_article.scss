@@ -93,6 +93,15 @@
     margin-bottom: 15px;
   }
 
+  blockquote ul li,
+  blockquote ul li p {
+    margin-bottom: 5px;
+    margin-bottom: .5rem;
+    font-size: 17px;
+    font-size: 1.7rem;
+    list-style: none;
+  }
+
   strong { font-weight: 700; }
 
   a { @extend %link; }
@@ -162,6 +171,17 @@
       padding-left: 25px;
     }
   }
+}
+
+.sonusetrhythmus .article-content blockquote {
+  border: 2px solid #ececec;
+  border-radius: 4px;
+  color: #a4a5a8;
+  font-size: 1em;
+  height: 300px;
+  margin: 0 0 20px;
+  overflow: scroll;
+  padding: 10px;
 }
 
 // load more
