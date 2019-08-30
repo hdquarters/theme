@@ -1,0 +1,38 @@
+// Social Profile
+// --------------------------------------------------------------------------
+.socialProfile {
+  padding-top: 10px;
+}
+
+.socialProfile-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.socialProfile-item {
+  margin-left: 15px;
+
+  @media(min-width:$screen-desktop) {
+    margin-left: 20px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.socialProfile-link {
+  text-decoration: none;
+
+  svg {
+    fill: $color-primary--light;
+  }
+}
+
+.socialProfile-text {
+  @include x-rem-fallback(font-size,$font-size-small);
+
+  color: $color-white;
+  line-height: 24px;
+}

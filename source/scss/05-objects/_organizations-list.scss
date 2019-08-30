@@ -1,0 +1,75 @@
+.organizations-list {
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 0.5em 0;
+
+  @media(min-width:$screen-desktop) {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+  }
+}
+
+.organizations-item {
+  float: left;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 0%;
+  margin-bottom: 2rem;
+  font-size: 17px;
+  font-size: 1.7rem;
+  display: block;
+
+  @media(min-width:$screen-desktop) {
+    width: x-gridsystem-width(4);
+  }
+}
+
+.organizations-link {
+  box-shadow: 0 1px 2px 0 #ccc;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+
+  @media(min-width:$screen-desktop) {
+    align-items: center;
+    display: flex;
+    min-height: 134px;
+  }
+}
+
+.organizations-title {
+  font-size: 20px;
+  font-size: 2rem;
+  color: #282838;
+  display: block;
+  font-weight: 700;
+}
+
+.organizations-description {
+  font-size: 17px;
+  font-size: 1.7rem;
+  color: #50616c;
+  display: block;
+}
+
+.organizations-figure {
+  float: left;
+
+  @media(min-width:$screen-desktop) {
+    float: inherit;
+  }
+}
+
+.organizations-image {
+  margin-right: 10px;
+  max-width: 100px;
+}
+
+.organizations-item--full {
+  @media(min-width:$screen-desktop) {
+    width: x-gridsystem-width(12);
+  }
+}

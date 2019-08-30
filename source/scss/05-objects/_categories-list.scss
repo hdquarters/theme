@@ -1,0 +1,71 @@
+.categories {
+  border-radius: 4px;
+  border: 1px solid #f3f7f4;;
+  padding: 10px;
+}
+
+.categories-title {
+  @include x-rem-fallback(font-size,$font-size-regular);
+
+  text-align: center;
+}
+
+.categories-title-count {
+  @include x-rem-fallback( font-size, 1.2);
+
+  display: block;
+}
+
+.categories-list {
+  @include x-clearfix;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.categories-item {
+  @include x-rem-fallback( font-size, 1.4);
+
+  border-radius: 4px;
+  border: 1px solid #f3f7f4;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.categories-link {
+  color: $color-primary--dark;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 35px 5px 10px;
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all ease-in 0.5ms;
+  width: 100%;
+
+  &:hover {
+    background: #f9f9f9;
+    text-decoration: none;
+  }
+}
+
+.categories-count {
+  @include x-rem-fallback( font-size, 1);
+
+  background: #f9f9f9;
+  color: $color-primary--dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  width: 25px;
+}
