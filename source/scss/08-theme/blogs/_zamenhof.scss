@@ -58,4 +58,14 @@
   .search {
     background: $zamenhof-color-rgba;
   }
+
+  .page-title,
+  .page-title--section,
+  .page-subtitle,
+  .page-subtitle-2,
+  .page-subtitle--section,
+  .page-subtitle--section-link {
+    color: $zamenhof-color-article-title
+  }
+
 }
