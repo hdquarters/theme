@@ -24,31 +24,36 @@
 
 .home_articles .box--article { display: block; }
 
-img.lazy { background: #f1f1fa url(/imhomovies/assets/img/site/global/loading.gif) no-repeat center center; }
-
 .box--article-content {
-  box-shadow: 0 1px 2px 0 #ccc;
-  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
   display: block;
-  padding: 0 10px 10px;
-  padding-bottom: 30px;
+  padding: 20px 10px 10px;
+  padding-bottom: 40px;
   position: relative;
 
   @media(min-width:$screen-tablet-portrait) {
-    padding-bottom: 0;
-    min-height: 210px;
+    min-height: 200px;
+    padding-bottom: 10px;
   }
 }
 
 .box--article-header {
   @include x-rem-fallback(font-size,$font-size-small);
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  border-bottom: 1px solid $base-background-color;
+  box-shadow: 0 1px 0 $color-secundary--light;
+  display: block;
+  padding: 0.2em 0.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .box--article-date {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: baseline;
   color: $color-typography--gray_light;
   font-size: 14px;
   font-weight: 700;
@@ -58,41 +63,35 @@ img.lazy { background: #f1f1fa url(/imhomovies/assets/img/site/global/loading.gi
   right: 0;
   text-align: right;
   text-shadow: 0 0 2px $base-background-color;
+  width: 100%;
 }
 
-.box--article-read {
-  background: rgba(0,0,0,0.8);
-  border-radius: 4px 0 0 0;
-  color: $color-white;
+.box--article-date-read {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  position: absolute;
-  bottom: -0;
-  right: 0;
-  padding: 2px 5px;
-  text-shadow: 0 0 0 #000;
 }
 
 .box--article-category {
-  display: inline-block;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   text-transform: uppercase;
 }
 
 .box--article-category-link {
   @extend %link;
-  display: inline-block;
+  display: flex;
 }
 
 .box--article-title {
   @include x-rem-fallback( font-size, 2.2);
+  color: #113a4e;
   display: table;
   font-weight: 800;
   margin-bottom: 5px;
   padding: 10px 0;
+  margin-top: 12px;
   width: 100%;
 }
 
@@ -108,16 +107,40 @@ img.lazy { background: #f1f1fa url(/imhomovies/assets/img/site/global/loading.gi
   display: block;
 }
 
-.box--article-figure {
-  border-radius: 4px 4px 0 0;
-  margin-left: -10px;
-  margin-right: -10px;
-  overflow: hidden;
-  position: relative;
+.articles-count {
+  font-size: 14px;
 }
 
-.box--article-image {
-  display: inline-block;
-  height: 110px;
-  width: 100%;
+.page-articles,
+.page-languages {
+  .box--article-content {
+    padding: 10px;
+
+    @media(min-width:$screen-tablet-portrait) {
+      min-height: 160px;
+    }
+  }
+
+  .box--article-title {
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+
+.box--article-category {
+  padding-left: 17px;
+
+  &:before {
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: left top;
+    content: "";
+    display: inline-block;
+    height: 18px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 18px;
+  }
 }
