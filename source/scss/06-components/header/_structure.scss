@@ -28,6 +28,12 @@ body, .header { transition: all 0.6s ease-in; }
 
   @media(min-width:$screen-desktop) {
     justify-content: space-between;
+    padding-bottom: 0;
+  }
+}
+
+.header-bottom .header-elements {
+  @media(min-width:$screen-desktop) {
     padding-bottom: 10px;
   }
 }
