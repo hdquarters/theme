@@ -63,6 +63,13 @@
   }
 }
 
+.page-article .article {
+  @media(min-width:$screen-desktop) {
+    margin: 0 auto;
+    max-width: 728px;
+  }
+}
+
 // ON
 .on {
   .wrapper {

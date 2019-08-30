@@ -60,6 +60,22 @@
   height: 100%;
 }
 
+.video-container-full {
+  margin-bottom: 30px;
+  margin-bottom: 3rem;
+  background: #ddd;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+
+  @media(min-width:$screen-desktop) {
+    min-width: 100%;
+    padding-bottom: 37%;
+  }
+}
+
+
 .youtube {
   background-color: #000;
   position: absolute;
