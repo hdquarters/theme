@@ -1,0 +1,33 @@
+// Support Menu
+// --------------------------------------------------------------------------
+.supportMenu {
+  display: none;
+
+  @media(min-width:$screen-desktop) {
+    display: inherit;
+  }
+}
+
+.supportMenu-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.supportMenu-item {
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.supportMenu-link {
+  text-decoration: none;
+}
+
+.supportMenu-text {
+  @include x-rem-fallback(font-size,$font-size-small);
+
+  color: #fff;
+  line-height: 24px;
+}

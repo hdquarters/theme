@@ -144,3 +144,15 @@
     width: 18px;
   }
 }
+
+.box--article-category-link--flag:before {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: left top;
+  content: "";
+  display: inline-block;
+  height: 18px;
+  margin-right: 5px;
+  margin-top: 1px;
+  width: 18px;
+}

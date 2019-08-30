@@ -1,90 +1,5 @@
 // Navigation
 
-// Support Menu
-// --------------------------------------------------------------------------
-.supportMenu {
-  display: none;
-
-  @media(min-width:$screen-desktop) {
-    display: inherit;
-  }
-}
-
-.supportMenu-list {
-  display: flex;
-  flex-direction: row;
-}
-
-.supportMenu-item {
-  margin-left: 20px;
-
-  &:first-child {
-    margin-left: 0;
-  }
-}
-
-.supportMenu-link {
-  text-decoration: none;
-}
-
-.supportMenu-text {
-  @include x-rem-fallback(font-size,$font-size-small);
-
-  color: #fff;
-  line-height: 24px;
-}
-
-// Social Menu
-// --------------------------------------------------------------------------
-.socialMenu {
-  display: none;
-
-  @media(min-width:$screen-desktop) {
-    display: inherit;
-  }
-}
-
-.socialMenu-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.socialMenu-list--second {
-  justify-content: center;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  width: 100%;
-
-  @media(min-width:$screen-desktop) {
-    justify-content: flex-start;
-    margin-bottom: 0;
-  }
-}
-
-.socialMenu-item {
-  margin-left: 15px;
-
-  @media(min-width:$screen-desktop) {
-    margin-left: 20px;
-  }
-
-  &:first-child {
-    margin-left: 0;
-  }
-}
-
-.socialMenu-link {
-  text-decoration: none;
-}
-
-.socialMenu-text {
-  @include x-rem-fallback(font-size,$font-size-small);
-
-  color: $color-white;
-  line-height: 24px;
-}
-
 // Manin Menu
 // --------------------------------------------------------------------------
 .mainMenu {
@@ -154,18 +69,6 @@
 
   svg {
     fill: #ececec;
-  }
-
-  &:hover {
-    svg {
-      fill: $color-primary--dark;
-    }
-  }
-}
-
-.mainMenu-link.on {
-  svg {
-    fill: $color-primary--dark;
   }
 }
 

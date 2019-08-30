@@ -68,4 +68,15 @@
     color: $foradabolha-color-article-title
   }
 
+  .mainMenu-link:hover {
+    svg { fill: $foradabolha-$color-primary--dark; }
+  }
+
+  .mainMenu-link.on {
+    svg { fill: $foradabolha-color-primary--dark; }
+  }
+
+  .categories-link {
+    color: $foradabolha-color-primary--dark;
+  }
 }

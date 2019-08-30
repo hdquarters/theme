@@ -12,6 +12,17 @@
   width: 100%;
 }
 
+.article-title--flag:before {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: left top;
+  content: "";
+  display: inline-block;
+  height: 24px;
+  margin-right: 5px;
+  width: 24px;
+}
+
 .article-meta {
   @include x-rem-fallback(font-size,$font-size-small);
   @include x-rem-fallback(margin-top,1);

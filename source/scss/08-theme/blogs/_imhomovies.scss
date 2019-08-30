@@ -68,4 +68,15 @@
     color: $imhomovies-color-article-title
   }
 
+  .mainMenu-link:hover {
+    svg { fill: $imhomovies-$color-primary--dark; }
+  }
+
+  .mainMenu-link.on {
+    svg { fill: $imhomovies-color-primary--dark; }
+  }
+
+  .categories-link {
+    color: $imhomovies-color-primary--dark;
+  }
 }

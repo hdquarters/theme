@@ -68,4 +68,15 @@
     color: $foconocapital-color-article-title
   }
 
+  .mainMenu-link:hover {
+    svg { fill: $foconocapital-$color-primary--dark; }
+  }
+
+  .mainMenu-link.on {
+    svg { fill: $foconocapital-color-primary--dark; }
+  }
+
+  .categories-link {
+    color: $foconocapital-color-primary--dark;
+  }
 }
