@@ -10,22 +10,6 @@
   }
 }
 
-.organizations-item {
-  float: left;
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 0%;
-  margin-bottom: 2rem;
-  font-size: 17px;
-  font-size: 1.7rem;
-  display: block;
-
-  @media(min-width:$screen-desktop) {
-    width: x-gridsystem-width(4);
-  }
-}
-
 .organizations-link {
   box-shadow: 0 1px 2px 0 #ccc;
   border-radius: 4px;
@@ -37,6 +21,30 @@
     align-items: center;
     display: flex;
     min-height: 134px;
+  }
+}
+
+.organizations-item {
+  float: left;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 0%;
+  margin-bottom: 2rem;
+  font-size: 17px;
+  font-size: 1.7rem;
+  display: block;
+
+  .organizations-item {
+    .organizations-link {
+      @media(min-width:$screen-desktop) {
+        min-height: 85px;
+      }
+    }
+  }
+
+  @media(min-width:$screen-desktop) {
+    width: x-gridsystem-width(4);
   }
 }
 

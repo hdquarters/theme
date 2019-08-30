@@ -1,0 +1,67 @@
+.perfilRow {
+  display: inline-block;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.perfilBox {
+  @include x-column(12);
+
+  margin-bottom: 20px;
+}
+
+.perfilBox--half {
+  @include x-column(12);
+
+  margin-bottom: 20px;
+
+  @media(min-width:$screen-tablet-portrait) {
+    width: x-gridsystem-width(6);
+  }
+}
+
+.perfil-tags {
+  display: block;
+
+  span {
+    background: #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+
+  .btn-link {
+    font-size: 14px;
+
+    &:before {
+      content: ">";
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.perfil-extra {
+  font-size: 16px;
+}
+
+.perfil-hl {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+
+  span {
+    background: #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+}
+
+.perfil-item {
+  box-shadow: 0 1px 2px 0 #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
