@@ -28,6 +28,7 @@
   box-shadow: 1px 2px 5px #ddd;
   border-radius: 4px;
   display: block;
+  overflow: hidden;
   padding: 20px 10px 10px;
   padding-bottom: 40px;
   position: relative;
@@ -98,6 +99,15 @@
   margin-bottom: 5px;
   padding: 10px 0;
   width: 100%;
+}
+
+.box--article-title--twoLines {
+  @extend .box--article-title;
+
+  @media(min-width:$screen-tablet-portrait) {
+    margin-bottom: 10px;
+    min-height: 55px;
+  }
 }
 
 .box--article-link {
