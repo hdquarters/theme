@@ -76,7 +76,12 @@
     svg { fill: $noobdaera8bits-color-primary--dark; }
   }
 
-  .categories-link {
-    color: $noobdaera8bits-color-primary--dark;
-  }
+  .categories-link { color: $noobdaera8bits-color-primary--dark; }
+
+  .article-title,
+  .article-content h2,
+  .article-content h3,
+  .article-content h4 { color: $noobdaera8bits-color-primary--dark; }
+
+  .author-description h3 { color: $noobdaera8bits-color-primary--dark; }
 }

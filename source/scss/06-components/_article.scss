@@ -5,7 +5,6 @@
 
 .article-title {
   @include x-rem-fallback( font-size, $font-size-xxx-large);
-  color: $color-typography--dark;
   display: table;
   font-weight: 800;
   margin-top: 12px;
@@ -54,21 +53,18 @@
 .article-content {
   h2 {
     @include x-rem-fallback(font-size, $font-size-xx-large);
-    color: $color-typography--dark;
     font-weight: 800;
     line-height: 1.4;
   }
 
   h3 {
     @include x-rem-fallback(font-size, $font-size-large);
-    color: $color-typography--dark;
     font-weight: 800;
     line-height: 1.4;
   }
 
   h4 {
     @include x-rem-fallback(font-size, $font-size-regular);
-    color: $color-typography--dark;
     font-weight: 800;
     line-height: 1.4;
   }
@@ -214,7 +210,6 @@
   h3 {
     @include x-rem-fallback(font-size, $font-size-large);
 
-    color: $color-primary--dark;
     font-weight: 700;
     margin-bottom: 10px;
 

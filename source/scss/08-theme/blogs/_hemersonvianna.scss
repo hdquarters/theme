@@ -76,7 +76,12 @@
     svg { fill: $hemersonvianna-color-primary--dark; }
   }
 
-  .categories-link {
-    color: $hemersonvianna-color-primary--dark;
-  }
+  .categories-link { color: $hemersonvianna-color-primary--dark; }
+
+  .article-title,
+  .article-content h2,
+  .article-content h3,
+  .article-content h4 { color: $hemersonvianna-color-primary--dark; }
+
+  .author-description h3 { color: $hemersonvianna-color-primary--dark; }
 }

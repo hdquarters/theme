@@ -76,7 +76,12 @@
     svg { fill: $saborinstintivo-color-primary--dark; }
   }
 
-  .categories-link {
-    color: $saborinstintivo-color-primary--dark;
-  }
+  .categories-link { color: $saborinstintivo-color-primary--dark; }
+
+  .article-title,
+  .article-content h2,
+  .article-content h3,
+  .article-content h4 { color: $saborinstintivo-color-primary--dark; }
+
+  .author-description h3 { color: $saborinstintivo-color-primary--dark; }
 }
