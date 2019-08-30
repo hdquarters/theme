@@ -142,6 +142,18 @@
   }
 }
 
+.box--article-figure {
+  margin-left: -10px;
+  margin-right: -10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.box--article-image {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
 
 .box--article-category--flag {
   &:before {
@@ -186,4 +198,10 @@
   margin-right: 5px;
   padding: 2px 5px;
   text-transform: uppercase;
+}
+
+.page-jogos {
+  .box--article-content-full {
+    padding-top: 0;
+  }
 }
