@@ -90,9 +90,6 @@
   display: block;
   font-weight: 400;
   font-size: 12px;
-  position: absolute;
-  top: -16px;
-  right: 0;
   padding: 2px 5px;
 }
 
@@ -102,8 +99,17 @@
   background: rgba(0,0,0,0.8);
   border-radius: 4px 0 0 0;
   color: #fff;
+  position: absolute;
   bottom: 0;
-  top: inherit;
+  right: 0;
+}
+
+.card-readTime--top {
+  @extend .card-readTime;
+
+  position: absolute;
+  top: -16px;
+  right: 0;
 }
 
 .card-category {
@@ -111,8 +117,10 @@
   flex-direction: row;
   justify-content: space-between;
   text-transform: uppercase;
+}
 
-  &--flag {
+.card-category--flag {
+  .card-category-link:first-child {
     &:before {
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -120,12 +128,13 @@
       content: "";
       display: inline-block;
       height: 18px;
-      position: absolute;
-      left: 4px;
-      top: 4px;
       width: 18px;
     }
   }
+}
+
+.card-category--block {
+  width: 100%;
 }
 
 .card-category-link {
@@ -133,20 +142,6 @@
   @include x-rem-fallback( font-size, 1.7);
 
   display: flex;
-
-  &--flag {
-    &:before {
-      background-size: 100% auto;
-      background-repeat: no-repeat;
-      background-position: left top;
-      content: "";
-      display: inline-block;
-      height: 18px;
-      margin-right: 5px;
-      margin-top: 1px;
-      width: 18px;
-    }
-  }
 }
 
 .card-title {
