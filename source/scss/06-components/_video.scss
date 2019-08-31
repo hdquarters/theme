@@ -1,14 +1,16 @@
 .videos {
   @include x-clearfix;
 
+  overflow: hidden;
+}
+
+.videos-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-flow: row wrap;
-  overflow: hidden;
+  margin: -0.5%;
 }
-
-.videos-list { margin: -0.5%; }
 
 .video {
   @include x-rem-fallback(margin-bottom,1);
