@@ -52,15 +52,17 @@
   }
 }
 
-.categories-link--flag:before {
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: left top;
-  content: "";
-  display: inline-block;
-  height: 14px;
-  margin-right: 5px;
-  width: 14px;
+.categories-link--flag {
+  &:before {
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: left top;
+    content: "";
+    display: inline-block;
+    height: 14px;
+    margin-right: 5px;
+    width: 14px;
+  }
 }
 
 .categories-count {

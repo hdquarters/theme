@@ -1,48 +1,22 @@
-.videos { @include x-clearfix; }
-
-.video-item {
-  @include x-column(12);
-
-  @media(min-width:$screen-tablet-portrait) {
-    width: x-gridsystem-width(6);
-  }
-}
-
-.clipes {
+.videos {
   @include x-clearfix;
 
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.wraper_description {
-  @include x-clearfix;
-
-  @media(min-width:$screen-desktop) {
-    @include x-rem-fallback(font-size,1.9);
-
-    display: flex;
-    flex-direction: row;
-    line-height: 1.2;
-    justify-content: space-between;
-  }
-}
-
-.video-container {
+.video {
   @include x-rem-fallback(margin-bottom,1);
 
   background: #ddd;
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
+  width: x-gridsystem-width(12);
 
-  @media(min-width:$screen-desktop) {
-    min-width: 48%;
-    max-width: 50%;
-    padding-bottom: 25%;
-  }
-
-  iframe {
+  & iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -50,32 +24,25 @@
     height: 100%;
     z-index: 1;
   }
+
+  @media(min-width:$screen-tablet-portrait) {
+    min-width: 48%;
+    max-width: 48%;
+    padding-bottom: 25%;
+  }
 }
 
-.video-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+.video--full {
+  @extend .video;
 
-.video-container-full {
-  margin-bottom: 30px;
-  margin-bottom: 3rem;
-  background: #ddd;
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
-
-  @media(min-width:$screen-desktop) {
+  @media(min-width:$screen-tablet-portrait) {
     min-width: 100%;
+    max-width: 100%;
     padding-bottom: 37%;
   }
 }
 
-
+// Youtube
 .youtube {
   background-color: #000;
   position: absolute;
@@ -109,7 +76,6 @@
   border-width: 15px 0 15px 26.0px;
   border-color: transparent transparent transparent #fff;
 }
-
 .youtube img,
 .youtube .play-button {
   cursor: pointer;
