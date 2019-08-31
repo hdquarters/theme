@@ -1,4 +1,4 @@
-.articles {
+.cards {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -6,12 +6,13 @@
   margin-right: -10px;
 }
 
-.box--article {
+.card {
   @include x-column(12);
   display: none;
   float: none;
   margin-bottom: 2em;
   padding-top: 1em;
+  position: relative;
 
   @media(min-width:$screen-tablet-portrait) {
     width: x-gridsystem-width(6);
@@ -22,9 +23,9 @@
   }
 }
 
-.home_articles .box--article { display: block; }
+.page-home .card { display: block; }
 
-.box--article-content {
+.card-content {
   box-shadow: 1px 2px 5px #ddd;
   border-radius: 4px;
   display: block;
@@ -39,15 +40,15 @@
   }
 }
 
-.box--article-content-full {
-  @extend .box--article-content;
+.card-content--full {
+  @extend .card-content;
 
   padding: 0;
 
-  .box--article-title { padding: 10px; }
+  .card-title { padding: 10px; }
 }
 
-.box--article-header {
+.card-header {
   @include x-rem-fallback(font-size,$font-size-small);
   border-bottom: 1px solid $base-background-color;
   box-shadow: 0 1px 0 $color-secundary--light;
@@ -56,7 +57,7 @@
   width: 100%;
 }
 
-.box--article-date {
+.card-date {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -73,25 +74,54 @@
   width: 100%;
 }
 
-.box--article-date-read {
+.card-readTime {
   display: block;
   font-weight: 400;
   font-size: 12px;
 }
 
-.box--article-category {
+.card-category {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-transform: uppercase;
+
+  &--flag {
+    &:before {
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: left top;
+      content: "";
+      display: inline-block;
+      height: 18px;
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      width: 18px;
+    }
+  }
 }
 
-.box--article-category-link {
+.card-category-link {
   @extend %link;
   display: flex;
+
+  &--flag {
+    &:before {
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: left top;
+      content: "";
+      display: inline-block;
+      height: 18px;
+      margin-right: 5px;
+      margin-top: 1px;
+      width: 18px;
+    }
+  }
 }
 
-.box--article-title {
+.card-title {
   @include x-rem-fallback( font-size, 2.2);
   color: #113a4e;
   display: table;
@@ -101,7 +131,7 @@
   width: 100%;
 }
 
-.box--article-title--twoLines {
+.card-title--twoLines {
   @extend .box--article-title;
 
   @media(min-width:$screen-tablet-portrait) {
@@ -110,79 +140,36 @@
   }
 }
 
-.box--article-link {
+.card-link {
   text-decoration: none;
   &:hover { text-decoration: none; }
 }
 
-.box--article-description {
+.card-description {
   @include x-clearfix;
   @include x-rem-fallback(font-size,$font-size-small);
   color: $color-typography;
   display: block;
 }
 
-.articles-count {
-  font-size: 14px;
-}
+.card-count { font-size: 14px; }
 
-.page-articles,
-.page-languages {
-  .box--article-content {
-    padding: 10px;
-
-    @media(min-width:$screen-tablet-portrait) {
-      min-height: 160px;
-    }
-  }
-
-  .box--article-title {
-    margin-top: 0;
-    padding: 0;
-  }
-}
-
-.box--article-figure {
+.card-figure {
   margin-left: -10px;
   margin-right: -10px;
   overflow: hidden;
   position: relative;
 }
 
-.box--article-image {
+.card-image {
   display: inline-block;
   height: auto;
   width: 100%;
+
+  &.lazy { background: #f1f1fa url(/jornadarelevante/assets/img/site/global/loading.gif) no-repeat center center; }
 }
 
-.box--article-category--flag {
-  &:before {
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: left top;
-    content: "";
-    display: inline-block;
-    height: 18px;
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    width: 18px;
-  }
-}
-
-.box--article-category-link--flag:before {
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: left top;
-  content: "";
-  display: inline-block;
-  height: 18px;
-  margin-right: 5px;
-  margin-top: 1px;
-  width: 18px;
-}
-
-.box--article-tags {
+.card-tags {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -191,7 +178,7 @@
   right: 0;
 }
 
-.box--article-tag {
+.card-tag {
   background: rgba(0,0,0,0.8);
   border-radius: 2px 2px 0 0;
   color: $color-white;
@@ -199,11 +186,3 @@
   padding: 2px 5px;
   text-transform: uppercase;
 }
-
-.page-jogos {
-  .box--article-content-full {
-    padding-top: 0;
-  }
-}
-
-img.lazy { background: #f1f1fa url(/jornadarelevante/assets/img/site/global/loading.gif) no-repeat center center; }
