@@ -4,7 +4,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-flow: row wrap;
+  overflow: hidden;
 }
+
+.videos-list { margin: -0.5%; }
 
 .video {
   @include x-rem-fallback(margin-bottom,1);
@@ -26,9 +30,9 @@
   }
 
   @media(min-width:$screen-tablet-portrait) {
-    min-width: 48%;
-    max-width: 48%;
-    padding-bottom: 25%;
+    margin: 0.5%;
+    width: 49%;
+    padding-bottom: 20%;
   }
 }
 
