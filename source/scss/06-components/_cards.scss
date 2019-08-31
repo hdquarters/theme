@@ -49,11 +49,16 @@
 }
 
 .card-header {
-  @include x-rem-fallback(font-size,$font-size-small);
-  border-bottom: 1px solid $base-background-color;
-  box-shadow: 0 1px 0 $color-secundary--light;
-  display: block;
-  padding: 0.2em 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -75,9 +80,16 @@
 }
 
 .card-readTime {
+  background: #fff;
+  border-radius: 0 4px 0 4px;
+  color: #c3c3c3;
   display: block;
   font-weight: 400;
   font-size: 12px;
+  position: absolute;
+  top: -16px;
+  right: 0;
+  padding: 2px 5px;
 }
 
 .card-category {
@@ -104,6 +116,8 @@
 
 .card-category-link {
   @extend %link;
+  @include x-rem-fallback( font-size, 1.7);
+
   display: flex;
 
   &--flag {
