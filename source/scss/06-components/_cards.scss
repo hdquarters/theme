@@ -41,7 +41,7 @@
 .card-content--full {
   @extend .card-content;
 
-  padding: 0 10px;
+  padding: 0;
   padding-bottom: 40px;
 
   .card-title {
@@ -94,6 +94,16 @@
   top: -16px;
   right: 0;
   padding: 2px 5px;
+}
+
+.card-readTime--image {
+  @extend .card-readTime;
+
+  background: rgba(0,0,0,0.8);
+  border-radius: 4px 0 0 0;
+  color: #fff;
+  bottom: 0;
+  top: inherit;
 }
 
 .card-category {
@@ -172,8 +182,6 @@
 .card-count { font-size: 14px; }
 
 .card-figure {
-  margin-left: -10px;
-  margin-right: -10px;
   overflow: hidden;
   position: relative;
 }
