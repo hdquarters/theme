@@ -1,0 +1,112 @@
+<header class="header" role="banner">
+  <button class="button-menu_main js-menu-trigger">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 448"><path d="M0 48h448v96H0V48zm0 128h448v96H0v-96zm0 128h448v96H0v-96z"/></svg>
+    <span class="button-menu_main-text">Menu</span>
+  </button>
+  <div class="header-top">
+    <div class="container">
+      <div class="header-elements">
+        <nav class="supportMenu" role="navigation">
+          <ul class="supportMenu-list">
+            <li class="supportMenu-item">
+              <a class="supportMenu-link js-scroll" data-target="body">
+                <span class="supportMenu-text"><%= __('menu_accessibility.content') %></span>
+              </a>
+            </li>
+            <li class="supportMenu-item">
+              <a class="supportMenu-link js-scroll" data-target="header-bottom">
+                <span class="supportMenu-text"><%= __('menu_accessibility.main_menu') %></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="socialMenu" role="navigation">
+          <ul class="socialMenu-list socialMenu-list--second" aria-label="Menu de mídias sociais">
+            <% for (let item in theme.socialmenu) { %>
+              <li class="socialMenu-item">
+                <a class="socialMenu-link" href="<%= theme.socialmenu[item].url %>" target="_blank">
+                  <%- theme.socialmenu[item].svg %>
+                </a>
+              </li>
+            <% } %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="container">
+      <div class="header-elements">
+        <h1 class="logotype">
+          <a class="logotype-link" href="<%= __('logotype.url') %>" rel="home" aria-describedby="a-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28.77" viewBox="0 0 500 449.6">
+              <path d="M170.2 219.7V20.6c0-5.6 2.6-8.2 7.8-7.8 24.9 1.9 37.4 2.8 62.3 4.7 5 .4 7.6 3.3 7.6 8.7v321c0 5.4-2.5 8.3-7.6 8.6-35.7 2.4-53.6 3.6-89.3 5.8-5.2.3-8.6-2.3-10.4-7.8-21.5-67.9-42.4-136-63-204.2v207.9c0 5.8-2.5 8.8-7.5 9.1-24.9 1.5-37.4 2.3-62.3 3.7-5.2.3-7.8-2.5-7.8-8.5V8.4C0 2.4 2.6-.3 7.8 0c35.9 2.7 53.8 4 89.7 6.7 5.2.4 8.6 3.5 10.4 9.3 20.3 68.1 41 135.9 62.3 203.7z"/>
+              <path d="M352.4 368.5c.2 4 2.3 6 6.3 6H491c6 0 9 3 9 9v57c0 6-3 9-9 9H346.9c-23.3 0-43.3-8.3-59.8-24.8s-24.8-36.4-24.8-59.8V159c0-23.3 8.3-43.3 24.8-59.8s36.4-24.8 59.8-24.8H491c6 0 9 3 9 9v57c0 6-3 9-9 9H358.7c-4 0-6.1 2-6.3 6v213.1z"/>
+            </svg>
+            <span class="hide" id="a-logo"><%= __('logotype.description') %></span>
+          </a>
+        </h1>
+        <nav class="mainMenu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+          <meta itemprop="about" content="Menu Principal" />
+          <ul class="mainMenu-list" id="mainMenu" aria-label="Menu principal">
+            <% for (const item in theme.blogmenu) { %>
+              <li class="mainMenu-item">
+                <a class="mainMenu-link <%= page.name === theme.blogmenu[item].slug ? 'on' : ''%>" href="<%= theme.blogmenu[item].url %>" itemprop="url">
+                  <%- theme.blogmenu[item].label %>
+                  <span class="hide" itemprop="name"><%- theme.blogmenu[item].name %></span>
+                </a>
+              </li>
+            <% } %>
+          </ul>
+          <ul class="mainMenu-list mainMenu-list--other">
+            <li class="mainMenu-item">
+              <a class="mainMenu-link <%= is_current(__('menu_site.presentation.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.presentation.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%= __('menu_site.presentation.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item">
+              <a class="mainMenu-link <%= is_current(__('menu_site.profile.url').replace('/', '')) ? 'on' : ''%>" href="<%= __('menu_site.profile.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%- __('menu_site.profile.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item">
+              <a class="mainMenu-link <%= is_current(__('menu_site.organizations.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.organizations.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%= __('menu_site.organizations.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item">
+              <a class="mainMenu-link <%= is_current(__('menu_site.projects.url').replace('/', '')) ? 'on' : ''%>" href="<%= __('menu_site.projects.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%= __('menu_site.projects.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item">
+              <a class="mainMenu-link <%= is_current(__('menu_site.following.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.following.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%= __('menu_site.following.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item">
+              <a class="mainMenu-link <%= is_current(__('menu_site.hall_of_fame.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.hall_of_fame.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%= __('menu_site.hall_of_fame.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item">
+              <a class="mainMenu-link <%= is_current(__('menu_site.styleguide.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.styleguide.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%= __('menu_site.styleguide.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item">
+              <a class="mainMenu-link <%= is_current(__('menu_site.privacy_policy.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.privacy_policy.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%= __('menu_site.privacy_policy.name') %></span>
+              </a>
+            </li>
+            <!-- <li class="mainMenu-item">
+              <a class="mainMenu-link mainMenu-link--flag pt-br <%= page.lang === 'pt-br' ? 'on' : '' %>" href="/" itemprop="url"></a>
+              <a class="mainMenu-link mainMenu-link--flag en <%= page.lang === 'en' ? 'on' : '' %>" href="/en/" itemprop="url"></a>
+            </li> -->
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
