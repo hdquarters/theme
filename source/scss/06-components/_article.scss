@@ -125,7 +125,6 @@
   { @include x-rem-fallback( margin-bottom, 2); }
 
   table {
-    background-color: $color-secundary--light;
     display: block;
     width: 100%;
     overflow: auto;
