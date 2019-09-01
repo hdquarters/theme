@@ -38,6 +38,18 @@
   }
 }
 
+.card-content--mdHeight {
+  @media(min-width:$screen-tablet-portrait) {
+    min-height: 170px;
+  }
+}
+
+.card-content--lgHeight {
+  @media(min-width:$screen-tablet-portrait) {
+    min-height: 200px;
+  }
+}
+
 .card-content--full {
   @extend .card-content;
 
