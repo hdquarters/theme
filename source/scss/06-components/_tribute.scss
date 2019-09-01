@@ -66,7 +66,7 @@
 
 .box--tribute-name {
   @include x-rem-fallback(font-size,$font-size-regular);
-  color: $color-article-title;
+  color: $imhomovies-color-article-title;
   font-weight: 700;
   overflow: hidden;
   white-space: normal;
