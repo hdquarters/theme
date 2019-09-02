@@ -76,6 +76,11 @@
               </a>
             </li>
             <li class="mainMenu-item">
+              <a class="mainMenu-link <%= is_current(__('menu_site.videos.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.videos.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%= __('menu_site.videos.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item">
               <a class="mainMenu-link <%= is_current(__('menu_site.organizations.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.organizations.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.organizations.name') %></span>
               </a>
