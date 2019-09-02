@@ -33,7 +33,16 @@
   @media(min-width:$screen-tablet-portrait) {
     margin: 0.5%;
     width: 49%;
+    padding-bottom: 25%;
+  }
+}
+
+.video--grid {
+  @extend .video;
+
+  @media(min-width:$screen-tablet-portrait) {
     padding-bottom: 20%;
+    width: 32.3%;
   }
 }
 
