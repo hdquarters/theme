@@ -22,6 +22,17 @@
         </nav>
 
         <nav class="socialMenu" role="navigation">
+          <% if (theme.mainmenu) { %>
+          <ul class="socialMenu-list" aria-label="Menu secundário">
+            <% for (let item in theme.mainmenu) { %>
+              <li class="socialMenu-item">
+                <a class="socialMenu-link" href="<%= theme.mainmenu[item].url %>">
+                  <span class="socialMenu-text"><%= theme.mainmenu[item].label %></span>
+                </a>
+              </li>
+            <% } %>
+          </ul>
+          <% } %>
           <ul class="socialMenu-list socialMenu-list--second" aria-label="Menu de mídias sociais">
             <% for (let item in theme.socialmenu) { %>
               <li class="socialMenu-item">
