@@ -88,4 +88,14 @@
   .search-button {
     path { fill: $zamenhof-color-primary--dark-plus; }
   }
+
+  .logotype-link {
+    path {
+      fill: $zamenhof-color-primary;
+
+      @media(min-width:$screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
 }

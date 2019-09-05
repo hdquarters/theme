@@ -88,4 +88,14 @@
   .search-button {
     path { fill: $hemersonvianna-color-primary--dark-plus; }
   }
+
+  .logotype-link {
+    path {
+      fill: $hemersonvianna-color-primary;
+
+      @media(min-width:$screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
 }

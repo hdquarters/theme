@@ -88,4 +88,14 @@
   .search-button {
     path { fill: $noobdaera8bits-color-primary--dark-plus; }
   }
+
+  .logotype-link {
+    path {
+      fill: $noobdaera8bits-color-primary;
+
+      @media(min-width:$screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
 }

@@ -88,4 +88,14 @@
   .search-button {
     path { fill: $sonusetrhythmus-color-primary--dark-plus; }
   }
+
+  .logotype-link {
+    path {
+      fill: $sonusetrhythmus-color-primary;
+
+      @media(min-width:$screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
 }

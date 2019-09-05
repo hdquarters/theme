@@ -88,4 +88,14 @@
   .search-button {
     path { fill: $foconocapital-color-primary--dark-plus; }
   }
+
+  .logotype-link {
+    path {
+      fill: $foconocapital-color-primary;
+
+      @media(min-width:$screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
 }

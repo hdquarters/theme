@@ -88,4 +88,14 @@
   .search-button {
     path { fill: $imhomovies-color-primary--dark-plus; }
   }
+
+  .logotype-link {
+    path {
+      fill: $imhomovies-color-primary;
+
+      @media(min-width:$screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
 }

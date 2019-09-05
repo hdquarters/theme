@@ -88,4 +88,14 @@
   .search-button {
     path { fill: $saborinstintivo-color-primary--dark-plus; }
   }
+
+  .logotype-link {
+    path {
+      fill: $saborinstintivo-color-primary;
+
+      @media(min-width:$screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
 }
