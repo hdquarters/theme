@@ -9,13 +9,14 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-flow: row wrap;
   margin: -0.5%;
 }
 
 .video {
   background: #ddd;
+  margin: 0.5% 0;
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 25px;
