@@ -30,7 +30,10 @@
   min-height: 150px;
   text-decoration: none;
 
-  svg { fill: $color-white; }
+  svg {
+    fill: #000;
+    opacity: 0.4;
+  }
 
   &:hover { box-shadow: inset 0 0 2px rgba(0,0,0,0.2); }
 
