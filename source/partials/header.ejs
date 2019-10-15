@@ -121,10 +121,12 @@
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.privacy_policy.name') %></span>
               </a>
             </li>
-            <!-- <li class="mainMenu-item">
+            <% if (local === 'principal') { %>
+            <li class="mainMenu-item">
               <a class="mainMenu-link mainMenu-link--flag pt-br <%= page.lang === 'pt-br' ? 'on' : '' %>" href="/" itemprop="url"></a>
               <a class="mainMenu-link mainMenu-link--flag en <%= page.lang === 'en' ? 'on' : '' %>" href="/en/" itemprop="url"></a>
-            </li> -->
+            </li>
+            <% } %>
           </ul>
         </nav>
       </div>
