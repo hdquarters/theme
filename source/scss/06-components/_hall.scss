@@ -45,6 +45,13 @@
 
         font-style: normal;
 
+        span {
+          @include x-rem-fallback(font-size,1.4);
+
+          font-weight: 700;
+          margin-bottom: 5px;
+        }
+
         strong {
           @include x-rem-fallback(font-size,1.2);
 
