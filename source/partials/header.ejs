@@ -77,6 +77,11 @@
           </ul>
           <ul class="mainMenu-list mainMenu-list--other">
             <li class="mainMenu-item">
+              <a class="mainMenu-link <%= is_current(__('menu_site.dailylog.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.dailylog.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%= __('menu_site.dailylog.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item">
               <a class="mainMenu-link <%= is_current(__('menu_site.presentation.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.presentation.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.presentation.name') %></span>
               </a>
