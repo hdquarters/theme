@@ -129,8 +129,14 @@
             <% if (local === 'principal') { %>
             <li class="mainMenu-item">
               <a class="mainMenu-link mainMenu-link--flag pt-br <%= page.lang === 'pt-br' ? 'on' : '' %>" href="/" itemprop="url"></a>
-              <a class="mainMenu-link mainMenu-link--flag en <%= page.lang === 'en' ? 'on' : '' %>" href="/en/" itemprop="url"></a>
+              <a id="js-flag" class="mainMenu-link mainMenu-link--flag en <%= page.lang === 'en' ? 'on' : '' %>" href="/en/" itemprop="url" onclick="handleClick()"></a>
             </li>
+            <script>
+              document.getElementById("js-flag").addEventListener("click", function(evt){
+                evt.preventDefault()
+                window.location.href = `/en${window.location.href.replace(window.location.origin, '')}`
+              });
+            </script>
             <% } %>
           </ul>
         </nav>
