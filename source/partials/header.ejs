@@ -133,17 +133,28 @@
               <a id="js-flag-cn" class="mainMenu-link mainMenu-link--flag zh-cn <%= page.lang === 'zh-cn' ? 'on' : '' %>" href="/cn/" itemprop="url" onclick="handleClick()"></a>
             </li>
             <script>
+              var rpl = (href) => {
+                var url = href;
+                var items = [
+                  `${window.location.origin}/en`,
+                  `${window.location.origin}/cn`
+                ];
+
+                items.map(item => url.replace.(item, '')
+
+                return url;
+              }
               document.getElementById("js-flag-pt").addEventListener("click", function(evt){
                 evt.preventDefault()
-                window.location.href = window.location.href.replace(`${window.location.origin}/en`, '')
+                window.location.href = rpl(window.location.href)
               });
               document.getElementById("js-flag-en").addEventListener("click", function(evt){
                 evt.preventDefault()
-                window.location.href = `/en${window.location.href.replace(window.location.origin, '')}`
+                window.location.href = `/en${rpl(window.location.href)}`
               });
               document.getElementById("js-flag-cn").addEventListener("click", function(evt){
                 evt.preventDefault()
-                window.location.href = `/cn${window.location.href.replace(window.location.origin, '')}`
+                window.location.href = `/cn${rpl(window.location.href)}`
               });
             </script>
             <% } %>
