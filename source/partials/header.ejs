@@ -136,8 +136,10 @@
               var rpl = (href) => {
                 var url = href;
                 var items = [
-                  `${window.location.origin}/en/`,
-                  `${window.location.origin}/cn/`
+                  `${window.location.origin}`,
+                  `/en`,
+                  `/cn`,
+                  `//`
                 ];
 
                 items.map(item => {
@@ -152,11 +154,11 @@
               });
               document.getElementById("js-flag-en").addEventListener("click", function(evt){
                 evt.preventDefault()
-                window.location.href = `/en/${rpl(window.location.href)}`
+                window.location.href = `/en${rpl(window.location.href)}`
               });
               document.getElementById("js-flag-cn").addEventListener("click", function(evt){
                 evt.preventDefault()
-                window.location.href = `/cn/${rpl(window.location.href)}`
+                window.location.href = `/cn${rpl(window.location.href)}`
               });
             </script>
             <% } %>
