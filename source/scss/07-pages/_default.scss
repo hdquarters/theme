@@ -129,13 +129,26 @@
     width: 100%;
   }
 
-  .mainMenu-item {
+  .mainMenu-item,
+  .mainMenu-item--full {
     display: flex;
     justify-content: center;
     margin-left: 0;
     width: x-gridsystem-width(6);
 
     @media(min-width:$screen-tablet-portrait) {
+      width: x-gridsystem-width(4);
+    }
+  }
+
+  .mainMenu-item--full {
+    padding: 10px 0;
+    justify-content: space-around;
+    width: x-gridsystem-width(12);
+
+    @media(min-width:$screen-tablet-portrait) {
+      padding: 0;
+      justify-content: center;
       width: x-gridsystem-width(4);
     }
   }
