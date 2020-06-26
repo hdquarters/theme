@@ -129,8 +129,7 @@
     width: 100%;
   }
 
-  .mainMenu-item,
-  .mainMenu-item--full {
+  .mainMenu-item {
     display: flex;
     justify-content: center;
     margin-left: 0;
@@ -149,7 +148,6 @@
     @media(min-width:$screen-tablet-portrait) {
       padding: 0;
       justify-content: center;
-      width: x-gridsystem-width(4);
     }
   }
 
