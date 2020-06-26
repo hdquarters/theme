@@ -129,9 +129,9 @@
             <% if (local === 'principal') { %>
             <li class="mainMenu-item mainMenu-item--full">
               <a id="js-flag-pt" class="mainMenu-link mainMenu-link--flag pt-br <%= page.lang === 'pt-br' ? 'on' : '' %>" href="/" itemprop="url"></a>
-              <a id="js-flag-en" class="mainMenu-link mainMenu-link--flag en <%= page.lang === 'en' ? 'on' : '' %>" href="/en/" itemprop="url" onclick="handleClick()"></a>
+              <a id="js-flag-en" class="mainMenu-link mainMenu-link--flag en-us <%= page.lang === 'en-us' ? 'on' : '' %>" href="/en/" itemprop="url" onclick="handleClick()"></a>
               <a id="js-flag-cn" class="mainMenu-link mainMenu-link--flag zh-cn <%= page.lang === 'zh-cn' ? 'on' : '' %>" href="/cn/" itemprop="url" onclick="handleClick()"></a>
-            </li>
+              <a id="js-flag-in" class="mainMenu-link mainMenu-link--flag hi-in <%= page.lang === 'hi-in' ? 'on' : '' %>" href="/in/" itemprop="url" onclick="handleClick()"></a>            </li>
             <script>
               var rpl = (href) => {
                 var url = href;
@@ -139,6 +139,7 @@
                   `${window.location.origin}`,
                   `/en`,
                   `/cn`,
+                  `/in`,
                   `//`
                 ];
 
@@ -159,6 +160,10 @@
               document.getElementById("js-flag-cn").addEventListener("click", function(evt){
                 evt.preventDefault()
                 window.location.href = `/cn${rpl(window.location.href)}`
+              });
+              document.getElementById("js-flag-in").addEventListener("click", function(evt){
+                evt.preventDefault()
+                window.location.href = `/in${rpl(window.location.href)}`
               });
             </script>
             <% } %>
