@@ -283,7 +283,7 @@
   }
 }
 
-.nc-card-image {
+.nc-card-figure {
   align-items: center;
   background: #fbfbfb;
   display: flex;
@@ -291,8 +291,20 @@
   min-height: 128px;
   padding: 0 10px;
   width: 42px;
+}
 
-  svg { min-width: 64px; }
+.nc-card-image {
+  background: #f1f1f1;
+  border-radius: 50%;
+  padding: 10px;
+
+  svg {
+    min-width: 64px;
+  }
+}
+
+.nc-card-description {
+  width: 100%;
 }
 
 .nc-card-title {
