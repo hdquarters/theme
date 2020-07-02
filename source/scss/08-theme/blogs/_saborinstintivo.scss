@@ -2,13 +2,13 @@
   .header {
     background: $saborinstintivo-color-primary--dark;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       box-shadow: 0 4px 0 $saborinstintivo-color-primary--dark-plus;
     }
   }
 
   .page-home .header {
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       box-shadow: 0 4px 0 $saborinstintivo-color-primary--dark-plus;
     }
   }
@@ -20,7 +20,7 @@
   .header-bottom {
     background: $saborinstintivo-color-primary--dark;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       background: $color-white;
     }
   }
@@ -28,7 +28,9 @@
   .button-menu_main {
     color: $saborinstintivo-color-primary--dark;
 
-    svg { fill: $saborinstintivo-color-primary--dark; }
+    svg {
+      fill: $saborinstintivo-color-primary--dark;
+    }
   }
 
   .socialMenu-link {
@@ -42,16 +44,14 @@
   }
 
   .banner {
-    background: $saborinstintivo-color-primary--dark;
-
-    svg { fill: $saborinstintivo-color-primary--dark-plus; }
+    svg {
+      fill: $saborinstintivo-color-primary--dark-plus;
+    }
   }
 
   .banner-description {
-    background: $saborinstintivo-color-primary--dark-plus;
-
     p {
-      color: $saborinstintivo-color-primary--light;
+      color: $saborinstintivo-color-primary--dark-plus;
     }
   }
 
@@ -65,35 +65,47 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $saborinstintivo-color-article-title
+    color: $saborinstintivo-color-article-title;
   }
 
   .mainMenu-link:hover {
-    svg { fill: $saborinstintivo-color-primary--dark; }
+    svg {
+      fill: $saborinstintivo-color-primary--dark;
+    }
   }
 
   .mainMenu-link.on {
-    svg { fill: $saborinstintivo-color-primary--dark; }
+    svg {
+      fill: $saborinstintivo-color-primary--dark;
+    }
   }
 
-  .categories-link { color: $saborinstintivo-color-primary--dark; }
+  .categories-link {
+    color: $saborinstintivo-color-primary--dark;
+  }
 
   .article-title,
   .article-content h2,
   .article-content h3,
-  .article-content h4 { color: $saborinstintivo-color-primary--dark; }
+  .article-content h4 {
+    color: $saborinstintivo-color-primary--dark;
+  }
 
-  .author-description h3 { color: $saborinstintivo-color-primary--dark; }
+  .author-description h3 {
+    color: $saborinstintivo-color-primary--dark;
+  }
 
   .search-button {
-    path { fill: $saborinstintivo-color-primary--dark-plus; }
+    path {
+      fill: $saborinstintivo-color-primary--dark-plus;
+    }
   }
 
   .logotype-link {
     path {
       fill: $saborinstintivo-color-primary;
 
-      @media(min-width:$screen-desktop) {
+      @media (min-width: $screen-desktop) {
         fill: #ececec;
       }
     }

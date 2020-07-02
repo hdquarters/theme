@@ -2,13 +2,13 @@
   .header {
     background: $imhomovies-color-primary--dark;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       box-shadow: 0 4px 0 $imhomovies-color-primary--dark-plus;
     }
   }
 
   .page-home .header {
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       box-shadow: 0 4px 0 $imhomovies-color-primary--dark-plus;
     }
   }
@@ -20,7 +20,7 @@
   .header-bottom {
     background: $imhomovies-color-primary--dark;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       background: $color-white;
     }
   }
@@ -28,7 +28,9 @@
   .button-menu_main {
     color: $imhomovies-color-primary--dark;
 
-    svg { fill: $imhomovies-color-primary--dark; }
+    svg {
+      fill: $imhomovies-color-primary--dark;
+    }
   }
 
   .socialMenu-link {
@@ -42,16 +44,14 @@
   }
 
   .banner {
-    background: $imhomovies-color-primary--dark;
-
-    svg { fill: $imhomovies-color-primary--dark-plus; }
+    svg {
+      fill: $imhomovies-color-primary--dark-plus;
+    }
   }
 
   .banner-description {
-    background: $imhomovies-color-primary--dark-plus;
-
     p {
-      color: $imhomovies-color-primary--light;
+      color: $imhomovies-color-primary--dark-plus;
     }
   }
 
@@ -65,35 +65,47 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $imhomovies-color-article-title
+    color: $imhomovies-color-article-title;
   }
 
   .mainMenu-link:hover {
-    svg { fill: $imhomovies-color-primary--dark; }
+    svg {
+      fill: $imhomovies-color-primary--dark;
+    }
   }
 
   .mainMenu-link.on {
-    svg { fill: $imhomovies-color-primary--dark; }
+    svg {
+      fill: $imhomovies-color-primary--dark;
+    }
   }
 
-  .categories-link { color: $imhomovies-color-primary--dark; }
+  .categories-link {
+    color: $imhomovies-color-primary--dark;
+  }
 
   .article-title,
   .article-content h2,
   .article-content h3,
-  .article-content h4 { color: $imhomovies-color-primary--dark; }
+  .article-content h4 {
+    color: $imhomovies-color-primary--dark;
+  }
 
-  .author-description h3 { color: $imhomovies-color-primary--dark; }
+  .author-description h3 {
+    color: $imhomovies-color-primary--dark;
+  }
 
   .search-button {
-    path { fill: $imhomovies-color-primary--dark-plus; }
+    path {
+      fill: $imhomovies-color-primary--dark-plus;
+    }
   }
 
   .logotype-link {
     path {
       fill: $imhomovies-color-primary;
 
-      @media(min-width:$screen-desktop) {
+      @media (min-width: $screen-desktop) {
         fill: #ececec;
       }
     }

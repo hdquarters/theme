@@ -2,13 +2,13 @@
   .header {
     background: $foradabolha-color-primary--dark;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       box-shadow: 0 4px 0 $foradabolha-color-primary--dark-plus;
     }
   }
 
   .page-home .header {
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       box-shadow: 0 4px 0 $foradabolha-color-primary--dark-plus;
     }
   }
@@ -20,7 +20,7 @@
   .header-bottom {
     background: $foradabolha-color-primary--dark;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       background: $color-white;
     }
   }
@@ -28,7 +28,9 @@
   .button-menu_main {
     color: $foradabolha-color-primary--dark;
 
-    svg { fill: $foradabolha-color-primary--dark; }
+    svg {
+      fill: $foradabolha-color-primary--dark;
+    }
   }
 
   .socialMenu-link {
@@ -42,16 +44,14 @@
   }
 
   .banner {
-    background: $foradabolha-color-primary--dark;
-
-    svg { fill: $foradabolha-color-primary--dark-plus; }
+    svg {
+      fill: $foradabolha-color-primary--dark-plus;
+    }
   }
 
   .banner-description {
-    background: $foradabolha-color-primary--dark-plus;
-
     p {
-      color: $foradabolha-color-primary--light;
+      color: $foradabolha-color-primary--dark-plus;
     }
   }
 
@@ -65,35 +65,47 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $foradabolha-color-article-title
+    color: $foradabolha-color-article-title;
   }
 
   .mainMenu-link:hover {
-    svg { fill: $foradabolha-color-primary--dark; }
+    svg {
+      fill: $foradabolha-color-primary--dark;
+    }
   }
 
   .mainMenu-link.on {
-    svg { fill: $foradabolha-color-primary--dark; }
+    svg {
+      fill: $foradabolha-color-primary--dark;
+    }
   }
 
-  .categories-link { color: $foradabolha-color-primary--dark; }
+  .categories-link {
+    color: $foradabolha-color-primary--dark;
+  }
 
   .article-title,
   .article-content h2,
   .article-content h3,
-  .article-content h4 { color: $foradabolha-color-primary--dark; }
+  .article-content h4 {
+    color: $foradabolha-color-primary--dark;
+  }
 
-  .author-description h3 { color: $foradabolha-color-primary--dark; }
+  .author-description h3 {
+    color: $foradabolha-color-primary--dark;
+  }
 
   .search-button {
-    path { fill: $foradabolha-color-primary--dark-plus; }
+    path {
+      fill: $foradabolha-color-primary--dark-plus;
+    }
   }
 
   .logotype-link {
     path {
       fill: $foradabolha-color-primary;
 
-      @media(min-width:$screen-desktop) {
+      @media (min-width: $screen-desktop) {
         fill: #ececec;
       }
     }

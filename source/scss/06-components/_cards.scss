@@ -284,10 +284,15 @@
 }
 
 .nc-card-image {
+  align-items: center;
   background: #fbfbfb;
+  display: flex;
   margin-right: 40px;
+  min-height: 128px;
   padding: 0 10px;
   width: 42px;
+
+  svg { min-width: 64px; }
 }
 
 .nc-card-title {
