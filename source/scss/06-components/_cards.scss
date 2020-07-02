@@ -266,21 +266,25 @@
   }
 }
 
-.page-home .nc-card { display: block; }
+.page-home .nc-card {
+  display: block;
+}
 
 .nc-card-link {
+  box-shadow: 0 2px 1px #f3f3f3;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   text-decoration: none;
 
-  &:hover { text-decoration: none; }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .nc-card-image {
   background: #fbfbfb;
-  border-radius: 10px 0 0 10px;
   margin-right: 40px;
   padding: 0 10px;
   width: 42px;
