@@ -254,7 +254,6 @@
   display: none;
   float: none;
   margin-bottom: 2em;
-  overflow: hidden;
   padding-top: 1em;
   position: relative;
 
@@ -332,22 +331,23 @@
 }
 
 .nc-card-date {
+  display: flex;
+  align-items: flex-end;
   color: $color-typography--gray_light;
   font-size: 14px;
   font-weight: 700;
   position: absolute;
   bottom: 0;
-  right: 20px;
-  background: #fff;
-  padding: 4px 10px;
+  right: 10px;
   border-radius: 4px;
+  overflow: hidden;
   text-align: right;
 }
 
 .nc-card-date-year {
   @include x-rem-fallback(font-size, 4);
   color: #f9f9f9;
-  display: block;
+  display: inline-block;
   line-height: 1;
   margin-bottom: -10px;
 }
