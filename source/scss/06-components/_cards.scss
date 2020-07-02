@@ -284,10 +284,10 @@
 }
 
 .nc-card-figure {
-  align-items: center;
+  align-items: flex-end;
   background: #fbfbfb;
   display: flex;
-  margin-right: 50px;
+  margin-right: 40px;
   min-height: 128px;
   padding: 0 10px;
   width: 42px;
@@ -295,10 +295,11 @@
 
 .nc-card-image {
   background: #ffffff;
-  border-radius: 50% 50% 0 50%;
+  border-radius: 50% 50% 50% 0;
+  font-size: 0;
   padding: 20px;
   margin-left: -20px;
-  box-shadow: 0 2px 2px #ccc;
+  box-shadow: 5px 4px 2px -4px #efeded;
 
   svg {
     min-width: 40px;
@@ -306,6 +307,8 @@
 }
 
 .nc-card-description {
+  margin-right: 10px;
+  padding: 20px 0 0 0;
   width: 100%;
 }
 
@@ -332,5 +335,16 @@
   font-size: 14px;
   font-weight: 700;
   text-shadow: 0 0 2px $base-background-color;
-  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background: #fff;
+  padding: 4px 10px;
+  box-shadow: 0 1px 2px #e0e0e0;
+  border-radius: 4px;
+}
+
+.nc-card-date-year {
+  @include x-rem-fallback(font-size, 2.2);
+  display: block;
 }
