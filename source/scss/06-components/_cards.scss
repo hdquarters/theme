@@ -14,16 +14,18 @@
   padding-top: 1em;
   position: relative;
 
-  @media(min-width:$screen-tablet-portrait) {
+  @media (min-width: $screen-tablet-portrait) {
     width: x-gridsystem-width(6);
   }
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     width: x-gridsystem-width(4);
   }
 }
 
-.page-home .card { display: block; }
+.page-home .card {
+  display: block;
+}
 
 .card-content {
   box-shadow: 1px 2px 5px #ddd;
@@ -33,19 +35,19 @@
   padding-bottom: 40px;
   position: relative;
 
-  @media(min-width:$screen-tablet-portrait) {
+  @media (min-width: $screen-tablet-portrait) {
     min-height: 140px;
   }
 }
 
 .card-content--mdHeight {
-  @media(min-width:$screen-tablet-portrait) {
+  @media (min-width: $screen-tablet-portrait) {
     min-height: 170px;
   }
 }
 
 .card-content--lgHeight {
-  @media(min-width:$screen-tablet-portrait) {
+  @media (min-width: $screen-tablet-portrait) {
     min-height: 200px;
   }
 }
@@ -70,7 +72,10 @@
   padding: 10px;
   width: 100%;
 
-  &--inline { padding: 0; padding-bottom: 10px; }
+  &--inline {
+    padding: 0;
+    padding-bottom: 10px;
+  }
 }
 
 .card-footer {
@@ -84,7 +89,10 @@
   left: 0;
   width: 100%;
 
-  &--inline { padding: 0; padding-bottom: 10px; }
+  &--inline {
+    padding: 0;
+    padding-bottom: 10px;
+  }
 }
 
 .card-date {
@@ -112,7 +120,7 @@
 .card-readTime--image {
   @extend .card-readTime;
 
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 4px 0 0 0;
   color: #fff;
   position: absolute;
@@ -156,13 +164,13 @@
 
 .card-category-link {
   @extend %link;
-  @include x-rem-fallback( font-size, 1.7);
+  @include x-rem-fallback(font-size, 1.7);
 
   display: flex;
 }
 
 .card-title {
-  @include x-rem-fallback( font-size, 2.2);
+  @include x-rem-fallback(font-size, 2.2);
   color: #113a4e;
   display: table;
   font-weight: 800;
@@ -172,7 +180,7 @@
 .card-title--twoLines {
   @extend .card-title;
 
-  @media(min-width:$screen-tablet-portrait) {
+  @media (min-width: $screen-tablet-portrait) {
     margin-bottom: 10px;
     min-height: 55px;
   }
@@ -180,18 +188,22 @@
 
 .card-link {
   text-decoration: none;
-  &:hover { text-decoration: none; }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .card-description {
   @include x-clearfix;
-  @include x-rem-fallback(font-size,$font-size-small);
+  @include x-rem-fallback(font-size, $font-size-small);
   color: $color-typography;
   display: block;
   padding-top: 10px;
 }
 
-.card-count { font-size: 14px; }
+.card-count {
+  font-size: 14px;
+}
 
 .card-figure {
   overflow: hidden;
@@ -203,7 +215,11 @@
   height: auto;
   width: 100%;
 
-  &.lazy { background: #f1f1fa url(/jornadarelevante/assets/img/site/global/loading.gif) no-repeat center center; }
+  &.lazy {
+    background: #f1f1fa
+      url(/jornadarelevante/assets/img/site/global/loading.gif) no-repeat center
+      center;
+  }
 }
 
 .card-tags {
@@ -216,10 +232,80 @@
 }
 
 .card-tag {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 2px 2px 0 0;
   color: $color-white;
   margin-right: 5px;
   padding: 2px 5px;
   text-transform: uppercase;
+}
+
+// CARD 2020
+.nc-cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.nc-card {
+  @include x-column(12);
+  display: none;
+  float: none;
+  margin-bottom: 2em;
+  padding-top: 1em;
+  position: relative;
+
+  @media (min-width: $screen-tablet-portrait) {
+    width: x-gridsystem-width(6);
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: x-gridsystem-width(4);
+  }
+}
+
+.page-home .nc-card { display: block; }
+
+.nc-card-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+
+  &:hover { text-decoration: none; }
+}
+
+.nc-card-image { width: 64px }
+
+.nc-card-title {
+  @include x-rem-fallback(font-size, 2.2);
+  color: #113a4e;
+  display: table;
+  font-weight: 800;
+  width: 100%;
+}
+
+.nc-card-readTime {
+  background: #fff;
+  border-radius: 0 4px 0 4px;
+  color: #c3c3c3;
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+.nc-card-date {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: baseline;
+  color: $color-typography--gray_light;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+  text-shadow: 0 0 2px $base-background-color;
 }
