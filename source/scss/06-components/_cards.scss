@@ -287,19 +287,21 @@
   align-items: center;
   background: #fbfbfb;
   display: flex;
-  margin-right: 40px;
+  margin-right: 50px;
   min-height: 128px;
   padding: 0 10px;
   width: 42px;
 }
 
 .nc-card-image {
-  background: #f1f1f1;
-  border-radius: 50%;
-  padding: 10px;
+  background: #ffffff;
+  border-radius: 50% 50% 0 50%;
+  padding: 20px;
+  margin-left: -20px;
+  box-shadow: 0 2px 2px #ccc;
 
   svg {
-    min-width: 64px;
+    min-width: 40px;
   }
 }
 
