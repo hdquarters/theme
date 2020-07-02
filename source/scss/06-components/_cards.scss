@@ -249,6 +249,11 @@
   margin-right: -10px;
 }
 
+.nc-cards--highlight {
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
 .nc-card {
   @include x-column(12);
   display: none;
@@ -264,6 +269,10 @@
   @media (min-width: $screen-desktop) {
     width: x-gridsystem-width(4);
   }
+}
+
+.nc-cards--highlight .nc-card {
+  margin-bottom: 10px;
 }
 
 .page-home .nc-card {
@@ -282,7 +291,7 @@
   position: relative;
 
   &:hover {
-    box-shadow: 0 0 0px 1000px rgba(0,0,0,0.4);
+    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.4);
     transform: scale(1.5);
     transition: transform 100ms ease-in-out;
     text-decoration: none;
@@ -294,7 +303,7 @@
   align-items: flex-end;
   background: #fbfbfb;
   display: flex;
-  margin-right: 40px;
+  margin-right: 50px;
   min-height: 128px;
   padding: 0 10px;
   width: 42px;
@@ -305,7 +314,7 @@
   border-radius: 50% 50% 50% 0;
   font-size: 0;
   padding: 20px;
-  margin-left: -20px;
+  margin-left: -10px;
   box-shadow: 5px 4px 2px -4px #efeded;
 
   svg {
