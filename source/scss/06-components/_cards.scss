@@ -278,7 +278,13 @@
   &:hover { text-decoration: none; }
 }
 
-.nc-card-image { width: 64px }
+.nc-card-image {
+  background: #fbfbfb;
+  border-radius: 10px 0 0 10px;
+  margin-right: 40px;
+  padding: 0 10px;
+  width: 42px;
+}
 
 .nc-card-title {
   @include x-rem-fallback(font-size, 2.2);
@@ -295,17 +301,13 @@
   display: block;
   font-weight: 400;
   font-size: 12px;
-  padding: 2px 5px;
+  padding: 5px 0;
 }
 
 .nc-card-date {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: baseline;
   color: $color-typography--gray_light;
   font-size: 14px;
   font-weight: 700;
-  text-align: right;
   text-shadow: 0 0 2px $base-background-color;
+  text-align: right;
 }
