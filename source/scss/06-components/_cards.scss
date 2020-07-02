@@ -321,13 +321,12 @@
 }
 
 .nc-card-description {
-  padding: 10px 0 10px;
+  padding: 10px 10px 0 0;
   width: 100%;
 }
 
 .nc-card-title {
   @include x-rem-fallback(font-size, 2.2);
-  color: #113a4e;
   display: table;
   font-weight: 800;
   width: 100%;
