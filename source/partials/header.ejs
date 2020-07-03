@@ -75,59 +75,64 @@
               </li>
             <% } %>
           </ul>
+          <%
+            var isCurrent = (path) => {
+              return is_current(path)
+            }
+          %>
           <ul class="mainMenu-list mainMenu-list--other">
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.home.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.home.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.home.url'))  ? 'on' : ''%>" href="<%= __('menu_site.home.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.home.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.dailylog.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.dailylog.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.dailylog.url'))  ? 'on' : ''%>" href="<%= __('menu_site.dailylog.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.dailylog.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.presentation.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.presentation.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.presentation.url'))  ? 'on' : ''%>" href="<%= __('menu_site.presentation.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.presentation.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.profile.url').replace('/', '')) ? 'on' : ''%>" href="<%= __('menu_site.profile.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.profile.url')) ? 'on' : ''%>" href="<%= __('menu_site.profile.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%- __('menu_site.profile.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.videos.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.videos.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.videos.url'))  ? 'on' : ''%>" href="<%= __('menu_site.videos.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.videos.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.organizations.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.organizations.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.organizations.url'))  ? 'on' : ''%>" href="<%= __('menu_site.organizations.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.organizations.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.projects.url').replace('/', '')) ? 'on' : ''%>" href="<%= __('menu_site.projects.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.projects.url')) ? 'on' : ''%>" href="<%= __('menu_site.projects.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.projects.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.following.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.following.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.following.url'))  ? 'on' : ''%>" href="<%= __('menu_site.following.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.following.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.hall_of_fame.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.hall_of_fame.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.hall_of_fame.url'))  ? 'on' : ''%>" href="<%= __('menu_site.hall_of_fame.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.hall_of_fame.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.styleguide.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.styleguide.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.styleguide.url'))  ? 'on' : ''%>" href="<%= __('menu_site.styleguide.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.styleguide.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= is_current(__('menu_site.privacy_policy.url').replace('/', ''))  ? 'on' : ''%>" href="<%= __('menu_site.privacy_policy.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.privacy_policy.url'))  ? 'on' : ''%>" href="<%= __('menu_site.privacy_policy.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.privacy_policy.name') %></span>
               </a>
             </li>
