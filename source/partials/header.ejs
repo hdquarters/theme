@@ -77,7 +77,8 @@
           </ul>
           <%
             var isCurrent = (path) => {
-              return is_current(path)
+              var url = path.length > 1 ? path.replace('/', '') : path;
+              return is_current(url)
             }
           %>
           <ul class="mainMenu-list mainMenu-list--other">
