@@ -76,7 +76,7 @@
             <% } %>
           </ul>
           <%
-            var isCurrent = (path) => path.length > 4 ? is_current(path) : is_current(path) && is_home();
+            var isCurrent = (path) => path === `/${page.path.replace('index.html', '')}`;
           %>
           <ul class="mainMenu-list mainMenu-list--other">
             <li class="mainMenu-item">
