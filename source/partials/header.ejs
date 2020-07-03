@@ -76,10 +76,7 @@
             <% } %>
           </ul>
           <%
-            var isCurrent = (path) => {
-              var url = path.length > 1 ? path.replace('/', '') : path;
-              return is_current(url)
-            }
+            var isCurrent = (path) => path.length > 4 ? is_current(path) : is_current(path) && is_home();
           %>
           <ul class="mainMenu-list mainMenu-list--other">
             <li class="mainMenu-item">
