@@ -78,7 +78,10 @@
   width: 100vw;
 }
 .advert {
+  border: 10px double rgba(0, 0, 0, 0.4);
   max-width: 1024px;
+  overflow: hidden;
+  position: relative;
   width: 100%;
 }
 
