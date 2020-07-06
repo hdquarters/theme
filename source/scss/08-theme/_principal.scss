@@ -2,13 +2,13 @@
   .header {
     background: $nerdcalistenico-color-primary--dark;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       box-shadow: 0 4px 0 $nerdcalistenico-color-primary--dark-plus;
     }
   }
 
   .page-home .header {
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       box-shadow: 0 4px 0 $nerdcalistenico-color-primary--dark-plus;
     }
   }
@@ -20,7 +20,7 @@
   .header-bottom {
     background: $nerdcalistenico-color-primary--dark;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       background: $color-white;
     }
   }
@@ -28,7 +28,9 @@
   .button-menu_main {
     color: $nerdcalistenico-color-primary--dark;
 
-    svg { fill: $nerdcalistenico-color-primary--dark; }
+    svg {
+      fill: $nerdcalistenico-color-primary--dark;
+    }
   }
 
   .socialMenu-link {
@@ -44,7 +46,9 @@
   .banner {
     background: $nerdcalistenico-color-primary--dark;
 
-    svg { fill: $nerdcalistenico-color-primary--dark-plus; }
+    svg {
+      fill: $nerdcalistenico-color-primary--dark-plus;
+    }
   }
 
   .banner-description {
@@ -61,15 +65,19 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $nerdcalistenico-color-article-title
+    color: $nerdcalistenico-color-article-title;
   }
 
   .mainMenu-link:hover {
-    svg { fill: $nerdcalistenico-color-primary--dark; }
+    svg {
+      fill: $nerdcalistenico-color-primary--dark;
+    }
   }
 
   .mainMenu-link.on {
-    svg { fill: $nerdcalistenico-color-primary--dark; }
+    svg {
+      fill: $nerdcalistenico-color-primary--dark;
+    }
   }
 
   .logotype-link {
@@ -77,4 +85,8 @@
       fill: $nerdcalistenico-color-primary;
     }
   }
+}
+
+.adverts {
+  background: $nerdcalistenico-color-article-title;
 }
