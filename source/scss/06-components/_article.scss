@@ -4,8 +4,9 @@
 }
 
 .article-title {
-  @include x-rem-fallback( font-size, $font-size-xxx-large);
+  @include x-rem-fallback(font-size, $font-size-xxx-large);
   display: table;
+  line-height: 1;
   font-weight: 800;
   margin-top: 12px;
   width: 100%;
@@ -23,9 +24,9 @@
 }
 
 .article-meta {
-  @include x-rem-fallback(font-size,$font-size-small);
-  @include x-rem-fallback(margin-top,1);
-  @include x-rem-fallback(margin-bottom,2);
+  @include x-rem-fallback(font-size, $font-size-small);
+  @include x-rem-fallback(margin-top, 1);
+  @include x-rem-fallback(margin-bottom, 2);
 
   color: #9a9c9c;
   line-height: $font-line-height-regular;
@@ -37,13 +38,13 @@
 }
 
 .article-meta-read {
-  @include x-rem-fallback(font-size,1.4);
+  @include x-rem-fallback(font-size, 1.4);
 
   color: #ccc8d4;
 }
 
 .article-content {
-  @include x-rem-fallback(font-size,$font-size-regular);
+  @include x-rem-fallback(font-size, $font-size-regular);
   color: $color-typography;
   line-height: $font-line-height-regular;
   margin-bottom: 0.5em;
@@ -54,26 +55,26 @@
   h2 {
     @include x-rem-fallback(font-size, $font-size-xx-large);
     font-weight: 800;
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   h3 {
     @include x-rem-fallback(font-size, $font-size-large);
     font-weight: 800;
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   h4 {
     @include x-rem-fallback(font-size, $font-size-regular);
     font-weight: 800;
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   blockquote {
     border-left: 5px solid $color-secundary--light;
     color: #a4a5a8;
     font-size: 1em;
-    font-family: "Georgia",serif;
+    font-family: "Georgia", serif;
     margin: 0 0 20px;
     padding: 10px 20px;
   }
@@ -86,7 +87,9 @@
     color: $color-secundary;
   }
 
-  blockquote ol { padding: 10px; }
+  blockquote ol {
+    padding: 10px;
+  }
 
   blockquote ol li {
     font-size: 0.8em;
@@ -96,15 +99,19 @@
   blockquote ul li,
   blockquote ul li p {
     margin-bottom: 5px;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     font-size: 17px;
     font-size: 1.7rem;
     list-style: none;
   }
 
-  strong { font-weight: 700; }
+  strong {
+    font-weight: 700;
+  }
 
-  a { @extend %link; }
+  a {
+    @extend %link;
+  }
 
   hr {
     border: 0;
@@ -121,8 +128,9 @@
   ol,
   dl,
   table,
-  iframe
-  { @include x-rem-fallback( margin-bottom, 2); }
+  iframe {
+    @include x-rem-fallback(margin-bottom, 2);
+  }
 
   table {
     display: block;
@@ -131,7 +139,9 @@
     word-break: keep-all;
   }
 
-  tr { background-color: $color-secundary--light; }
+  tr {
+    background-color: $color-secundary--light;
+  }
 
   th,
   td {
@@ -139,12 +149,14 @@
     border: 1px solid $color-secundary--light;
   }
 
-  th { font-weight: bold; }
+  th {
+    font-weight: bold;
+  }
 
   p {
     line-height: 1.4;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       text-align: justify;
     }
   }
@@ -159,7 +171,7 @@
   }
 
   h2 code {
-    @include x-rem-fallback( font-size, 2);
+    @include x-rem-fallback(font-size, 2);
     font-weight: 400;
   }
 
@@ -192,7 +204,7 @@
 // load more
 .js-load_more-item,
 .page-articles .js-load_more-item,
-.page-category  .js-load_more-item {
+.page-category .js-load_more-item {
   display: none;
 }
 
@@ -207,7 +219,7 @@
   margin: 20px -10px;
   padding: 10px;
 
-  @media(min-width:$screen-tablet-portrait) {
+  @media (min-width: $screen-tablet-portrait) {
     margin: 20px 0;
     padding: 20px 10px;
   }
@@ -228,7 +240,7 @@
   align-items: center;
   margin-left: 10px;
 
-  @media(min-width:$screen-tablet-portrait) {
+  @media (min-width: $screen-tablet-portrait) {
     @include x-rem-fallback(font-size, $font-size-regular);
   }
 
@@ -238,7 +250,7 @@
     font-weight: 700;
     margin-bottom: 10px;
 
-    @media(min-width:$screen-tablet-portrait) {
+    @media (min-width: $screen-tablet-portrait) {
       @include x-rem-fallback(font-size, $font-size-x-large);
     }
   }
@@ -257,18 +269,18 @@
 .article-content a.lightbox {
   display: none;
 
-	position: fixed;
+  position: fixed;
   z-index: 10000;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
   cursor: pointer;
 }
 
 .article-content a.lightbox img {
-	width: auto;
+  width: auto;
   height: auto;
   margin: auto;
   max-width: 100%;
@@ -280,6 +292,6 @@
 }
 
 .article-content a.lightbox:target {
-	outline: none;
-	display: block;
+  outline: none;
+  display: block;
 }
