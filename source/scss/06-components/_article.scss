@@ -56,18 +56,21 @@
     @include x-rem-fallback(font-size, $font-size-xx-large);
     font-weight: 800;
     line-height: 1.2;
+    margin-bottom: 10px;
   }
 
   h3 {
     @include x-rem-fallback(font-size, $font-size-large);
     font-weight: 800;
     line-height: 1.2;
+    margin-bottom: 10px;
   }
 
   h4 {
     @include x-rem-fallback(font-size, $font-size-regular);
     font-weight: 800;
     line-height: 1.2;
+    margin-bottom: 10px;
   }
 
   blockquote {
