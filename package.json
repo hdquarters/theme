@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/org-descco/blogtheme.git"
+    "url": "git+https://github.com/hdquarters/blogtheme.git"
   },
   "keywords": [
     "scss",
@@ -18,9 +18,9 @@
   ],
   "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://nerdcalistenico.com.br)",
   "bugs": {
-    "url": "https://github.com/org-descco/blogtheme/issues"
+    "url": "https://github.com/hdquarters/blogtheme/issues"
   },
-  "homepage": "https://github.com/org-descco/blogtheme#readme",
+  "homepage": "https://github.com/hdquarters/blogtheme#readme",
   "release-it": {
     "github": {
       "release": true
