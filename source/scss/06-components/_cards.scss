@@ -253,7 +253,7 @@
 .nc-card {
   @include x-column(12);
   display: none;
-  float: none;
+  flex-direction: row;
   margin-bottom: 2em;
   padding-top: 1em;
   position: relative;
@@ -272,7 +272,7 @@
 }
 
 .page-home .nc-card {
-  display: block;
+  display: flex;
 }
 
 .nc-card-link {
