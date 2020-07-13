@@ -278,6 +278,7 @@
 
 .nc-card-link {
   background: #fff;
+  box-shadow: 0 2px 1px #f3f3f3;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -288,15 +289,17 @@
   width: 100%;
 
   &:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 0px 5000px rgba(0, 0, 0, 0.4),
-      0 0 8px 2px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-    padding-left: 10px;
-    transform: scale(1.5);
-    transition: transform 100ms ease-in-out;
-    text-decoration: none;
-    z-index: 2;
+    @media (min-width: $screen-desktop) {
+      border-radius: 4px;
+      box-shadow: 0 0 0px 5000px rgba(0, 0, 0, 0.4),
+        0 0 8px 2px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      padding-left: 10px;
+      transform: scale(1.5);
+      transition: transform 100ms ease-in-out;
+      text-decoration: none;
+      z-index: 2;
+    }
   }
 }
 
@@ -316,6 +319,10 @@
   padding: 20px;
   margin-left: -10px;
   box-shadow: 5px 4px 2px -4px #efeded;
+
+  &:hover {
+    box-shadow: 5px 4px 2px -4px #efeded, inset 0 0 15px #efeded;
+  }
 
   svg {
     min-width: 40px;
