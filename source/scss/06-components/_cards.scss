@@ -254,6 +254,7 @@
   @include x-column(12);
   display: none;
   flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 2em;
   padding-top: 1em;
   position: relative;
@@ -277,7 +278,6 @@
 
 .nc-card-link {
   background: #fff;
-  box-shadow: 0 2px 1px #f3f3f3;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -285,12 +285,14 @@
   transition: transform 100ms ease-in-out;
   text-decoration: none;
   position: relative;
+  width: 100%;
 
   &:hover {
     border-radius: 4px;
     box-shadow: 0 0 0px 5000px rgba(0, 0, 0, 0.4),
       0 0 8px 2px rgba(0, 0, 0, 0.4);
     overflow: hidden;
+    padding-left: 10px;
     transform: scale(1.5);
     transition: transform 100ms ease-in-out;
     text-decoration: none;
@@ -300,12 +302,11 @@
 
 .nc-card-figure {
   align-items: flex-end;
-  background: #fbfbfb;
+  background: #fff;
+  box-shadow: inset 42px 0 0 #fbfbfb, 0 2px 1px #f3f3f3;
   display: flex;
-  margin-right: 40px;
   min-height: 128px;
   padding: 0 10px;
-  width: 42px;
 }
 
 .nc-card-image {
