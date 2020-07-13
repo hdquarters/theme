@@ -351,6 +351,20 @@
   display: inline-block;
   padding: 2px 4px;
   border-radius: 4px;
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+  background: #fff;
+  left: 15px;
+  max-width: 75px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:hover {
+    box-shadow: inset 0 0 5px #ececec;
+    max-width: inherit;
+  }
 }
 
 .nc-card-readTime {
