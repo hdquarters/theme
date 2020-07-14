@@ -283,19 +283,18 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  padding-left: 10px;
+  position: relative;
   transition: transform 100ms ease-in-out;
   text-decoration: none;
-  position: relative;
   width: 100%;
 
   &:hover {
     @media (min-width: $screen-desktop) {
-      border-radius: 4px;
       box-shadow: 0 0 0px 5000px rgba(0, 0, 0, 0.4),
         0 0 8px 2px rgba(0, 0, 0, 0.4);
       overflow: hidden;
-      padding-left: 10px;
-      transform: scale(1.1);
+      transform: scale(1.02);
       transition: transform 100ms ease-in-out;
       text-decoration: none;
       z-index: 2;
@@ -309,7 +308,7 @@
   box-shadow: inset 42px 0 0 #fbfbfb, 0 2px 1px #f3f3f3;
   display: flex;
   min-height: 128px;
-  padding: 0 10px;
+  padding: 0 2px 0 10px;
 }
 
 .nc-card-image {
@@ -345,16 +344,16 @@
 }
 
 .nc-card-category {
-  color: #c3c3c3;
+  color: #fff;
   font-size: 14px;
-  border: 1px solid #ececec;
+  border: 1px solid #333;
   display: inline-block;
   padding: 2px 4px;
   border-radius: 4px;
   position: absolute;
   top: 15px;
   z-index: 1;
-  background: #fff;
+  background: #000;
   left: 15px;
   max-width: 75px;
   text-overflow: ellipsis;
@@ -362,7 +361,7 @@
   white-space: nowrap;
 
   &:hover {
-    box-shadow: inset 0 0 5px #ececec;
+    box-shadow: inset 0 0 5px #ccc;
     max-width: inherit;
   }
 }
