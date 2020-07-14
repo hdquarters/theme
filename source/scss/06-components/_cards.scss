@@ -253,7 +253,7 @@
 .nc-card {
   @include x-column(12);
   display: none;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 2em;
   padding-top: 1em;
@@ -295,7 +295,7 @@
         0 0 8px 2px rgba(0, 0, 0, 0.4);
       overflow: hidden;
       padding-left: 10px;
-      transform: scale(1.5);
+      transform: scale(1.1);
       transition: transform 100ms ease-in-out;
       text-decoration: none;
       z-index: 2;
@@ -397,4 +397,27 @@
   display: inline-block;
   line-height: 1;
   margin-bottom: -10px;
+}
+
+.nc-card-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.nc-card-thumbnail {
+  box-shadow: inset 100px 0 0 #fbfbfb;
+  padding-left: 42px;
+
+  &:hover .nc-card-thumbnail-image {
+    transform: scale(1.5);
+  }
+}
+
+.nc-card-thumbnail-figure {
+  overflow: hidden;
+}
+
+.nc-card-thumbnail-image {
+  box-shadow: 0 3px 3px #ccc;
+  transition: all 0.5s ease-in-out;
 }
