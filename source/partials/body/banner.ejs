@@ -1,0 +1,24 @@
+<%
+
+const getTexts = name => {
+  switch(name) {
+    case 'hemersonvianna':
+      return {
+        name: 'Hemerson Vianna',
+        text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre as áreas de TI, voltadas para o desenvolvimento web.',
+        text2: 'é o nome do autor desse site e tem esse como o principal blog que é ligado à sua profissão.',
+      }
+  }
+}
+
+const banner = getTexts(projectName);
+%>
+<section>
+  <h1 class="banner">
+    <svg xmlns="http://www.w3.org/2000/svg" height="100"><use href="#<%- projectName %>" /></svg>
+  </h1>
+</section>
+<div class="banner-description">
+  <p><%- banner.text1 %></p>
+  <p><strong class="text--hl"><%- banner.name %></strong> <%- banner.text2 %></p>
+</div>

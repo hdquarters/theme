@@ -25,11 +25,11 @@ title: Início
     </ul>
   </div>
 
-  <%- include('../../../node_modules/@descco/blogtheme/source/partials/googleads/hemersonvianna/3-category-1.ejs') %>
+  <%- include('../partials/googleads/hemersonvianna/3-category-1.ejs') %>
 
   <h2 class="page-subtitle--section"><%= page.category %></h2>
 <% } else { %>
-  <%- include('../../../node_modules/@descco/blogtheme/source/partials/googleads/hemersonvianna/1-home-1.ejs') %>
+  <%- include('../partials/googleads/hemersonvianna/1-home-1.ejs') %>
 
   <div class="categories">
     <h3 class="categories-title">
@@ -51,19 +51,6 @@ title: Início
         <% } %>
       <% }) %>
     </ul>
-
-    <% /*
-    <select>
-      <option value="">Selecione um filtro</option>
-      site.categories.sort('name').map(category => {
-        var icon = category.name.replace(' ', '').toLowerCase()
-        var name = category.name.toLowerCase()
-        if (!category.parent) {
-          <option value="url_for(category.path)">name</option>
-        }
-      })
-    </select>
-    */ %>
   </div>
 <% } %>
 
@@ -74,7 +61,7 @@ title: Início
 <% } %>
   <div class="nc-cards">
   	<% page.posts.each(function(post, idx){ %>
-  		<%- partial('_partial/item-post', {post: post, index: true, idx: idx}) %>
+  		<%- include('../partials/body/card', {post: post, index: true, idx: idx}) %>
   	<% }) %>
   </div>
   <% if (!is_home()) { %>
