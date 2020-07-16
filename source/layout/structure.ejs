@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-BR" xml:lang="pt-BR" itemscope itemtype="https://schema.org/Organization">
+<%- partial('_partial/head') %>
+  <body class="hemersonvianna page-<%- is_home() ? 'home' : page.name %>">
+    <%- include('../partials/svg/blogs.ejs') %>
+    <%- include('../partials/svg/social.ejs') %>
+
+    <%- include('../partials/svg/hemersonvianna.ejs') %>
+
+    <div class="search" id="site_search">
+      <p>
+        <input class="search-input" type="text" id="local-search-input" name="q" results="0" placeholder="Pesquisar por.." autocomplete="off">
+        <button class="search-close" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100"><path fill-rule="evenodd" clip-rule="evenodd" d="M82.18 0h5.427c.554.303 1.133.568 1.66.912 9.256 6.02 14.774 14.166 3.984 23.845-7.775 6.977-14.865 14.72-22.248 22.134-.876.88-1.673 1.84-2.67 2.94 9.204 9.19 18.193 18.088 27.088 27.08 5.198 5.256 5.117 11.024-.024 16.363-.627.65-1.27 1.287-1.917 1.92-5.64 5.523-11.33 5.58-16.91.047-7.98-7.913-15.893-15.895-23.845-23.837-.975-.974-2.013-1.885-3.108-2.905-.993.908-1.77 1.567-2.488 2.282-8.32 8.308-16.58 16.673-24.96 24.916-4.96 4.884-10.89 4.96-15.753.075C4.003 93.35 2.122 90.397 0 87.683V82.25c3.427-3.96 6.685-8.08 10.316-11.84 6.693-6.932 13.605-13.65 20.708-20.74C22.63 41.276 14.482 33.244 6.49 25.06 4.104 22.616 2.15 19.746 0 17.07v-5.43C2.604 6.486 6.482 2.608 11.63 0h5.426c3.767 3.25 7.7 6.327 11.267 9.78 7.108 6.883 14.018 13.973 21.164 21.132 1.21-1.117 2.167-1.94 3.056-2.83 7.39-7.38 14.707-14.836 22.183-22.13C76.99 3.745 79.683 1.973 82.18 0z"/></svg>
+        </button>
+      </p>
+      <div class="search-results" id="local-search-result"></div>
+    </div>
+    <%- include('../partials/body/google-analytics.ejs') %>
+    <div class="wrapper">
+      <%- include('../partials/body/header.ejs', {themeName: 'hemersonvianna', local: 'hemersonvianna'}) %>
+
+      <% if (is_home()) { %>
+        <section>
+          <h1 class="banner">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100"><use href="#hemersonvianna" /></svg>
+          </h1>
+        </section>
+        <div class="banner-description">
+          <p>Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre as áreas de TI, voltadas para o desenvolvimento web.</p>
+          <p><strong class="text--hl">Hemerson Vianna</strong> é o nome do autor desse site e tem esse como o principal blog que é ligado à sua profissão.</p>
+        </div>
+
+        <div class="nc-cards--highlight">
+          <div class="container">
+            <div class="nc-cards">
+              <%
+                const list = ['artigos/personal/o-ano-que-mudou-a-minha-vida/', 'artigos/personal/o-ano-dos-desafios/', 'artigos/git/fluxo-e-versionamento-semantico-com-git/']
+                page.posts.sort('_id').each(function(post){
+                  if (list.indexOf(post.path) >= 0) {
+              %>
+                <%- partial('_partial/item-post', {post: post, index: false}) %>
+              <%
+                  }
+                })
+              %>
+            </div>
+          </div>
+        </div>
+      <% } %>
+
+      <div class="content">
+        <div class="container">
+          <%
+            var categoriesPage = page.layout === 'categories';
+            var isDaysOfCode = page.layout === '2019'
+            var hasBreadcrumb = is_home() || is_post() || is_category() || categoriesPage || isDaysOfCode;
+            var paths = page.path.split('/');
+            var path = '/hemersonvianna';
+            if (hasBreadcrumb){
+          %>
+           <div class="breadcrumb">
+            <ul class="breadcrumb-list">
+              <li class="breadcrumb-item">
+                <a class="breadcrumb-link" href="/">NC</a>
+                <svg class="breadcrumb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="141.887 206 100 100"><path d="M173.48 206h-26.563l31.314 50-31.313 50h26.562l31.314-50"/><path d="M206.572 206H180.01l31.313 50-31.313 50h26.56l31.317-50"/></svg>
+              </li>
+              <% if (is_home()) { %>
+                <li class="breadcrumb-item">hemerson vianna</li>
+              <% } else { %>
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link" href="<%= path %>">hemerson vianna</a>
+                  <svg class="breadcrumb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="141.887 206 100 100"><path d="M173.48 206h-26.563l31.314 50-31.313 50h26.562l31.314-50"/><path d="M206.572 206H180.01l31.313 50-31.313 50h26.56l31.317-50"/></svg>
+                </li>
+              <% } %>
+              <% for(var i = 0; i < paths.length-1; i++) {
+                  var text = paths[i].replace(/-/g, ' ').toLowerCase()
+              %>
+                <% if(i === paths.length-2) { %>
+                  <li class="breadcrumb-item"><%- text %></li>
+                <% } else { %>
+                  <% path = path+'/'+paths[i] %>
+                  <li class="breadcrumb-item">
+                    <a class="breadcrumb-link" href="<%= path %>"><%- text %></a>
+                    <svg class="breadcrumb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="141.887 206 100 100"><path d="M173.48 206h-26.563l31.314 50-31.313 50h26.562l31.314-50"/><path d="M206.572 206H180.01l31.313 50-31.313 50h26.56l31.317-50"/></svg>
+                  </li>
+                <% } %>
+              <% } %>
+            </ul>
+          </div>
+          <% } %>
+          <div class="body">
+          <%- body %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/body/snackbar.ejs') %>
+    <%- include('../partials/service-worker.ejs') %>
+    <% if (is_post()){ %>
+      <%- include('../partials/body/disqus.ejs') %>
+    <% } %>
+    <script src="/hemersonvianna/assets/js/site/scripts.js?v=4.0"></script>
+  </body>
+</html>

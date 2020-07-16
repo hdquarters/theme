@@ -1,0 +1,92 @@
+<script type="application/ld+json">
+{ "@context": "https://schema.org",
+ "@type": "NewsArticle",
+ "headline": "<%- post.title %>",
+ "image": "https://nerdcalistenico.com.br/hemersonvianna/assets/img/site/global/compartilhar.jpg",
+ "author": {
+    "@type": "Person",
+    "name": "Hemerson Vianna"
+  },
+ "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nerdcalistenico.com.br<%- url_for(post.path) %>"
+  },
+ "url": "<%- url_for(post.path) %>",
+ "datePublished": "<%- moment(post.date).toISOString() %>",
+ "dateCreated": "<%- moment(post.date).toISOString() %>",
+ "dateModified": "<%- moment(post.updated).toISOString() %>",
+ "articleBody": "<%- strip_html(post.content.replace(/\\/g,"/").replace(/"/g, "'")) %>",
+ "publisher": {
+    "@type": "Organization",
+    "name":"Nerd Calistênico",
+    "url":"https:\/\/nerdcalistenico.com.br",
+    "logo":{
+    "@type":"ImageObject",
+      "url":"https://nerdcalistenico.com.br/assets/img/site/global/apple-touch-icon.png",
+      "contentUrl":"https://nerdcalistenico.com.br/assets/img/site/global/apple-touch-icon.png",
+      "width":"200",
+      "height":"200"
+      }
+    }
+  }
+ }
+</script>
+
+<%
+  const calcRT = text => {
+    const wordsPerMinute = 200;
+    let result;
+    text =  strip_html(text) || "";
+    let textLength = text.split(" ").length;
+
+    if(textLength > 0){
+      let value = Math.ceil(textLength / wordsPerMinute);
+      result = `${value} min`;
+    }
+    return result;
+  };
+%>
+
+<article class="nc-card js-load_more-item" role="article">
+  <% if(index && post.thumbnail) { %>
+    <a class="nc-card-thumbnail" href="<%- url_for(post.path) %>">
+      <figure class="nc-card-thumbnail-figure">
+        <% if(idx > 8) { %>
+          <img class="nc-card-thumbnail-image lazy" src="/assets/img/site/global/transparent.png" data-src="/hemersonvianna/assets/img/site/articles/thumbnail/<%- post.thumbnail %>.jpg" alt="<%- post.title %>" width="340" height="120">
+        <% } else { %>
+          <img class="nc-card-thumbnail-image" src="/hemersonvianna/assets/img/site/articles/thumbnail/<%- post.thumbnail %>.jpg" alt="<%- post.title %>" width="340" height="120">
+        <% } %>
+      </figure>
+    </a>
+  <% } %>
+  <div class="nc-card-body">
+    <figure class="nc-card-figure">
+      <%
+        var category = null;
+        post.categories.map(item => {
+          category = item.name.replace(' ', '').toLowerCase()
+      %>
+      <a href="<%- url_for(item.path) %>" class="nc-card-image">
+        <svg height="40" width="40"><use xlink:href="#<%- category %>" /></svg>
+      </a>
+      <%
+        })
+      %>
+    </figure>
+    <a class="nc-card-link" href="<%- url_for(post.path) %>">
+      <dl class="nc-card-description">
+        <dt class="nc-card-title"><%- post.title %></dt>
+        <dd class="nc-card-readTime"><%- calcRT(post.content); %> de leitura</dd>
+        <dd class="nc-card-date">
+          <%
+            var arrayDate = date(post.date, config.date_format).split('.')
+            var date = arrayDate[0] + '/' + arrayDate[1]
+            var year = arrayDate[2]
+          %>
+          <strong class="nc-card-date-dayMonth"><%- date %></strong>
+          <span class="nc-card-date-year">/<%- year %></span>
+        </dd>
+      </dl>
+    </a>
+  </div>
+</article>

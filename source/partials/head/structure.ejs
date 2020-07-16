@@ -1,0 +1,107 @@
+<%
+  var title;
+  var description = page.description;
+  // title
+  if(is_home()) {
+    title = theme.title+" | "+config.title;
+  } else if (is_category()){
+    title = page.category+" | "+ config.author +" | "+config.title;
+    page.name = 'category';
+  } else {
+    title = page.title+" | "+ config.author +" | "+config.title;
+  }
+  title = titlecase(title);
+
+  // description
+  if(is_home()) {
+    description = theme.description;
+  } else if (is_post()){
+    page.name = 'article';
+    description = page.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 150) + '...' ;
+  }
+
+  // image
+  var image = theme.theme_url +"/assets/img/site/global/compartilhar.png";
+%>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <title><%- title %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="preconnect" crossorigin="" href="//stats.g.doubleclick.net">
+  <link rel="preconnect" crossorigin="" href="//tpc.googlesyndication.com">
+  <link rel="preconnect" crossorigin="" href="//www.google-analytics.com">
+  <link rel="preconnect" href="//pagead2.googlesyndication.com">
+  <link rel="preconnect" href="//www.googletagmanager.com">
+
+  <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Cabin+Condensed:400,700" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin+Condensed:400,700">
+
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//ssl.google-analytics.com">
+  <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="//googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="//tpc.googlesyndication.com">
+  <link rel="dns-prefetch" href="//stats.g.doubleclick.net">
+  <link rel="dns-prefetch" href="//www.gstatic.com">
+
+  <meta name="distribution" content="global">
+  <meta name="revisit-after" content="1 days">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="referrer" content="always">
+  <meta name="description" content="<%- description %>">
+
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- facebook -->
+  <meta property="og:site_name" content="<%- theme.site_name %>" />
+  <meta property="og:title" content="<%- title %> | <%- config.title %>" />
+  <meta property="og:type"  content="website" />
+  <meta property="og:url" content="<%- url.replace('index.html', '') %>" />
+  <meta property="og:description" content="<%- description %>" />
+  <meta property="og:image" content="<%- image %>" />
+  <meta property="fb:app_id" content="318373612399015">
+
+  <!-- twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="<%- title %>">
+  <meta property="twitter:description" content="<%- description %>">
+  <meta property="twitter:image" content="<%- image %>">
+
+  <!-- component schema.org -->
+  <meta name="title" content="<%- title %>">
+  <meta name="description" content="<%- description %>">
+  <!-- <meta itemprop="name" content="<%- theme.site_name %>"> -->
+  <!-- <meta itemprop="description" content="<%- description %>"> -->
+  <meta itemprop="image" content="<%- image %>">
+  <!-- <meta itemprop="url" content="<%- url.replace('index.html', '') %>"> -->
+
+  <link rel="image_src" href="<%- image %>">
+
+  <meta name="geo.country" content="BR">
+  <meta name="geo.region" content="RJ">
+  <meta name="geo.placename" content="Rio de Janeiro">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" href="https://nerdcalistenico.com.br/assets/img/site/global/apple-touch-icon.png">
+  <link rel="shortcut icon" href="https://nerdcalistenico.com.br/assets/img/site/global/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://nerdcalistenico.com.br/assets/img/site/global/favicon.ico" type="image/x-icon">
+
+  <!-- canonical -->
+  <% if (is_home()){ %>
+  <link rel="canonical" href="<%- theme.theme_url %>">
+  <% } else { %>
+  <link rel="canonical" href="<%- url.replace('index.html', '') %>">
+  <% } %>
+  <% if (theme.rss){ %>
+    <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+
+  <link rel="stylesheet" href="/hemersonvianna/assets/scss/site/style.css?v=4.0">
+
+  <%- include('../../../../node_modules/@descco/blogtheme/source/partials/google-analytics-head.ejs') %>
+  <%- include('../../../../node_modules/@descco/blogtheme/source/partials/googleads-head.ejs') %>
+</head>
