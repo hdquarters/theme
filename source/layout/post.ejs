@@ -1,5 +1,5 @@
 <%#
-include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { projectName: 'hemersonvianna' })
+include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { projectName: 'hemersonvianna', hasImageLarge: false })
 %>
 <%
   const googleads1 = `../partials/googleads/${projectName}/4-article-1.ejs`;
@@ -63,6 +63,9 @@ include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { proj
   </header>
   <%- include(googleads1) %>
   <div class="article-content">
+    <% if(hasImageLarge) { %>
+    <img class="article-content-image_large" src="/<%- projectName %>/assets/img/site/articles/large/<%- page.thumbnail %>.jpg" alt="<%- page.title %>" width="728" height="262">
+    <% } %>
     <%- post.content %>
   </div>
   <%- include(googleads2) %>
