@@ -1,8 +1,4 @@
 <%#
-const categoriesPage = page.layout === 'categories';
-const isDaysOfCode = page.layout === '2019'
-const hasBreadcrumb = is_home() || is_post() || is_category() || categoriesPage || isDaysOfCode;
-
 include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', { projectName: 'hemersonvianna', slug: 'hemerson-vianna' highlight: [], hasBreadcrumb: hasBreadcrumb, hasSvg: true, isPost: is_post() })
 %>
 <!DOCTYPE html>
@@ -23,7 +19,9 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
       <%- include('../partials/body/header.ejs', {projectName}) %>
       <% if (is_home()) { %>
         <%- include('../partials/body/banner.ejs', { projectName }) %>
+        <% if(highlight) { %>
         <%- include('../partials/body/highlight.ejs', { page, items: highlight, projectName }) %>
+        <% } %>
       <% } %>
       <div class="content">
         <div class="container">

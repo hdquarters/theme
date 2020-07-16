@@ -1,5 +1,5 @@
 <%
-  var name = slug.replace('-', ' ');
+  var name = slug.replace(/-/g, ' ');
   var paths = page.path.split('/');
   var path = `/${projectName}`;
   if (hasBreadcrumb){
