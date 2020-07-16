@@ -1,8 +1,18 @@
+<%#
+include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { projectName: 'hemersonvianna' })
+%>
+<%
+  const googleads1 = `../partials/googleads/${projectName}/4-article-1.ejs`;
+  const googleads2 = `../partials/googleads/${projectName}/5-article-2.ejs`;
+
+  const shared = `https://nerdcalistenico.com.br/${projectName}/assets/css/img/site/global/compartilhar.jpg`
+%>
+
 <script type="application/ld+json">
   { "@context": "https://schema.org",
   "@type": "NewsArticle",
   "headline": "<%- post.title %>",
-  "image": "https://nerdcalistenico.com.br/hemersonvianna/assets/css/img/site/global/compartilhar.jpg",
+  "image": "<%- shared %>",
   "author": {
     "@type": "Person",
     "name": "Hemerson Vianna"
@@ -35,18 +45,14 @@
     const wordsPerMinute = 200;
     let result;
     text =  strip_html(text) || "";
-
     let textLength = text.split(" ").length;
-
     if(textLength > 0){
       let value = Math.ceil(textLength / wordsPerMinute);
       result = `${value} min`;
     }
-
     return result;
   };
 %>
-
 <article class="article" role="article">
   <header class="article-header">
     <h1 class="article-title"><%- post.title %></h1>
@@ -56,15 +62,11 @@
       <br> <span class="article-meta-read"><%- calcRT(post.content); %> de leitura</span>
     </p>
   </header>
-
-  <%- include('../../../../node_modules/@descco/blogtheme/source/partials/googleads/hemersonvianna/4-article-1.ejs') %>
-
+  <%- include(googleads1) %>
   <div class="article-content">
     <%- post.content %>
   </div>
-
-  <%- include('../../../../node_modules/@descco/blogtheme/source/partials/googleads/hemersonvianna/5-article-2.ejs') %>
-
+  <%- include(googleads2) %>
   <section class="author">
     <figure class="author-image">
       <img src="https://nerdcalistenico.com.br/assets/img/site/global/hemerson-vianna.jpg" width="120" height="120" />
@@ -76,7 +78,6 @@
       <p><a href="https://twitter.com/hemersonvianna" target="_blank">twitter: hemersonvianna</a></p>
     </div>
   </section>
-
   <% if (!index && post.comments && theme.disqus_shortname){ %>
     <div id="disqus_thread"></div>
   <% } %>
