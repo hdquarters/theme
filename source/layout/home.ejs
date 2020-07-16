@@ -2,71 +2,30 @@
 name: home
 title: Início
 ---
+<%#
+include('../../../node_modules/@hdquarters/theme/source/layout/home.ejs', { projectName: 'hemersonvianna' })
+%>
+<%
+  const googleads1 = `../partials/googleads/${projectName}/3-category-1.ejs`;
+  const googleads2 = `../partials/googleads/${projectName}/1-home-1.ejs`;
+%>
 
 <% if (!is_home()) { %>
-  <div class="categories">
-    <p class="text">Outras categorias:</p>
-    <ul class="categories-list">
-    <% site.categories.sort('name').map(category => { %>
-      <%
-        if (page.category !== category.name) {
-          var icon = category.name.replace(' ', '').toLowerCase();
-          var name = category.name.toLowerCase();
-      %>
-        <li class="categories-item">
-          <a href="<%- url_for(category.path) %>" class="categories-link <%- url_for(category.path).split('/')[3] %>">
-            <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>
-            &nbsp; <%- name %>
-            <span class="categories-count"><%= category.posts.length %></span>
-          </a>
-        </li>
-      <% } %>
-    <% }) %>
-    </ul>
-  </div>
-
-  <%- include('../partials/googleads/hemersonvianna/3-category-1.ejs') %>
-
+  <%- include('../partials/body/other-categories.ejs') %>
+  <%- include(googleads1) %>
   <h2 class="page-subtitle--section"><%= page.category %></h2>
 <% } else { %>
-  <%- include('../partials/googleads/hemersonvianna/1-home-1.ejs') %>
-
-  <div class="categories">
-    <h3 class="categories-title">
-      <strong class="categories-title-count"><%= page.posts.length %> artigos</strong> Categorias
-    </h3>
-    <ul class="categories-list">
-      <% site.categories.sort('name').map(category => {
-        var icon = category.name.replace(' ', '').toLowerCase()
-        var name = category.name.toLowerCase()
-      %>
-        <% if (!category.parent) { %>
-          <li class="categories-item">
-            <a href="<%- url_for(category.path) %>" class="categories-link">
-              <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>
-              &nbsp; <%- name %>
-              <span class="categories-count"><%= category.posts.length %></span>
-            </a>
-          </li>
-        <% } %>
-      <% }) %>
-    </ul>
-  </div>
+  <%- include(googleads2) %>
+  <%- include('../partials/body/categories.ejs') %>
 <% } %>
 
-<% if (!is_home()) { %>
-<main class="home_articles js-load_more-container">
-<% } else { %>
-<main class="home_articles">
-<% } %>
+<main class="home_articles <% !is_home() ? 'js-load_more-container' : '' %>">
   <div class="nc-cards">
   	<% page.posts.each(function(post, idx){ %>
-  		<%- include('../partials/body/card', {post: post, index: true, idx: idx}) %>
+  		<%- include('../partials/body/card.ejs', {post: post, index: true, idx: idx}) %>
   	<% }) %>
   </div>
-  <% if (!is_home()) { %>
-    <% if (page.posts.length > 9){ %>
-      <p><button class="button-load_more js-load_more" type="button">Carregar mais</button></p>
-    <%  } %>
+  <% if (!is_home() && page.posts.length > 9) { %>
+    <p><button class="button-load_more js-load_more" type="button">Carregar mais</button></p>
   <% } %>
 </main>

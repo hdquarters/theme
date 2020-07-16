@@ -1,18 +1,5 @@
 <%
-  const calcRT = text => {
-    const wordsPerMinute = 200;
-    let result;
-    text =  strip_html(text) || "";
-
-    let textLength = text.split(" ").length;
-
-    if(textLength > 0){
-      let value = Math.ceil(textLength / wordsPerMinute);
-      result = `${value} min`;
-    }
-
-    return result;
-  };
+  const googleads1 = `../partials/googleads/${projectName}/2-categories-1.ejs`;
 %>
 
 <h1 class="page-title">Artigos</h1>
@@ -37,92 +24,29 @@
   </ul>
 </div>
 
-<%- include('../../../node_modules/@descco/blogtheme/source/partials/googleads/hemersonvianna/2-categories-1.ejs') %>
+<%- include(googleads1) %>
 
 <div>
-    <% if (site.categories.length) { %>
-        <% site.categories.sort('name').each(function(category){ %>
-        <div class="js-load_more-container js-category-<%- url_for(category.path).split('/')[3] %>">
-  		    <h2 class="page-subtitle--section">
-            <a class="page-subtitle--section-link" href="<%- url_for(category.path) %>">
-              <%= category.name %> <span class="articles-count">
-              - <%= category.posts.length %> artigo<% if (category.posts.length > 1) { %>s<% } %></span>
-            </a>
-          </h2>
-  		    <div class="nc-cards">
-		        <% category.posts.sort('date', -1).each(function(post, idx){ %>
-			        <% if (post.categories.length == 1 && post.categories.data[0]._id == category._id){ %>
-                <article class="nc-card js-load_more-item" role="article">
-                  <script type="application/ld+json">
-                    { "@context": "https://schema.org",
-                    "@type": "NewsArticle",
-                    "headline": "<%- post.title %>",
-                    "image": "https://nerdcalistenico.com.br/hemersonvianna/assets/img/site/global/compartilhar.jpg",
-                    "author": {
-                      "@type": "Person",
-                      "name": "Hemerson Vianna"
-                    },
-                    "mainEntityOfPage": {
-                      "@type": "WebPage",
-                      "@id": "https://nerdcalistenico.com.br<%- url_for(post.path) %>"
-                    },
-                    "url": "<%- url_for(post.path) %>",
-                    "datePublished": "<%- moment(post.date).toISOString() %>",
-                    "dateCreated": "<%- moment(post.date).toISOString() %>",
-                    "dateModified": "<%- moment(post.updated).toISOString() %>",
-                    "articleBody": "<%- strip_html(post.content.replace(/\\/g,"/").replace(/"/g, "'")) %>",
-                    "publisher": {
-                        "@type": "Organization",
-                        "name":"Nerd Calistênico",
-                        "url":"https:\/\/nerdcalistenico.com.br",
-                        "logo":{
-                        "@type":"ImageObject",
-                          "url":"https://nerdcalistenico.com.br/assets/img/site/global/apple-touch-icon.png",
-                          "contentUrl":"https://nerdcalistenico.com.br/assets/img/site/global/apple-touch-icon.png",
-                          "width":"200",
-                          "height":"200"
-                          }
-                        }
-                      }
-                    }
-                  </script>
-                  <% if(post.thumbnail) { %>
-                    <a class="nc-card-thumbnail" href="<%- url_for(post.path) %>">
-                      <figure class="nc-card-thumbnail-figure">
-                        <% if(idx > 8) { %>
-                          <img class="nc-card-thumbnail-image lazy" src="/assets/img/site/global/transparent.png" data-src="/hemersonvianna/assets/img/site/articles/thumbnail/<%- post.thumbnail %>.jpg" alt="<%- post.title %>" width="340" height="120">
-                        <% } else { %>
-                          <img class="nc-card-thumbnail-image" src="/hemersonvianna/assets/img/site/articles/thumbnail/<%- post.thumbnail %>.jpg" alt="<%- post.title %>" width="340" height="120">
-                        <% } %>
-                      </figure>
-                    </a>
-                  <% } %>
-                  <div class="nc-card-body">
-                    <figure class="nc-card-figure">
-                      <% var cat = category.name.replace(' ', '').toLowerCase() %>
-                      <a href="<%- url_for(category.path) %>" class="nc-card-image">
-                        <svg height="40" width="40"><use xlink:href="#<%- cat %>" /></svg>
-                      </a>
-                    </figure>
-                    <a class="nc-card-link" href="<%- url_for(post.path) %>">
-                      <dl class="nc-card-description">
-                        <dt class="nc-card-title"><%- post.title %></dt>
-                        <dd class="nc-card-readTime"><%- calcRT(post.content); %> de leitura</dd>
-                        <dd class="nc-card-date">
-                          <strong class="nc-card-date-dayMonth"><%- moment(post.date).format('DD/MM') %></strong>
-                          <span class="nc-card-date-year">/<%- moment(post.date).format('YYYY') %></span>
-                        </dd>
-                      </dl>
-                    </a>
-                  </div>
-                </article>
-			        <% } %>
-  		        <% }); %>
-  		   </div>
-         <% if (category.posts.length > 9) { %>
-         <p><button class="button-load_more js-load_more" type="button">Carregar mais</button></p>
-         <% } %>
-       </div>
-	   <% }); %>
-    <% } %>
+  <% if (site.categories.length) { %>
+    <% site.categories.sort('name').each(function(category){ %>
+      <div class="js-load_more-container js-category-<%- url_for(category.path).split('/')[3] %>">
+        <h2 class="page-subtitle--section">
+          <a class="page-subtitle--section-link" href="<%- url_for(category.path) %>">
+            <%= category.name %> <span class="articles-count">
+            - <%= category.posts.length %> artigo<% if (category.posts.length > 1) { %>s<% } %></span>
+          </a>
+        </h2>
+        <div class="nc-cards">
+          <% category.posts.sort('date', -1).each(function(post, idx){ %>
+            <% if (post.categories.length == 1 && post.categories.data[0]._id == category._id){ %>
+              <%- include('../partials/body/card.ejs', {post: post, index: true, idx: idx}) %>
+            <% } %>
+          <% }); %>
+        </div>
+        <% if (category.posts.length > 9) { %>
+        <p><button class="button-load_more js-load_more" type="button">Carregar mais</button></p>
+        <% } %>
+      </div>
+    <% }); %>
+  <% } %>
 </div>

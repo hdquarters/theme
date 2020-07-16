@@ -3,7 +3,7 @@ const categoriesPage = page.layout === 'categories';
 const isDaysOfCode = page.layout === '2019'
 const hasBreadcrumb = is_home() || is_post() || is_category() || categoriesPage || isDaysOfCode;
 
-include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', { projectName: 'hemersonvianna', slug: 'hemerson-vianna' highlight: [], hasBreadcrumb: hasBreadcrumb })
+include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', { projectName: 'hemersonvianna', slug: 'hemerson-vianna' highlight: [], hasBreadcrumb: hasBreadcrumb, hasSvg: true, isPost: is_post() })
 %>
 <!DOCTYPE html>
 <html class="no-js" lang="pt-BR" xml:lang="pt-BR" itemscope itemtype="https://schema.org/Organization">
@@ -11,21 +11,23 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
   <body class="<%- projectName %> page-<%- is_home() ? 'home' : page.name %>">
     <%- include('../partials/svg/blogs.ejs') %>
     <%- include('../partials/svg/social.ejs') %>
-    <% const svgPath = `../partials/svg/${projectName}.ejs` %>
+    <% 
+      const svgPath = `../partials/svg/${projectName}.ejs`;
+      if (hasSvg) {
+    %>
     <%- include(svgPath) %>
+    <% } %>
     <%- include('../partials/body/search.ejs') %>
     <%- include('../partials/body/google-analytics.ejs') %>
     <div class="wrapper">
-      <%- include('../partials/body/header.ejs', {themeName: projectName, local: projectName}) %>
-
+      <%- include('../partials/body/header.ejs', {projectName}) %>
       <% if (is_home()) { %>
-        <%- include('../partials/body/banner.ejs', { projectName: projectName }) %>
-        <%- include('../partials/body/highlight.ejs', { page: page, items: highlight }) %>
+        <%- include('../partials/body/banner.ejs', { projectName }) %>
+        <%- include('../partials/body/highlight.ejs', { page, items: highlight }) %>
       <% } %>
-
       <div class="content">
         <div class="container">
-          <%- include('../partials/body/breadcrumb.ejs', { page: page, hasBreadcrumb: hasBreadcrumb, slug: slug, projectName: projectName }) %>
+          <%- include('../partials/body/breadcrumb.ejs', { page, hasBreadcrumb, slug, projectName }) %>
           <div class="body">
           <%- body %>
           </div>
@@ -34,7 +36,7 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
     </div>
     <%- include('../partials/body/snackbar.ejs') %>
     <%- include('../partials/service-worker.ejs') %>
-    <% if (is_post()){ %>
+    <% if (isPost){ %>
       <%- include('../partials/body/disqus.ejs') %>
     <% } %>
     <script src="/<%- projectName %>/assets/js/site/scripts.js?v=4.0"></script>

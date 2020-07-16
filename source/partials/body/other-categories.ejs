@@ -1,0 +1,20 @@
+<div class="categories">
+  <p class="text">Outras categorias:</p>
+  <ul class="categories-list">
+  <% site.categories.sort('name').map(category => { %>
+    <%
+      if (page.category !== category.name) {
+        var icon = category.name.replace(' ', '').toLowerCase();
+        var name = category.name.toLowerCase();
+    %>
+      <li class="categories-item">
+        <a href="<%- url_for(category.path) %>" class="categories-link <%- url_for(category.path).split('/')[3] %>">
+          <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>
+          &nbsp; <%- name %>
+          <span class="categories-count"><%= category.posts.length %></span>
+        </a>
+      </li>
+    <% } %>
+  <% }) %>
+  </ul>
+</div>
