@@ -8,8 +8,8 @@
   <p class="text">Confira os artigos segmentados pelas suas categorias</p>
   <ul class="categories-list">
   <% site.categories.sort('name').map(category => {
-    var icon = category.name.replace(' ', '').toLowerCase()
-    var name = category.name.toLowerCase()
+    const icon = category.name.replace(' ', '').toLowerCase();
+    const name = category.name.toLowerCase();
   %>
     <% if (!category.parent) { %>
       <li class="categories-item">
@@ -41,7 +41,7 @@
             <% if (post.categories.length == 1 && post.categories.data[0]._id == category._id){ %>
               <%- include('../partials/body/card.ejs', {post: post, index: true, idx: idx}) %>
             <% } %>
-          <% }); %>
+          <% }) %>
         </div>
         <% if (category.posts.length > 9) { %>
         <p><button class="button-load_more js-load_more" type="button">Carregar mais</button></p>

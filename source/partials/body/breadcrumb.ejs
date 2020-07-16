@@ -1,7 +1,7 @@
 <%
-  const name = slug.replace('-', ' ');
-  const paths = page.path.split('/');
-  const path = '/<%- projectName %>';
+  var name = slug.replace('-', ' ');
+  var paths = page.path.split('/');
+  var path = `/${projectName}`;
   if (hasBreadcrumb){
 %>
   <div class="breadcrumb">

@@ -1,7 +1,3 @@
----
-name: home
-title: Início
----
 <%#
 include('../../../node_modules/@hdquarters/theme/source/layout/home.ejs', { projectName: 'hemersonvianna' })
 %>
@@ -19,10 +15,10 @@ include('../../../node_modules/@hdquarters/theme/source/layout/home.ejs', { proj
   <%- include('../partials/body/categories.ejs') %>
 <% } %>
 
-<main class="home_articles <% !is_home() ? 'js-load_more-container' : '' %>">
+<main class="home_articles <%- !is_home() ? 'js-load_more-container' : '' %>">
   <div class="nc-cards">
   	<% page.posts.each(function(post, idx){ %>
-  		<%- include('../partials/body/card.ejs', {post: post, index: true, idx: idx}) %>
+  		<%- include('../partials/body/card.ejs', {post, index: true, idx}) %>
   	<% }) %>
   </div>
   <% if (!is_home() && page.posts.length > 9) { %>

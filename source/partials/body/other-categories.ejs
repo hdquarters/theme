@@ -4,8 +4,8 @@
   <% site.categories.sort('name').map(category => { %>
     <%
       if (page.category !== category.name) {
-        var icon = category.name.replace(' ', '').toLowerCase();
-        var name = category.name.toLowerCase();
+        const icon = category.name.replace(' ', '').toLowerCase();
+        const name = category.name.toLowerCase();
     %>
       <li class="categories-item">
         <a href="<%- url_for(category.path) %>" class="categories-link <%- url_for(category.path).split('/')[3] %>">

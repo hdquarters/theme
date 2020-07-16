@@ -100,8 +100,8 @@
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
 
-  <link rel="stylesheet" href="/hemersonvianna/assets/scss/site/style.css?v=4.0">
+  <link rel="stylesheet" href="/<%- projectName %>/assets/scss/site/style.css?v=4.0">
 
-  <%- include('../../../../node_modules/@descco/blogtheme/source/partials/google-analytics-head.ejs') %>
-  <%- include('../../../../node_modules/@descco/blogtheme/source/partials/googleads-head.ejs') %>
+  <%- include('./google-analytics.ejs') %>
+  <%- include('./googleads.ejs') %>
 </head>

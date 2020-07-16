@@ -7,7 +7,7 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
 %>
 <!DOCTYPE html>
 <html class="no-js" lang="pt-BR" xml:lang="pt-BR" itemscope itemtype="https://schema.org/Organization">
-<%- partial('_partial/head') %>
+  <%- include('../partials/head/structure', { projectName }) %>
   <body class="<%- projectName %> page-<%- is_home() ? 'home' : page.name %>">
     <%- include('../partials/svg/blogs.ejs') %>
     <%- include('../partials/svg/social.ejs') %>
@@ -23,7 +23,7 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
       <%- include('../partials/body/header.ejs', {projectName}) %>
       <% if (is_home()) { %>
         <%- include('../partials/body/banner.ejs', { projectName }) %>
-        <%- include('../partials/body/highlight.ejs', { page, items: highlight }) %>
+        <%- include('../partials/body/highlight.ejs', { page, items: highlight, projectName }) %>
       <% } %>
       <div class="content">
         <div class="container">

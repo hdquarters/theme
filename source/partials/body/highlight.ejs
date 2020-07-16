@@ -5,7 +5,7 @@
         page.posts.sort('_id').each(function(post){
           if (items.indexOf(post.path) >= 0) {
       %>
-        <%- include('./card', {post: post, index: false}) %>
+        <%- include('./card', {post, index: false, projectName}) %>
       <%
           }
         })
