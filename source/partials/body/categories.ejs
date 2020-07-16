@@ -1,6 +1,18 @@
+<%
+const getTexts = name => {
+  switch(name) {
+    case 'hemersonvianna':
+      return {
+        slug: 'artigos',
+        title: 'Categorias'
+      }
+  }
+};
+const content = getTexts(projectName);
+%>
 <div class="categories">
   <h3 class="categories-title">
-    <strong class="categories-title-count"><%= page.posts.length %> artigos</strong> Categorias
+    <strong class="categories-title-count"><%= page.posts.length %> <%- content.slug %></strong> <%- content.title %>
   </h3>
   <ul class="categories-list">
     <% site.categories.sort('name').map(category => {

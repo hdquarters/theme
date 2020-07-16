@@ -1,11 +1,23 @@
 <%
-  const googleads1 = `../partials/googleads/${projectName}/2-categories-1.ejs`;
+const googleads1 = `../partials/googleads/${projectName}/2-categories-1.ejs`;
+
+const getTexts = name => {
+  switch(name) {
+    case 'hemersonvianna':
+      return {
+        title: 'Artigos',
+        categoriesTitle: 'Confira os artigos segmentados pelas suas categorias',
+        slug: 'artigo'
+      }
+  }
+};
+const content = getTexts(projectName);
 %>
 
-<h1 class="page-title">Artigos</h1>
+<h1 class="page-title"><%- content.title %></h1>
 
 <div class="categories">
-  <p class="text">Confira os artigos segmentados pelas suas categorias</p>
+  <p class="text"><%- content.categoriesTitle %></p>
   <ul class="categories-list">
   <% site.categories.sort('name').map(category => {
     const icon = category.name.replace(' ', '').toLowerCase();
@@ -33,13 +45,13 @@
         <h2 class="page-subtitle--section">
           <a class="page-subtitle--section-link" href="<%- url_for(category.path) %>">
             <%= category.name %> <span class="articles-count">
-            - <%= category.posts.length %> artigo<% if (category.posts.length > 1) { %>s<% } %></span>
+            - <%= category.posts.length %> <%- content.slug %><% if (category.posts.length > 1) { %>s<% } %></span>
           </a>
         </h2>
         <div class="nc-cards">
-          <% category.posts.sort('date', -1).each(function(post, idx){ %>
+          <% category.posts.sort('date', -1).each(function(post){ %>
             <% if (post.categories.length == 1 && post.categories.data[0]._id == category._id){ %>
-              <%- include('../partials/body/card.ejs', {post: post, index: true, idx: idx}) %>
+              <%- include('../partials/body/card.ejs', {post, index: true, projectName}) %>
             <% } %>
           <% }) %>
         </div>

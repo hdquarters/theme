@@ -1,5 +1,16 @@
+<%
+const getTexts = name => {
+  switch(name) {
+    case 'hemersonvianna':
+      return {
+        title: 'Outras categorias'
+      }
+  }
+};
+const content = getTexts(projectName);
+%>
 <div class="categories">
-  <p class="text">Outras categorias:</p>
+  <p class="text"><%- content.title %>:</p>
   <ul class="categories-list">
   <% site.categories.sort('name').map(category => { %>
     <%

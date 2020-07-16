@@ -1,8 +1,11 @@
+<%
+const shared = `https://nerdcalistenico.com.br/${projectName}/assets/img/site/global/compartilhar.jpg`
+%>
 <script type="application/ld+json">
 { "@context": "https://schema.org",
  "@type": "NewsArticle",
  "headline": "<%- post.title %>",
- "image": "https://nerdcalistenico.com.br/hemersonvianna/assets/img/site/global/compartilhar.jpg",
+ "image": "<%- shared %>",
  "author": {
     "@type": "Person",
     "name": "Hemerson Vianna"
@@ -51,11 +54,7 @@
   <% if(index && post.thumbnail) { %>
     <a class="nc-card-thumbnail" href="<%- url_for(post.path) %>">
       <figure class="nc-card-thumbnail-figure">
-        <% if(idx > 8) { %>
-          <img class="nc-card-thumbnail-image lazy" src="/assets/img/site/global/transparent.png" data-src="/hemersonvianna/assets/img/site/articles/thumbnail/<%- post.thumbnail %>.jpg" alt="<%- post.title %>" width="340" height="120">
-        <% } else { %>
-          <img class="nc-card-thumbnail-image" src="/hemersonvianna/assets/img/site/articles/thumbnail/<%- post.thumbnail %>.jpg" alt="<%- post.title %>" width="340" height="120">
-        <% } %>
+        <img class="nc-card-thumbnail-image lazy" src="/assets/img/site/global/transparent.png" data-src="/<%- projectName %>/assets/img/site/articles/thumbnail/<%- post.thumbnail %>.jpg" alt="<%- post.title %>" width="340" height="120">
       </figure>
     </a>
   <% } %>
