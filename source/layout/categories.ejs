@@ -20,7 +20,7 @@ const content = getTexts(projectName);
   <p class="text"><%- content.categoriesTitle %></p>
   <ul class="categories-list">
   <% site.categories.sort('name').map(category => {
-    const icon = category.name.replace(' ', '').toLowerCase();
+    const icon = category.name.replace(/ /g, '').toLowerCase();
     const name = category.name.toLowerCase();
   %>
     <% if (!category.parent) { %>

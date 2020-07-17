@@ -15,7 +15,7 @@ const content = getTexts(projectName);
   <% site.categories.sort('name').map(category => { %>
     <%
       if (page.category !== category.name) {
-        const icon = category.name.replace(' ', '').toLowerCase();
+        const icon = category.name.replace(/ /g, '').toLowerCase();
         const name = category.name.toLowerCase();
     %>
       <li class="categories-item">
