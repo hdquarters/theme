@@ -1,0 +1,27 @@
+<%#
+include('../../../node_modules/@hdquarters/theme/source/layout/home.ejs', { projectName: 'hemersonvianna' })
+%>
+<%
+  const googleads1 = `../partials/googleads/${projectName}/3-category-1.ejs`;
+  const googleads2 = `../partials/googleads/${projectName}/1-home-1.ejs`;
+%>
+
+<% if (!is_home()) { %>
+  <%- include('../partials/body/other-categories.ejs', {projectName}) %>
+  <%- include(googleads1) %>
+  <h2 class="page-subtitle--section"><%= page.category %></h2>
+<% } else { %>
+  <%- include(googleads2) %>
+  <%- include('../partials/body/categories.ejs', {projectName}) %>
+<% } %>
+
+<main class="home_articles <%- !is_home() ? 'js-load_more-container' : '' %>">
+  <div class="nc-cards">
+  	<% page.posts.each(function(post, idx){ %>
+  		<%- include('../partials/body/card.ejs', {post, index: true, projectName}) %>
+  	<% }) %>
+  </div>
+  <% if (!is_home() && page.posts.length > 9) { %>
+    <p><button class="button-load_more js-load_more" type="button">Carregar mais</button></p>
+  <% } %>
+</main>

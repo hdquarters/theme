@@ -1,0 +1,70 @@
+<%
+const getTexts = name => {
+  switch(name) {
+    case 'hemersonvianna':
+      return {
+        name: 'Hemerson Vianna',
+        text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre as áreas de TI, voltadas para o desenvolvimento web.',
+        text2: 'é o nome do autor desse site e tem esse como o principal blog que é ligado à sua profissão.',
+      }
+    case 'foconocapital':
+      return {
+        name: 'Foco no Capital',
+        text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre o mercado financeiro, investimentos e finanças.',
+        text2: 'é mais um meio para mostrar que vale a pena saber mais sobre investimentos e ativos do mercado financeiro.',
+      }
+    case 'foradabolha':
+      return {
+        name: 'Fora da Bolha',
+        text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre curiosidades e assuntos interessantes/desconhecidos.',
+        text2: 'tem a missão de estourar várias bolhas sociais e trazer um conhecimento que na maioria das vezes não se tem muito acesso.',
+      }
+    case 'imhomovies':
+      return {
+        name: 'IMHO Movies',
+        text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo baseado em opiniões sobre os filmes assistidos nos cinemas, serviços de streaming e TV.',
+        text2: 'vem da abreviação em inglês para In My Humble Opinion que em português significa: Na minha humilde opinião.',
+      }
+    case 'jornadarelevante':
+      return {
+        name: 'Jornada Relevante',
+        text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre as experiências de viagens e eventos, que o autor teve a oportunidade de fazer e participar.',
+        text2: 'destaca as principais viagens e eventos, sempre lembrando que viajar é necessário.',
+      }
+    case 'noobdaera8bits':
+      return {
+        name: 'Noob da era 8 bits',
+        text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre jogos e o mundo do e-sports.',
+        text2: 'deixa explicito que o autor quer entender mais da área de jogos, que evoluiu muito nos últimos anos.',
+      }
+    case 'saborinstintivo':
+      return {
+        name: 'Sabor Instintivo',
+        text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre receitas práticas do dia a dia ou mais elaboradas para ocasiões especiais.',
+        text2: 'exemplifica o perfil do autor na cozinha, que tenta sempre acrescentar um detalhe novo.',
+      }
+    case 'sonusetrhythmus':
+      return {
+        name: 'Sonus et Rhythmus',
+        text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre música, focando nos artistas desconhecidos e de toda parte do mundo.',
+        text2: 'vem do latim e significa Sons e ritmos.',
+      }
+    case 'zamenhof':
+      return {
+        name: 'Zamenhof',
+        text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre diversos idiomas e metodologias de aprendizado de um novo idioma.',
+        text2: 'vem do sobrenome do criador do Esperanto, que é a linguagem artificial mais falada no mundo.',
+      }
+  }
+}
+const banner = getTexts(projectName);
+%>
+<section>
+  <h1 class="banner">
+    <svg xmlns="http://www.w3.org/2000/svg" height="100"><use href="#<%- projectName %>" /></svg>
+  </h1>
+</section>
+<div class="banner-description">
+  <p><%- banner.text1 %></p>
+  <p><strong class="text--hl"><%- banner.name %></strong> <%- banner.text2 %></p>
+</div>

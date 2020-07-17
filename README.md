@@ -1,12 +1,36 @@
-# Blog theme
+# Theme
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
-[![GitHub issues](https://img.shields.io/github/issues/hdquarters/blogtheme.svg)](https://github.com/hdquarters/blogtheme/issues)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/hdquarters/blogtheme.svg)
-![GitHub Release Date](https://img.shields.io/github/release-date/hdquarters/blogtheme.svg)
-![GitHub top language](https://img.shields.io/github/languages/top/hdquarters/blogtheme.svg)
-![GitHub repo size](https://img.shields.io/github/repo-size/hdquarters/blogtheme.svg)
-![GitHub All Releases](https://img.shields.io/github/downloads/hdquarters/blogtheme/total.svg)
+[![GitHub issues](https://img.shields.io/github/issues/hdquarters/theme.svg)](https://github.com/hdquarters/theme/issues)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/hdquarters/theme.svg)
+![GitHub Release Date](https://img.shields.io/github/release-date/hdquarters/theme.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/hdquarters/theme.svg)
+![GitHub repo size](https://img.shields.io/github/repo-size/hdquarters/theme.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/hdquarters/theme/total.svg)
+
+## Prerequisites
+- Node >= v12.18.2
+- NPM >= v6.14.5
+- Yarn >= v1.22.0 or npm install -g yarn
+
+## .gitconfig
+
+Git's merge commit message
+
+```
+[alias]
+  mergelogmsg = "!f() { var=$(git symbolic-ref --short HEAD) && printf 'Merge branch %s into %s\n\n::SUMMARY::\nBranch %s commits:\n' $1 $var $1 > temp_merge_msg && git log --format=format:'%s' $var..$1 >> temp_merge_msg && printf '\n\nBranch %s commits:\n' $var >> temp_merge_msg && git log --format=format:'%s' $1..$var >> temp_merge_msg && printf '\n\n* * * * * * * * * * * * * * * * * * * * * * * * *\n::DETAILS::\n' >> temp_merge_msg && git log --left-right $var...$1 >> temp_merge_msg && git merge --no-ff --no-commit $1 && git commit -eF temp_merge_msg; rm -f temp_merge_msg;}; f"
+```
+
+## Install
+
+```
+yarn
+```
+
+## Commands
+
+- **yarn release**
 
 ## Contributing
 
@@ -18,7 +42,7 @@
 
 ## Log
 
-Check [Releases](https://github.com/hdquarters/blogtheme/releases) for detailed changelog.
+Check [Releases](https://github.com/hdquarters/theme/releases) for detailed changelog.
 
 ## License
 
