@@ -1,0 +1,86 @@
+<%#
+include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { projectName: 'hemersonvianna', hasImageLarge: false })
+%>
+<%
+  const googleads1 = `../partials/googleads/${projectName}/4-article-1.ejs`;
+  const googleads2 = `../partials/googleads/${projectName}/5-article-2.ejs`;
+  const shared = `https://nerdcalistenico.com.br/${projectName}/assets/css/img/site/global/compartilhar.jpg`
+%>
+
+<script type="application/ld+json">
+  { "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "<%- post.title %>",
+  "image": "<%- shared %>",
+  "author": {
+    "@type": "Person",
+    "name": "Hemerson Vianna"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nerdcalistenico.com.br<%- url_for(post.path) %>"
+  },
+  "url": "<%- url_for(post.path) %>",
+  "datePublished": "<%- moment(post.date).toISOString() %>",
+  "dateCreated": "<%- moment(post.date).toISOString() %>",
+  "dateModified": "<%- moment(post.updated).toISOString() %>",
+  "articleBody": "<%- strip_html(post.content.replace(/\\/g,"/").replace(/"/g, "'")) %>",
+  "publisher": {
+    "@type": "Organization",
+    "name":"Nerd Calistênico",
+    "url":"https:\/\/nerdcalistenico.com.br",
+    "logo":{
+    "@type":"ImageObject",
+      "url":"https://nerdcalistenico.com.br/assets/img/site/global/apple-touch-icon.png",
+      "contentUrl":"https://nerdcalistenico.com.br/assets/img/site/global/apple-touch-icon.png",
+      "width":"200",
+      "height":"200"
+      }
+    }
+  }
+</script>
+<%
+  const calcRT = text => {
+    const wordsPerMinute = 200;
+    let result;
+    text =  strip_html(text) || "";
+    let textLength = text.split(" ").length;
+    if(textLength > 0){
+      let value = Math.ceil(textLength / wordsPerMinute);
+      result = `${value} min`;
+    }
+    return result;
+  };
+%>
+<article class="article" role="article">
+  <header class="article-header">
+    <h1 class="article-title"><%- post.title %></h1>
+    <p class="article-meta">
+      Publicado em <time class="article-meta-date"><%- date(post.date, config.date_article_format) %></time>
+      <% if(post.updated && moment(post.updated).format('DD-MM-YYYY') !== moment(post.date).format('DD-MM-YYYY') && typeof post.updated !== 'function') { %> e atualizado em <time class="article-meta-date"><%- date(post.updated, config.date_article_format) %></time><% } %>
+      <br> <span class="article-meta-read"><%- calcRT(post.content); %> de leitura</span>
+    </p>
+  </header>
+  <%- include(googleads1) %>
+  <div class="article-content">
+    <% if(hasImageLarge) { %>
+    <img class="article-content-image_large" src="/<%- projectName %>/assets/img/site/articles/large/<%- page.thumbnail %>.jpg" alt="<%- page.title %>" width="728" height="262">
+    <% } %>
+    <%- post.content %>
+  </div>
+  <%- include(googleads2) %>
+  <section class="author">
+    <figure class="author-image">
+      <img src="https://nerdcalistenico.com.br/assets/img/site/global/hemerson-vianna.jpg" width="120" height="120" />
+    </figure>
+    <div class="author-description">
+      <p>Autor</p>
+      <h3>Hemerson Vianna</h3>
+      <p><a href="https://github.com/hemersonvianna" target="_blank">github: hemersonvianna</a></p>
+      <p><a href="https://twitter.com/hemersonvianna" target="_blank">twitter: hemersonvianna</a></p>
+    </div>
+  </section>
+  <% if (!index && post.comments && theme.disqus_shortname){ %>
+    <div id="disqus_thread"></div>
+  <% } %>
+</article>

@@ -1,0 +1,14 @@
+<% if (theme.disqus_shortname){ %>
+<script type='text/javascript'>
+//<![CDATA[
+var disqus_shortname = '<%= theme.disqus_shortname %>';
+<% if (page.permalink){ %>
+var disqus_url = '<%= page.permalink %>';
+<% } %>
+// Lazy Load Disqus
+var lazydisqus=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===lazydisqus||0!=document.body.scrollTop&&!1===lazydisqus)&&(!function(){var dsq=document.createElement("script");dsq.type="text/javascript",dsq.async=!0,dsq.src= '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(dsq,a)}(),lazydisqus=!0)},!0);
+//]]>
+</script>
+<% } %>
+
+

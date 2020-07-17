@@ -1,0 +1,33 @@
+<%
+const getTexts = name => {
+  switch(name) {
+    default:
+      return {
+        slug: 'artigos',
+        title: 'Categorias'
+      }
+  }
+};
+const content = getTexts(projectName);
+%>
+<div class="categories">
+  <h3 class="categories-title">
+    <strong class="categories-title-count"><%= page.posts.length %> <%- content.slug %></strong> <%- content.title %>
+  </h3>
+  <ul class="categories-list">
+    <% site.categories.sort('name').map(category => {
+      const icon = category.name.replace(/ /g, '').toLowerCase()
+      const name = category.name.toLowerCase()
+    %>
+      <% if (!category.parent) { %>
+        <li class="categories-item">
+          <a href="<%- url_for(category.path) %>" class="categories-link">
+            <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>
+            &nbsp; <%- name %>
+            <span class="categories-count"><%= category.posts.length %></span>
+          </a>
+        </li>
+      <% } %>
+    <% }) %>
+  </ul>
+</div>

@@ -1,0 +1,36 @@
+<%
+  var name = slug.replace(/-/g, ' ');
+  var paths = page.path.split('/');
+  var path = `/${projectName}`;
+  if (hasBreadcrumb){
+%>
+  <div class="breadcrumb">
+  <ul class="breadcrumb-list">
+    <li class="breadcrumb-item">
+      <a class="breadcrumb-link" href="/">NC</a>
+      <svg class="breadcrumb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="141.887 206 100 100"><path d="M173.48 206h-26.563l31.314 50-31.313 50h26.562l31.314-50"/><path d="M206.572 206H180.01l31.313 50-31.313 50h26.56l31.317-50"/></svg>
+    </li>
+    <% if (is_home()) { %>
+      <li class="breadcrumb-item"><%- name %></li>
+    <% } else { %>
+      <li class="breadcrumb-item">
+        <a class="breadcrumb-link" href="<%= path %>"><%- name %></a>
+        <svg class="breadcrumb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="141.887 206 100 100"><path d="M173.48 206h-26.563l31.314 50-31.313 50h26.562l31.314-50"/><path d="M206.572 206H180.01l31.313 50-31.313 50h26.56l31.317-50"/></svg>
+      </li>
+    <% } %>
+    <% for(var i = 0; i < paths.length-1; i++) {
+        var text = paths[i].replace(/-/g, ' ').toLowerCase()
+    %>
+      <% if(i === paths.length-2) { %>
+        <li class="breadcrumb-item"><%- text %></li>
+      <% } else { %>
+        <% path = path+'/'+paths[i] %>
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-link" href="<%= path %>"><%- text %></a>
+          <svg class="breadcrumb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="141.887 206 100 100"><path d="M173.48 206h-26.563l31.314 50-31.313 50h26.562l31.314-50"/><path d="M206.572 206H180.01l31.313 50-31.313 50h26.56l31.317-50"/></svg>
+        </li>
+      <% } %>
+    <% } %>
+  </ul>
+</div>
+<% } %>
