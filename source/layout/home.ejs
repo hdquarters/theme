@@ -11,6 +11,9 @@ include('../../../node_modules/@hdquarters/theme/source/layout/home.ejs', { proj
   <%- include(googleads1) %>
   <h2 class="page-subtitle--section"><%= page.category %></h2>
 <% } else { %>
+  <% if (!!highlight) { %>
+    <%- highlight %>
+  <% } %>
   <%- include(googleads2) %>
   <%- include('../partials/body/categories.ejs', {projectName}) %>
 <% } %>
