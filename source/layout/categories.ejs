@@ -51,7 +51,7 @@ const content = getTexts(projectName);
         <div class="nc-cards">
           <% category.posts.sort('date', -1).each(function(post){ %>
             <% if (post.categories.length == 1 && post.categories.data[0]._id == category._id){ %>
-              <%- include('../partials/body/card.ejs', {post, index: true, projectName}) %>
+              <%- include('../partials/body/card.ejs', {post, index: true, projectName, hasTag}) %>
             <% } %>
           <% }) %>
         </div>

@@ -61,16 +61,24 @@ const shared = `https://nerdcalistenico.com.br/${projectName}/assets/img/site/gl
   <div class="nc-card-body">
     <figure class="nc-card-figure">
       <%
-        var category = null;
-        post.categories.map(item => {
+        let category = null;
+        post.categories.map((item, index) => {
+          if (!hasTag || index === 0) {
           category = item.name.replace(/ /g, '').toLowerCase()
       %>
       <a href="<%- url_for(item.path) %>" class="nc-card-image">
         <svg height="40" width="40"><use xlink:href="#<%- category %>" /></svg>
       </a>
       <%
-        })
+        } })
       %>
+      <%
+        if (hasTag) {
+        post.categories.map((item, index) => {
+          if (index !== 0) {
+      %>
+        <a href="<%- url_for(item.path) %>" class="nc-card-category"><%- item.name %></a>
+      <% } }) } %>
     </figure>
     <a class="nc-card-link" href="<%- url_for(post.path) %>">
       <dl class="nc-card-description">

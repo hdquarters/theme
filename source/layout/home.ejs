@@ -21,7 +21,7 @@ include('../../../node_modules/@hdquarters/theme/source/layout/home.ejs', { proj
 <main class="home_articles <%- !is_home() ? 'js-load_more-container' : '' %>">
   <div class="nc-cards">
   	<% page.posts.each(function(post, idx){ %>
-  		<%- include('../partials/body/card.ejs', {post, index: true, projectName}) %>
+  		<%- include('../partials/body/card.ejs', {post, index: true, projectName, hasTag}) %>
   	<% }) %>
   </div>
   <% if (!is_home() && page.posts.length > 9) { %>
