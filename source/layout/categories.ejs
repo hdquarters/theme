@@ -49,8 +49,11 @@ const content = getTexts(projectName);
           </a>
         </h2>
         <div class="nc-cards">
-          <% category.posts.sort('date', -1).each(function(post){ %>
-            <% if (post.categories.length == 1 && post.categories.data[0]._id == category._id){ %>
+          <% category.posts.sort('date', -1).each(function(post, index){ %>
+            <% if (post.categories.data[0]._id == category._id){ %>
+              <%- include('../partials/body/card.ejs', {post, index: true, projectName, hasTag}) %>
+            <% } %>
+            <% if (post.categories.data[1] && post.categories.data[1]._id == category._id){ %>
               <%- include('../partials/body/card.ejs', {post, index: true, projectName, hasTag}) %>
             <% } %>
           <% }) %>
