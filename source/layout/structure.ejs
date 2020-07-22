@@ -7,7 +7,7 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
   <body class="<%- projectName %> page-<%- is_home() ? 'home' : page.name %>">
     <%- include('../partials/svg/blogs.ejs') %>
     <%- include('../partials/svg/social.ejs') %>
-    <% 
+    <%
       const svgPath = `../partials/svg/${projectName}.ejs`;
       if (hasSvg) {
     %>
@@ -37,6 +37,6 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
     <% if (isPost){ %>
       <%- include('../partials/body/disqus.ejs') %>
     <% } %>
-    <script src="/<%- projectName %>/assets/js/site/scripts.js?v=6.0"></script>
+    <script src="/<%- projectName %>/assets/js/site/scripts.js?v=7.0"></script>
   </body>
 </html>

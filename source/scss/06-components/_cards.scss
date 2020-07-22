@@ -63,7 +63,7 @@
   background: #fff;
   box-shadow: inset 42px 0 0 #fbfbfb, 0 2px 1px #f3f3f3;
   display: flex;
-  min-height: 128px;
+  min-height: 110px;
   padding: 0 2px 0 10px;
   flex-direction: column-reverse;
   justify-content: flex-start;
@@ -74,9 +74,9 @@
   background: #ffffff;
   border-radius: 50% 50% 50% 0;
   font-size: 0;
-  padding: 10px;
+  padding: 5px;
   position: absolute;
-  bottom: 70px;
+  bottom: 60px;
   margin-left: -10px;
   box-shadow: 5px 4px 2px -4px #efeded;
 
@@ -91,7 +91,7 @@
   }
 
   &:first-child {
-    padding: 20px;
+    padding: 10px;
     position: relative;
     bottom: inherit;
 
