@@ -55,10 +55,13 @@ const getTexts = name => {
         text1: 'Criado com o intuito de ser uma área para o compartilhamento de contéudo sobre diversos idiomas e metodologias de aprendizado de um novo idioma.',
         text2: 'vem do sobrenome do criador do Esperanto, que é a linguagem artificial mais falada no mundo.',
       }
+    default:
+      return false
   }
 }
 const banner = getTexts(projectName);
 %>
+<% if (banner) { %>
 <section>
   <h1 class="banner">
     <svg xmlns="http://www.w3.org/2000/svg" height="100"><use href="#<%- projectName %>" /></svg>
@@ -68,3 +71,4 @@ const banner = getTexts(projectName);
   <p><%- banner.text1 %></p>
   <p><strong class="text--hl"><%- banner.name %></strong> <%- banner.text2 %></p>
 </div>
+<% } %>
