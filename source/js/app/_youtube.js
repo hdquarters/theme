@@ -1,4 +1,4 @@
-const youtube = document.querySelectorAll( ".youtube" );
+const youtube = document.querySelector('body').querySelectorAll(".youtube");
 
 if (youtube.length > 0) {
   for (var i = 0; i < youtube.length; i++) {
