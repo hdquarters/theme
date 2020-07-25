@@ -1,0 +1,118 @@
+.profile {
+  .header {
+    background: $profile-color-primary--dark;
+
+    @media (min-width: $screen-desktop) {
+      box-shadow: 0 4px 0 $profile-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media (min-width: $screen-desktop) {
+      box-shadow: 0 4px 0 $profile-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $profile-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $profile-color-primary--dark;
+
+    @media (min-width: $screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $profile-color-primary--dark;
+
+    svg {
+      fill: $profile-color-primary--dark;
+    }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $profile-color-social;
+    }
+  }
+
+  .card-title,
+  .nc-card-title {
+    color: $profile-color-article-title;
+  }
+
+  .banner {
+    svg {
+      fill: $profile-color-primary--dark-plus;
+    }
+  }
+
+  .banner-description {
+    p {
+      color: $profile-color-primary--dark-plus;
+    }
+  }
+
+  .search {
+    background: $profile-color-rgba;
+  }
+
+  .page-title,
+  .page-title--section,
+  .page-subtitle,
+  .page-subtitle-2,
+  .page-subtitle--section,
+  .page-subtitle--section-link {
+    color: $profile-color-article-title;
+  }
+
+  .mainMenu-link:hover {
+    svg {
+      fill: $profile-color-primary--dark;
+    }
+  }
+
+  .mainMenu-link.on {
+    svg {
+      fill: $profile-color-primary--dark;
+    }
+  }
+
+  .categories-link {
+    color: $profile-color-primary--dark;
+  }
+
+  .article-title,
+  .article-content h2,
+  .article-content h3,
+  .article-content h4 {
+    color: $profile-color-primary--dark;
+  }
+
+  .author-description h3 {
+    color: $profile-color-primary--dark;
+  }
+
+  .search-button {
+    path {
+      fill: $profile-color-primary--dark-plus;
+    }
+  }
+
+  .logotype-link {
+    path {
+      fill: $profile-color-primary;
+
+      @media (min-width: $screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
+
+  .nc-cards--highlight {
+    background: $profile-color-primary--dark-plus;
+  }
+}
