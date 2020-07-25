@@ -84,7 +84,7 @@ const shared = `https://nerdcalistenico.com.br/${projectName}/assets/img/site/gl
       <dl class="nc-card-description">
         <dt class="nc-card-title"><%- post.title %></dt>
         <dd class="nc-card-readTime"><%- calcRT(post.content); %> de leitura</dd>
-        <% if (post.date) { %>
+        <% if (post.date && !!post.noDate !== true) { %>
         <dd class="nc-card-date">
           <%
             var arrayDate = date(post.date, config.date_format).split('.')
