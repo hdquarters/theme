@@ -1,0 +1,118 @@
+.projects {
+  .header {
+    background: $projects-color-primary--dark;
+
+    @media (min-width: $screen-desktop) {
+      box-shadow: 0 4px 0 $projects-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media (min-width: $screen-desktop) {
+      box-shadow: 0 4px 0 $projects-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $projects-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $projects-color-primary--dark;
+
+    @media (min-width: $screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $projects-color-primary--dark;
+
+    svg {
+      fill: $projects-color-primary--dark;
+    }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $projects-color-social;
+    }
+  }
+
+  .card-title,
+  .nc-card-title {
+    color: $projects-color-article-title;
+  }
+
+  .banner {
+    svg {
+      fill: $projects-color-primary--dark-plus;
+    }
+  }
+
+  .banner-description {
+    p {
+      color: $projects-color-primary--dark-plus;
+    }
+  }
+
+  .search {
+    background: $projects-color-rgba;
+  }
+
+  .page-title,
+  .page-title--section,
+  .page-subtitle,
+  .page-subtitle-2,
+  .page-subtitle--section,
+  .page-subtitle--section-link {
+    color: $projects-color-article-title;
+  }
+
+  .mainMenu-link:hover {
+    svg {
+      fill: $projects-color-primary--dark;
+    }
+  }
+
+  .mainMenu-link.on {
+    svg {
+      fill: $projects-color-primary--dark;
+    }
+  }
+
+  .categories-link {
+    color: $projects-color-primary--dark;
+  }
+
+  .article-title,
+  .article-content h2,
+  .article-content h3,
+  .article-content h4 {
+    color: $projects-color-primary--dark;
+  }
+
+  .author-description h3 {
+    color: $projects-color-primary--dark;
+  }
+
+  .search-button {
+    path {
+      fill: $projects-color-primary--dark-plus;
+    }
+  }
+
+  .logotype-link {
+    path {
+      fill: $projects-color-primary;
+
+      @media (min-width: $screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
+
+  .nc-cards--highlight {
+    background: $projects-color-primary--dark-plus;
+  }
+}

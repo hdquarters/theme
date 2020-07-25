@@ -1,0 +1,118 @@
+.youtube {
+  .header {
+    background: $youtube-color-primary--dark;
+
+    @media (min-width: $screen-desktop) {
+      box-shadow: 0 4px 0 $youtube-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media (min-width: $screen-desktop) {
+      box-shadow: 0 4px 0 $youtube-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $youtube-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $youtube-color-primary--dark;
+
+    @media (min-width: $screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $youtube-color-primary--dark;
+
+    svg {
+      fill: $youtube-color-primary--dark;
+    }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $youtube-color-social;
+    }
+  }
+
+  .card-title,
+  .nc-card-title {
+    color: $youtube-color-article-title;
+  }
+
+  .banner {
+    svg {
+      fill: $youtube-color-primary--dark-plus;
+    }
+  }
+
+  .banner-description {
+    p {
+      color: $youtube-color-primary--dark-plus;
+    }
+  }
+
+  .search {
+    background: $youtube-color-rgba;
+  }
+
+  .page-title,
+  .page-title--section,
+  .page-subtitle,
+  .page-subtitle-2,
+  .page-subtitle--section,
+  .page-subtitle--section-link {
+    color: $youtube-color-article-title;
+  }
+
+  .mainMenu-link:hover {
+    svg {
+      fill: $youtube-color-primary--dark;
+    }
+  }
+
+  .mainMenu-link.on {
+    svg {
+      fill: $youtube-color-primary--dark;
+    }
+  }
+
+  .categories-link {
+    color: $youtube-color-primary--dark;
+  }
+
+  .article-title,
+  .article-content h2,
+  .article-content h3,
+  .article-content h4 {
+    color: $youtube-color-primary--dark;
+  }
+
+  .author-description h3 {
+    color: $youtube-color-primary--dark;
+  }
+
+  .search-button {
+    path {
+      fill: $youtube-color-primary--dark-plus;
+    }
+  }
+
+  .logotype-link {
+    path {
+      fill: $youtube-color-primary;
+
+      @media (min-width: $screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
+
+  .nc-cards--highlight {
+    background: $youtube-color-primary--dark-plus;
+  }
+}

@@ -1,0 +1,118 @@
+.following {
+  .header {
+    background: $following-color-primary--dark;
+
+    @media (min-width: $screen-desktop) {
+      box-shadow: 0 4px 0 $following-color-primary--dark-plus;
+    }
+  }
+
+  .page-home .header {
+    @media (min-width: $screen-desktop) {
+      box-shadow: 0 4px 0 $following-color-primary--dark-plus;
+    }
+  }
+
+  .header-top {
+    background: $following-color-primary--dark;
+  }
+
+  .header-bottom {
+    background: $following-color-primary--dark;
+
+    @media (min-width: $screen-desktop) {
+      background: $color-white;
+    }
+  }
+
+  .button-menu_main {
+    color: $following-color-primary--dark;
+
+    svg {
+      fill: $following-color-primary--dark;
+    }
+  }
+
+  .socialMenu-link {
+    svg {
+      fill: $following-color-social;
+    }
+  }
+
+  .card-title,
+  .nc-card-title {
+    color: $following-color-article-title;
+  }
+
+  .banner {
+    svg {
+      fill: $following-color-primary--dark-plus;
+    }
+  }
+
+  .banner-description {
+    p {
+      color: $following-color-primary--dark-plus;
+    }
+  }
+
+  .search {
+    background: $following-color-rgba;
+  }
+
+  .page-title,
+  .page-title--section,
+  .page-subtitle,
+  .page-subtitle-2,
+  .page-subtitle--section,
+  .page-subtitle--section-link {
+    color: $following-color-article-title;
+  }
+
+  .mainMenu-link:hover {
+    svg {
+      fill: $following-color-primary--dark;
+    }
+  }
+
+  .mainMenu-link.on {
+    svg {
+      fill: $following-color-primary--dark;
+    }
+  }
+
+  .categories-link {
+    color: $following-color-primary--dark;
+  }
+
+  .article-title,
+  .article-content h2,
+  .article-content h3,
+  .article-content h4 {
+    color: $following-color-primary--dark;
+  }
+
+  .author-description h3 {
+    color: $following-color-primary--dark;
+  }
+
+  .search-button {
+    path {
+      fill: $following-color-primary--dark-plus;
+    }
+  }
+
+  .logotype-link {
+    path {
+      fill: $following-color-primary;
+
+      @media (min-width: $screen-desktop) {
+        fill: #ececec;
+      }
+    }
+  }
+
+  .nc-cards--highlight {
+    background: $following-color-primary--dark-plus;
+  }
+}
