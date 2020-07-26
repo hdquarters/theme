@@ -55,11 +55,13 @@ include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { proj
 <article class="article" role="article">
   <header class="article-header">
     <h1 class="article-title"><%- post.title %></h1>
+    <% if (!!post.noDate !== true) { %>
     <p class="article-meta">
       Publicado em <time class="article-meta-date"><%- date(post.date, config.date_article_format) %></time>
       <% if(post.updated && moment(post.updated).format('DD-MM-YYYY') !== moment(post.date).format('DD-MM-YYYY') && typeof post.updated !== 'function') { %> e atualizado em <time class="article-meta-date"><%- date(post.updated, config.date_article_format) %></time><% } %>
       <br> <span class="article-meta-read"><%- calcRT(post.content); %> de leitura</span>
     </p>
+    <% } %>
   </header>
   <%- include(googleads1) %>
   <div class="article-content">
