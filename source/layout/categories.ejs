@@ -41,6 +41,7 @@ const content = getTexts(projectName);
 <div>
   <% if (site.categories.length) { %>
     <% site.categories.sort('name').each(function(category){ %>
+      <% if (!category.parent) { %>
       <div class="js-load_more-container js-category-<%- url_for(category.path).split('/')[3] %>">
         <h2 class="page-subtitle--section">
           <a class="page-subtitle--section-link" href="<%- url_for(category.path) %>">
@@ -62,6 +63,7 @@ const content = getTexts(projectName);
         <p><button class="button-load_more js-load_more" type="button">Carregar mais</button></p>
         <% } %>
       </div>
+      <% } %>
     <% }); %>
   <% } %>
 </div>

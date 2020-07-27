@@ -3,7 +3,7 @@
 .socialMenu {
   display: none;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     display: inherit;
   }
 }
@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .socialMenu-list--second {
@@ -20,7 +21,7 @@
   margin-left: 10px;
   width: 100%;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     justify-content: flex-start;
     margin-bottom: 0;
   }
@@ -29,7 +30,7 @@
 .socialMenu-item {
   margin-left: 15px;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     margin-left: 20px;
   }
 
@@ -43,7 +44,7 @@
 }
 
 .socialMenu-text {
-  @include x-rem-fallback(font-size,$font-size-small);
+  @include x-rem-fallback(font-size, $font-size-small);
 
   color: $color-white;
   line-height: 24px;
