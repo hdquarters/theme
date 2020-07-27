@@ -114,7 +114,7 @@
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.privacy_policy.name') %></span>
               </a>
             </li>
-            <% if (projectName === 'main') { %>
+            <% if (projectName === 'main' || projectName === 'github' || projectName === 'profile' || projectName === 'following') { %>
             <li class="mainMenu-item mainMenu-item--full">
               <a id="js-flag-pt" class="mainMenu-link mainMenu-link--flag pt-br <%= page.lang === 'pt-br' ? 'on' : '' %>" href="/" itemprop="url"></a>
               <a id="js-flag-en" class="mainMenu-link mainMenu-link--flag en-us <%= page.lang === 'en-us' ? 'on' : '' %>" href="/en/" itemprop="url" onclick="handleClick()"></a>
