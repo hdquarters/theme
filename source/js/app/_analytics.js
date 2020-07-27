@@ -113,6 +113,8 @@ export default (blogname, isMain) => {
     }
 
     const $openSearch = document.querySelector('.search-button');
-    $openSearch.addEventListener("click", event => eventAnalytics('mostrar busca','clique', `${blogname}`));
+    if ($openSearch) {
+      $openSearch.addEventListener("click", event => eventAnalytics('mostrar busca','clique', `${blogname}`));
+    }
   }
 }
