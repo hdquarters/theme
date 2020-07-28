@@ -3,6 +3,12 @@ const googleads1 = `../partials/googleads/${projectName}/2-categories-1.ejs`;
 
 const getTexts = name => {
   switch(name) {
+    case 'github':
+      return {
+        title: 'Projetos',
+        categoriesTitle: 'Confira os projetos segmentados pelas suas organizações',
+        slug: 'projeto'
+      }
     default:
       return {
         title: 'Artigos',
