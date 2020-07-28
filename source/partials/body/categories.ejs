@@ -1,10 +1,20 @@
 <%
 const getTexts = name => {
   switch(name) {
+    case 'following':
+      return {
+        title: 'Categorias',
+        slug: 'resultados'
+      }
+    case 'github':
+      return {
+        title: 'Organizações',
+        slug: 'projetos'
+      }
     default:
       return {
-        slug: 'artigos',
-        title: 'Categorias'
+        title: 'Categorias',
+        slug: 'artigos'
       }
   }
 };
