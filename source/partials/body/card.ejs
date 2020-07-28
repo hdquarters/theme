@@ -52,7 +52,7 @@ const shared = `https://nerdcalistenico.com.br/${projectName}/assets/img/site/gl
 
 <article class="nc-card js-load_more-item" role="article">
   <% if(index && post.thumbnail) { %>
-    <a class="nc-card-thumbnail" href="<%- url_for(post.path) %>">
+    <a class="nc-card-thumbnail" href="<%- post.externalLink ? post.externalLink : url_for(post.path) %>">
       <figure class="nc-card-thumbnail-figure">
         <img class="nc-card-thumbnail-image lazy" src="/assets/img/site/global/transparent.png" data-src="/<%- projectName %>/assets/img/site/articles/thumbnail/<%- post.thumbnail %>.jpg" alt="<%- post.title %>" width="340" height="120">
       </figure>
@@ -80,7 +80,7 @@ const shared = `https://nerdcalistenico.com.br/${projectName}/assets/img/site/gl
         <a href="<%- url_for(item.path) %>" class="nc-card-category"><%- item.name %></a>
       <% } }) } %>
     </figure>
-    <a class="nc-card-link" href="<%- url_for(post.path) %>">
+    <a class="nc-card-link" href="<%- post.externalLink ? post.externalLink : url_for(post.path) %>">
       <dl class="nc-card-description">
         <dt class="nc-card-title"><%- post.title %></dt>
         <% if (post.date && !!post.noDate !== true) { %>
