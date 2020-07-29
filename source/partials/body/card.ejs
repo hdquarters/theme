@@ -48,13 +48,23 @@ const shared = `https://nerdcalistenico.com.br/${projectName}/assets/img/site/gl
     }
     return result;
   };
+
+  let name = projectName;
+
+  if(projectName === 'profile') {
+    name = 'perfil';
+  }
+
+  if(projectName === 'following') {
+    name = 'seguindo';
+  }
 %>
 
 <article class="nc-card js-load_more-item" role="article">
   <% if(index && post.thumbnail) { %>
     <a class="nc-card-thumbnail" href="<%- post.externalLink ? post.externalLink : url_for(post.path) %>">
       <figure class="nc-card-thumbnail-figure">
-        <img class="nc-card-thumbnail-image lazy" src="/assets/img/site/global/transparent.png" data-src="/<%- projectName %>/assets/img/site/articles/thumbnail/<%- post.thumbnail %>.jpg" alt="<%- post.title %>" width="340" height="120">
+        <img class="nc-card-thumbnail-image lazy" src="/assets/img/site/global/transparent.png" data-src="/<%- name %>/assets/img/site/articles/thumbnail/<%- post.thumbnail %>.jpg" alt="<%- post.title %>" width="340" height="120">
       </figure>
     </a>
   <% } %>

@@ -37,6 +37,17 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
     <% if (isPost){ %>
       <%- include('../partials/body/disqus.ejs') %>
     <% } %>
-    <script src="/<%- projectName %>/assets/js/site/scripts.js?v9.0"></script>
+    <%
+      let name = projectName;
+
+      if(projectName === 'profile') {
+        name = 'perfil';
+      }
+
+      if(projectName === 'following') {
+        name = 'seguindo';
+      }
+    %>
+    <script src="/<%- name %>/assets/js/site/scripts.js?v9.0"></script>
   </body>
 </html>

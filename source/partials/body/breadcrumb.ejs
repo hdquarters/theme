@@ -1,7 +1,16 @@
 <%
+  let project = projectName;
+
+  if(projectName === 'profile') {
+    project = 'perfil';
+  }
+
+  if(projectName === 'following') {
+    project = 'seguindo';
+  }
   var name = slug.replace(/-/g, ' ');
   var paths = page.path.split('/');
-  var path = `/${projectName}`;
+  var path = `/${project}`;
   if (hasBreadcrumb){
 %>
   <div class="breadcrumb">

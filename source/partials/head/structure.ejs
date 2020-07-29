@@ -100,7 +100,18 @@
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
 
-  <link rel="stylesheet" href="/<%- projectName %>/assets/scss/site/style.css?v=9.0">
+  <%
+    let name = projectName;
+
+    if(projectName === 'profile') {
+      name = 'perfil';
+    }
+
+    if(projectName === 'following') {
+      name = 'seguindo';
+    }
+  %>
+  <link rel="stylesheet" href="/<%- name %>/assets/scss/site/style.css?v=9.0">
 
   <%- include('./google-analytics.ejs') %>
   <%- include('./googleads.ejs') %>
