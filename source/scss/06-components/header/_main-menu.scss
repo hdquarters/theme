@@ -53,6 +53,15 @@
   }
 }
 
+.mainMenu-item--spacing {
+  display: none;
+
+  @media (min-width: $screen-desktop) {
+    display: inline-block;
+    width: 40px;
+  }
+}
+
 .mainMenu-list--other {
   .mainMenu-item {
     margin-left: 10px;

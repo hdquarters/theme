@@ -85,23 +85,29 @@
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= isCurrent(__('menu_site.profile.url')) ? 'on' : ''%>" href="<%= __('menu_site.profile.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= projectName === 'profile' ? 'on' : ''%>" href="<%= __('menu_site.profile.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%- __('menu_site.profile.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= isCurrent(__('menu_site.github.url')) ? 'on' : ''%>" href="<%= __('menu_site.github.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= projectName === 'github' ? 'on' : ''%>" href="<%= __('menu_site.github.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.github.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= isCurrent(__('menu_site.following.url'))  ? 'on' : ''%>" href="<%= __('menu_site.following.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= projectName === 'following' ? 'on' : ''%>" href="<%= __('menu_site.following.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.following.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
-              <a class="mainMenu-link <%= isCurrent(__('menu_site.videos.url'))  ? 'on' : ''%>" href="<%= __('menu_site.videos.url') %>" itemprop="url">
+              <a class="mainMenu-link <%= projectName === 'videos'  ? 'on' : ''%>" href="<%= __('menu_site.videos.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.videos.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item--spacing"></li>
+            <li class="mainMenu-item">
+              <a class="mainMenu-link <%= isCurrent(__('menu_site.sitemap.url'))  ? 'on' : ''%>" href="<%= __('menu_site.sitemap.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%= __('menu_site.sitemap.name') %></span>
               </a>
             </li>
             <li class="mainMenu-item">
@@ -114,7 +120,7 @@
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.privacy_policy.name') %></span>
               </a>
             </li>
-            <% if (projectName === 'main' || projectName === 'github' || projectName === 'profile' || projectName === 'following') { %>
+            <% if (projectName === 'main' || projectName === 'github' || projectName === 'profile' || projectName === 'following' || projectName === 'videos') { %>
             <li class="mainMenu-item mainMenu-item--full">
               <a id="js-flag-pt" class="mainMenu-link mainMenu-link--flag pt-br <%= page.lang === 'pt-br' ? 'on' : '' %>" href="/" itemprop="url"></a>
               <a id="js-flag-en" class="mainMenu-link mainMenu-link--flag en-us <%= page.lang === 'en-us' ? 'on' : '' %>" href="/en/" itemprop="url" onclick="handleClick()"></a>
