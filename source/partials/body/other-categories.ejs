@@ -1,6 +1,10 @@
 <%
 const getTexts = name => {
   switch(name) {
+    case 'profiel':
+      return {
+        title: 'Outras preferências'
+      }
     case 'github':
       return {
         title: 'Outros projetos'
@@ -18,7 +22,7 @@ const content = getTexts(projectName);
   <ul class="categories-list">
   <% site.categories.sort('name').map(category => { %>
     <%
-      if (page.category !== category.name) {
+      if (page.category !== category.name && !category.parent) {
         const icon = category.name.replace(/ /g, '').toLowerCase();
         const name = category.name.toLowerCase();
     %>
