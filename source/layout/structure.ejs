@@ -7,16 +7,16 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
   <body class="<%- projectName %> page-<%- is_home() ? 'home' : page.name %>">
     <%- include('../partials/svg/blogs.ejs') %>
     <%- include('../partials/svg/social.ejs') %>
+    <%
+      const svgPath = `../partials/svg/${projectName}.ejs`;
+      if (hasSvg) {
+    %>
+    <%- include(svgPath) %>
+    <% } %>
     <%- include('../partials/body/search.ejs') %>
     <%- include('../partials/body/google-analytics.ejs') %>
     <div class="wrapper">
       <%- include('../partials/body/header.ejs', {projectName}) %>
-      <%
-        const svgPath = `../partials/svg/${projectName}.ejs`;
-        if (hasSvg) {
-      %>
-      <%- include(svgPath) %>
-      <% } %>
       <% if (is_home()) { %>
         <%- include('../partials/body/banner.ejs', { projectName }) %>
         <% if(highlight) { %>
