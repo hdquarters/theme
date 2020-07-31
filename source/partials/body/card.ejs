@@ -76,7 +76,7 @@ const shared = `https://nerdcalistenico.com.br/${projectName}/assets/img/site/gl
           if (!hasTag || index === 0) {
           category = item.name.replace(/ /g, '').toLowerCase()
       %>
-      <a href="<%- url_for(item.path) %>" class="nc-card-image">
+      <a href="<%- post.categoryLink ? post.categoryLink : url_for(item.path) %>" class="nc-card-image">
         <svg height="40" width="40"><use xlink:href="#<%- category %>" /></svg>
       </a>
       <%
