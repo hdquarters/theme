@@ -87,7 +87,7 @@ const shared = `https://nerdcalistenico.com.br/${projectName}/assets/img/site/gl
         post.categories.map((item, index) => {
           if (index !== 0) {
       %>
-        <a href="<%- url_for(item.path) %>" class="nc-card-category"><%- item.name %></a>
+        <a href="<%- post.category2Link ? post.category2Link : url_for(item.path) %>" class="nc-card-category"><%- item.name %></a>
       <% } }) } %>
     </figure>
     <a class="nc-card-link" href="<%- post.externalLink ? post.externalLink : url_for(post.path) %>">
