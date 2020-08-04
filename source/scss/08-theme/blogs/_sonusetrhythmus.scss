@@ -1,4 +1,6 @@
 .sonusetrhythmus {
+  background: $sonusetrhythmus-color-social;
+
   .header {
     background: $sonusetrhythmus-color-primary--dark;
 
@@ -45,6 +47,7 @@
   }
 
   .banner {
+    background: $sonusetrhythmus-color-primary;
     svg {
       fill: $sonusetrhythmus-color-primary--dark-plus;
     }
@@ -114,5 +117,80 @@
 
   .nc-cards--highlight {
     background: $sonusetrhythmus-color-primary--dark-plus;
+  }
+
+  .nc-card {
+    .nc-card-title {
+      color: $sonusetrhythmus-color-social;
+    }
+
+    .nc-card-link {
+      background: $sonusetrhythmus-color-primary--dark-plus;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-figure {
+      background: $sonusetrhythmus-color-primary--dark-plus;
+      box-shadow: inset 42px 0 0 $sonusetrhythmus-color-primary--dark,
+        0 2px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-thumbnail {
+      box-shadow: inset 100px 0 0 $sonusetrhythmus-color-primary--dark;
+    }
+
+    .nc-card-image {
+      background: $sonusetrhythmus-color-primary--dark-plus;
+      box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background: $sonusetrhythmus-color-social;
+      }
+    }
+
+    .nc-card-readTime {
+      background: $sonusetrhythmus-color-primary--dark-plus;
+    }
+
+    .nc-card-date {
+      color: $sonusetrhythmus-color-social;
+    }
+
+    .nc-card-date-year {
+      color: $sonusetrhythmus-color-primary;
+    }
+  }
+
+  .breadcrumb-icon path {
+    fill: $sonusetrhythmus-color-primary--dark-plus;
+  }
+
+  .breadcrumb-item,
+  .breadcrumb-link {
+    color: $sonusetrhythmus-color-primary--dark-plus;
+  }
+
+  .categories {
+    background: $sonusetrhythmus-color-primary--dark-plus;
+    border-color: $sonusetrhythmus-color-social;
+  }
+
+  .categories-link {
+    background: $sonusetrhythmus-color-social;
+    border-color: $sonusetrhythmus-color-social;
+  }
+
+  .categories-count {
+    background: $sonusetrhythmus-color-primary--dark-plus;
+    color: $sonusetrhythmus-color-social;
+  }
+
+  .categories-title,
+  .categories-title-count {
+    color: $sonusetrhythmus-color-social;
+  }
+
+  .categories .text {
+    color: $sonusetrhythmus-color-social;
   }
 }

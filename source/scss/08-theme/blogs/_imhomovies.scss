@@ -1,4 +1,6 @@
 .imhomovies {
+  background: $imhomovies-color-social;
+
   .header {
     background: $imhomovies-color-primary--dark;
 
@@ -45,6 +47,7 @@
   }
 
   .banner {
+    background: $imhomovies-color-primary;
     svg {
       fill: $imhomovies-color-primary--dark-plus;
     }
@@ -114,5 +117,80 @@
 
   .nc-cards--highlight {
     background: $imhomovies-color-primary--dark-plus;
+  }
+
+  .nc-card {
+    .nc-card-title {
+      color: $imhomovies-color-social;
+    }
+
+    .nc-card-link {
+      background: $imhomovies-color-primary--dark-plus;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-figure {
+      background: $imhomovies-color-primary--dark-plus;
+      box-shadow: inset 42px 0 0 $imhomovies-color-primary--dark,
+        0 2px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-thumbnail {
+      box-shadow: inset 100px 0 0 $imhomovies-color-primary--dark;
+    }
+
+    .nc-card-image {
+      background: $imhomovies-color-primary--dark-plus;
+      box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background: $imhomovies-color-social;
+      }
+    }
+
+    .nc-card-readTime {
+      background: $imhomovies-color-primary--dark-plus;
+    }
+
+    .nc-card-date {
+      color: $imhomovies-color-social;
+    }
+
+    .nc-card-date-year {
+      color: $imhomovies-color-primary;
+    }
+  }
+
+  .breadcrumb-icon path {
+    fill: $imhomovies-color-primary--dark-plus;
+  }
+
+  .breadcrumb-item,
+  .breadcrumb-link {
+    color: $imhomovies-color-primary--dark-plus;
+  }
+
+  .categories {
+    background: $imhomovies-color-primary--dark-plus;
+    border-color: $imhomovies-color-social;
+  }
+
+  .categories-link {
+    background: $imhomovies-color-social;
+    border-color: $imhomovies-color-social;
+  }
+
+  .categories-count {
+    background: $imhomovies-color-primary--dark-plus;
+    color: $imhomovies-color-social;
+  }
+
+  .categories-title,
+  .categories-title-count {
+    color: $imhomovies-color-social;
+  }
+
+  .categories .text {
+    color: $imhomovies-color-social;
   }
 }

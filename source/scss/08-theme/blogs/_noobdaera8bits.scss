@@ -1,4 +1,6 @@
 .noobdaera8bits {
+  background: $noobdaera8bits-color-social;
+
   .header {
     background: $noobdaera8bits-color-primary--dark;
 
@@ -45,6 +47,7 @@
   }
 
   .banner {
+    background: $noobdaera8bits-color-primary;
     svg {
       fill: $noobdaera8bits-color-primary--dark-plus;
     }
@@ -114,5 +117,80 @@
 
   .nc-cards--highlight {
     background: $noobdaera8bits-color-primary--dark-plus;
+  }
+
+  .nc-card {
+    .nc-card-title {
+      color: $noobdaera8bits-color-social;
+    }
+
+    .nc-card-link {
+      background: $noobdaera8bits-color-primary--dark-plus;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-figure {
+      background: $noobdaera8bits-color-primary--dark-plus;
+      box-shadow: inset 42px 0 0 $noobdaera8bits-color-primary--dark,
+        0 2px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-thumbnail {
+      box-shadow: inset 100px 0 0 $noobdaera8bits-color-primary--dark;
+    }
+
+    .nc-card-image {
+      background: $noobdaera8bits-color-primary--dark-plus;
+      box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background: $noobdaera8bits-color-social;
+      }
+    }
+
+    .nc-card-readTime {
+      background: $noobdaera8bits-color-primary--dark-plus;
+    }
+
+    .nc-card-date {
+      color: $noobdaera8bits-color-social;
+    }
+
+    .nc-card-date-year {
+      color: $noobdaera8bits-color-primary;
+    }
+  }
+
+  .breadcrumb-icon path {
+    fill: $noobdaera8bits-color-primary--dark-plus;
+  }
+
+  .breadcrumb-item,
+  .breadcrumb-link {
+    color: $noobdaera8bits-color-primary--dark-plus;
+  }
+
+  .categories {
+    background: $noobdaera8bits-color-primary--dark-plus;
+    border-color: $noobdaera8bits-color-social;
+  }
+
+  .categories-link {
+    background: $noobdaera8bits-color-social;
+    border-color: $noobdaera8bits-color-social;
+  }
+
+  .categories-count {
+    background: $noobdaera8bits-color-primary--dark-plus;
+    color: $noobdaera8bits-color-social;
+  }
+
+  .categories-title,
+  .categories-title-count {
+    color: $noobdaera8bits-color-social;
+  }
+
+  .categories .text {
+    color: $noobdaera8bits-color-social;
   }
 }

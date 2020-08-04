@@ -1,4 +1,6 @@
 .hemersonvianna {
+  background: $hemersonvianna-color-social;
+
   .header {
     background: $hemersonvianna-color-primary--dark;
 
@@ -45,6 +47,7 @@
   }
 
   .banner {
+    background: $hemersonvianna-color-primary;
     svg {
       fill: $hemersonvianna-color-primary--dark-plus;
     }
@@ -114,5 +117,80 @@
 
   .nc-cards--highlight {
     background: $hemersonvianna-color-primary--dark-plus;
+  }
+
+  .nc-card {
+    .nc-card-title {
+      color: $hemersonvianna-color-social;
+    }
+
+    .nc-card-link {
+      background: $hemersonvianna-color-primary--dark-plus;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-figure {
+      background: $hemersonvianna-color-primary--dark-plus;
+      box-shadow: inset 42px 0 0 $hemersonvianna-color-primary--dark,
+        0 2px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-thumbnail {
+      box-shadow: inset 100px 0 0 $hemersonvianna-color-primary--dark;
+    }
+
+    .nc-card-image {
+      background: $hemersonvianna-color-primary--dark-plus;
+      box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background: $hemersonvianna-color-social;
+      }
+    }
+
+    .nc-card-readTime {
+      background: $hemersonvianna-color-primary--dark-plus;
+    }
+
+    .nc-card-date {
+      color: $hemersonvianna-color-social;
+    }
+
+    .nc-card-date-year {
+      color: $hemersonvianna-color-primary;
+    }
+  }
+
+  .breadcrumb-icon path {
+    fill: $hemersonvianna-color-primary--dark-plus;
+  }
+
+  .breadcrumb-item,
+  .breadcrumb-link {
+    color: $hemersonvianna-color-primary--dark-plus;
+  }
+
+  .categories {
+    background: $hemersonvianna-color-primary--dark-plus;
+    border-color: $hemersonvianna-color-social;
+  }
+
+  .categories-link {
+    background: $hemersonvianna-color-social;
+    border-color: $hemersonvianna-color-social;
+  }
+
+  .categories-count {
+    background: $hemersonvianna-color-primary--dark-plus;
+    color: $hemersonvianna-color-social;
+  }
+
+  .categories-title,
+  .categories-title-count {
+    color: $hemersonvianna-color-social;
+  }
+
+  .categories .text {
+    color: $hemersonvianna-color-social;
   }
 }

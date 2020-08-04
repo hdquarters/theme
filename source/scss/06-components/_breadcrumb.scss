@@ -3,11 +3,10 @@
   display: none;
 
   @media (min-width: $screen-tablet-portrait) {
-    border: 1px solid #f3f7f4;
     border-radius: 1rem;
     display: block;
     margin-bottom: 2em;
-    padding: 0.2em 2em;
+    padding: 0.2em 0;
     padding-right: 80px;
     width: 100%;
   }
@@ -21,19 +20,23 @@
 }
 
 .breadcrumb-list {
-  @include x-clearfix;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap row;
 }
+
 .breadcrumb-item {
   @include x-rem-fallback(font-size, $font-size-small);
-  color: #5a6772;
-  float: left;
+  align-items: center;
+  display: flex;
+  color: rgba(0,0,0,0.4);
   font-weight: 400;
   line-height: $font-line-height-small;
 }
 
 .breadcrumb-link {
   @include x-rem-fallback(font-size, $font-size-small);
-  color: #5a6772;
+  color: rgba(0,0,0,0.6);
   display: inline-block;
   font-weight: 700;
   line-height: $font-line-height-small;
@@ -45,7 +48,9 @@
 }
 
 .breadcrumb-icon {
-  margin-right: 5px;
+  margin: 0 5px;
+  width: 8px;
+
   path {
     fill: #afb8bf;
   }

@@ -1,4 +1,6 @@
 .foconocapital {
+  background: $foconocapital-color-social;
+
   .header {
     background: $foconocapital-color-primary--dark;
 
@@ -45,6 +47,7 @@
   }
 
   .banner {
+    background: $foconocapital-color-primary;
     svg {
       fill: $foconocapital-color-primary--dark-plus;
     }
@@ -114,5 +117,80 @@
 
   .nc-cards--highlight {
     background: $foconocapital-color-primary--dark-plus;
+  }
+
+  .nc-card {
+    .nc-card-title {
+      color: $foconocapital-color-social;
+    }
+
+    .nc-card-link {
+      background: $foconocapital-color-primary--dark-plus;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-figure {
+      background: $foconocapital-color-primary--dark-plus;
+      box-shadow: inset 42px 0 0 $foconocapital-color-primary--dark,
+        0 2px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-thumbnail {
+      box-shadow: inset 100px 0 0 $foconocapital-color-primary--dark;
+    }
+
+    .nc-card-image {
+      background: $foconocapital-color-primary--dark-plus;
+      box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background: $foconocapital-color-social;
+      }
+    }
+
+    .nc-card-readTime {
+      background: $foconocapital-color-primary--dark-plus;
+    }
+
+    .nc-card-date {
+      color: $foconocapital-color-social;
+    }
+
+    .nc-card-date-year {
+      color: $foconocapital-color-primary;
+    }
+  }
+
+  .breadcrumb-icon path {
+    fill: $foconocapital-color-primary--dark-plus;
+  }
+
+  .breadcrumb-item,
+  .breadcrumb-link {
+    color: $foconocapital-color-primary--dark-plus;
+  }
+
+  .categories {
+    background: $foconocapital-color-primary--dark-plus;
+    border-color: $foconocapital-color-social;
+  }
+
+  .categories-link {
+    background: $foconocapital-color-social;
+    border-color: $foconocapital-color-social;
+  }
+
+  .categories-count {
+    background: $foconocapital-color-primary--dark-plus;
+    color: $foconocapital-color-social;
+  }
+
+  .categories-title,
+  .categories-title-count {
+    color: $foconocapital-color-social;
+  }
+
+  .categories .text {
+    color: $foconocapital-color-social;
   }
 }

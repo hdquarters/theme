@@ -1,4 +1,6 @@
 .foradabolha {
+  background: $foradabolha-color-social;
+
   .header {
     background: $foradabolha-color-primary--dark;
 
@@ -45,6 +47,7 @@
   }
 
   .banner {
+    background: $foradabolha-color-primary;
     svg {
       fill: $foradabolha-color-primary--dark-plus;
     }
@@ -114,5 +117,80 @@
 
   .nc-cards--highlight {
     background: $foradabolha-color-primary--dark-plus;
+  }
+
+  .nc-card {
+    .nc-card-title {
+      color: $foradabolha-color-social;
+    }
+
+    .nc-card-link {
+      background: $foradabolha-color-primary--dark-plus;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-figure {
+      background: $foradabolha-color-primary--dark-plus;
+      box-shadow: inset 42px 0 0 $foradabolha-color-primary--dark,
+        0 2px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .nc-card-thumbnail {
+      box-shadow: inset 100px 0 0 $foradabolha-color-primary--dark;
+    }
+
+    .nc-card-image {
+      background: $foradabolha-color-primary--dark-plus;
+      box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background: $foradabolha-color-social;
+      }
+    }
+
+    .nc-card-readTime {
+      background: $foradabolha-color-primary--dark-plus;
+    }
+
+    .nc-card-date {
+      color: $foradabolha-color-social;
+    }
+
+    .nc-card-date-year {
+      color: $foradabolha-color-primary;
+    }
+  }
+
+  .breadcrumb-icon path {
+    fill: $foradabolha-color-primary--dark-plus;
+  }
+
+  .breadcrumb-item,
+  .breadcrumb-link {
+    color: $foradabolha-color-primary--dark-plus;
+  }
+
+  .categories {
+    background: $foradabolha-color-primary--dark-plus;
+    border-color: $foradabolha-color-social;
+  }
+
+  .categories-link {
+    background: $foradabolha-color-social;
+    border-color: $foradabolha-color-social;
+  }
+
+  .categories-count {
+    background: $foradabolha-color-primary--dark-plus;
+    color: $foradabolha-color-social;
+  }
+
+  .categories-title,
+  .categories-title-count {
+    color: $foradabolha-color-social;
+  }
+
+  .categories .text {
+    color: $foradabolha-color-social;
   }
 }

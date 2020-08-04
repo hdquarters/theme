@@ -83,6 +83,7 @@
   bottom: 60px;
   margin-left: -10px;
   box-shadow: 5px 4px 2px -4px #efeded;
+  transition: all 0.5s ease-in-out;
 
   &:hover {
     box-shadow: 5px 4px 2px -4px #efeded, inset 0 0 15px #efeded;
@@ -185,6 +186,7 @@
 .nc-card-thumbnail {
   box-shadow: inset 100px 0 0 #fbfbfb;
   max-height: 97px;
+  overflow: hidden;
   padding-left: 42px;
 
   &:hover .nc-card-thumbnail-image {
@@ -199,4 +201,8 @@
 .nc-card-thumbnail-image {
   box-shadow: 0 3px 3px #ccc;
   transition: all 0.5s ease-in-out;
+}
+
+.nc-card:hover .nc-card-thumbnail {
+  max-height: inherit;
 }
