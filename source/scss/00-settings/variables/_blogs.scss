@@ -18,7 +18,7 @@ $imhomovies-color-primary--dark: #4e1111;
 $imhomovies-color-primary: #c11e1e;
 $imhomovies-color-primary--light: #e87d7d;
 
-$imhomovies-color-article-title: #752929;
+$imhomovies-color-article-title: $imhomovies-color-primary--dark-plus;
 $imhomovies-color-social: #903f3f;
 
 $imhomovies-color-rgba: rgba(58, 9, 9, 0.9);
@@ -29,7 +29,7 @@ $zamenhof-color-primary--dark: #113a4e;
 $zamenhof-color-primary: #1ea2c1;
 $zamenhof-color-primary--light: #e0f0ff;
 
-$zamenhof-color-article-title: #123863;
+$zamenhof-color-article-title: $zamenhof-color-primary--dark-plus;
 $zamenhof-color-social: #20556f;
 
 $zamenhof-color-rgba: rgba(9, 38, 53, 0.9);
@@ -40,7 +40,7 @@ $saborinstintivo-color-primary--dark: #4e4a11;
 $saborinstintivo-color-primary: #c1ae1e;
 $saborinstintivo-color-primary--light: #f2ec82;
 
-$saborinstintivo-color-article-title: #5d6312;
+$saborinstintivo-color-article-title: $saborinstintivo-color-primary--dark-plus;
 $saborinstintivo-color-social: #8c895b;
 
 $saborinstintivo-color-rgba: rgba(64, 60, 13, 0.9);
@@ -51,7 +51,7 @@ $foconocapital-color-primary--dark: #114e21;
 $foconocapital-color-primary: #358a4b;
 $foconocapital-color-primary--light: #52bd6e;
 
-$foconocapital-color-article-title: #63916c;
+$foconocapital-color-article-title: $foconocapital-color-primary--dark-plus;
 $foconocapital-color-social: #467552;
 
 $foconocapital-color-rgba: rgba(14, 60, 15, 0.9);
@@ -62,7 +62,7 @@ $jornadarelevante-color-primary--dark: #734a16;
 $jornadarelevante-color-primary: #c1801e;
 $jornadarelevante-color-primary--light: #e8b87d;
 
-$jornadarelevante-color-article-title: #754a29;
+$jornadarelevante-color-article-title: $jornadarelevante-color-primary--dark-plus;
 $jornadarelevante-color-social: #90633f;
 
 $jornadarelevante-color-rgba: rgba(80, 50, 11, 0.9);
@@ -73,7 +73,7 @@ $sonusetrhythmus-color-primary--dark: #65135b;
 $sonusetrhythmus-color-primary: #b71ec1;
 $sonusetrhythmus-color-primary--light: #ffe0fd;
 
-$sonusetrhythmus-color-article-title: #692975;
+$sonusetrhythmus-color-article-title: $sonusetrhythmus-color-primary--dark-plus;
 $sonusetrhythmus-color-social: #903f8e;
 
 $sonusetrhythmus-color-rgba: rgba(64, 10, 56, 0.9);
@@ -84,7 +84,7 @@ $foradabolha-color-primary--dark: #464848;
 $foradabolha-color-primary: #626465;
 $foradabolha-color-primary--light: #d0d0d0;
 
-$foradabolha-color-article-title: #585858;
+$foradabolha-color-article-title: $foradabolha-color-primary--dark-plus;
 $foradabolha-color-social: #6d6d6d;
 
 $foradabolha-color-rgba: rgba(34, 35, 35, 0.9);
@@ -95,7 +95,7 @@ $noobdaera8bits-color-primary--dark: #0a3c40;
 $noobdaera8bits-color-primary: #136165;
 $noobdaera8bits-color-primary--light: #e0faff;
 
-$noobdaera8bits-color-article-title: #0f4346;
+$noobdaera8bits-color-article-title: $noobdaera8bits-color-primary--dark-plus;
 $noobdaera8bits-color-social: #1c575a;
 
 $noobdaera8bits-color-rgba: rgba(10, 60, 64, 0.9);
