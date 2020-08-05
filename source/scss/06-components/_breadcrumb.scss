@@ -3,11 +3,11 @@
   display: none;
 
   @media (min-width: $screen-tablet-portrait) {
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     display: block;
-    margin-bottom: 2em;
-    padding: 0.2em 0;
-    padding-right: 80px;
+    margin: 1em 0;
+    padding: 0 10px;
     width: 100%;
   }
 }
@@ -29,14 +29,14 @@
   @include x-rem-fallback(font-size, $font-size-small);
   align-items: center;
   display: flex;
-  color: rgba(0,0,0,0.4);
+  color: rgba(0, 0, 0, 0.4);
   font-weight: 400;
   line-height: $font-line-height-small;
 }
 
 .breadcrumb-link {
   @include x-rem-fallback(font-size, $font-size-small);
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
   display: inline-block;
   font-weight: 700;
   line-height: $font-line-height-small;
