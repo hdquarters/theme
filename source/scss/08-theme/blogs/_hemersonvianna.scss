@@ -1,17 +1,17 @@
 .hemersonvianna {
-  background: $hemersonvianna-color-social;
+  background: $hemersonvianna-background;
 
   .header {
     background: $hemersonvianna-color-primary--dark;
 
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $hemersonvianna-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $hemersonvianna-color-primary--dark;
     }
   }
 
   .page-home .header {
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $hemersonvianna-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $hemersonvianna-color-primary--dark;
     }
   }
 
@@ -49,13 +49,13 @@
   .banner {
     background: $hemersonvianna-color-primary;
     svg {
-      fill: $hemersonvianna-color-primary--dark-plus;
+      fill: $hemersonvianna-color-primary--dark;
     }
   }
 
   .banner-description {
     p {
-      color: $hemersonvianna-color-primary--dark-plus;
+      color: $hemersonvianna-color-primary--dark;
     }
   }
 
@@ -101,7 +101,7 @@
 
   .search-button {
     path {
-      fill: $hemersonvianna-color-primary--dark-plus;
+      fill: $hemersonvianna-color-primary--dark;
     }
   }
 
@@ -116,7 +116,7 @@
   }
 
   .nc-cards--highlight {
-    background: $hemersonvianna-color-primary--dark-plus;
+    background: $hemersonvianna-color-primary--dark;
   }
 
   .nc-card {
@@ -125,12 +125,12 @@
     }
 
     .nc-card-link {
-      background: $hemersonvianna-color-primary--dark-plus;
+      background: $hemersonvianna-color-primary--dark;
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     }
 
     .nc-card-figure {
-      background: $hemersonvianna-color-primary--dark-plus;
+      background: $hemersonvianna-color-primary--dark;
       box-shadow: inset 42px 0 0 $hemersonvianna-color-primary--dark,
         0 2px 1px rgba(0, 0, 0, 0.4);
     }
@@ -140,7 +140,7 @@
     }
 
     .nc-card-image {
-      background: $hemersonvianna-color-primary--dark-plus;
+      background: $hemersonvianna-color-primary--dark;
       box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
 
       &:hover {
@@ -149,7 +149,7 @@
     }
 
     .nc-card-readTime {
-      background: $hemersonvianna-color-primary--dark-plus;
+      background: $hemersonvianna-color-primary--dark;
     }
 
     .nc-card-date {
@@ -162,16 +162,16 @@
   }
 
   .breadcrumb-icon path {
-    fill: $hemersonvianna-color-primary--dark-plus;
+    fill: $hemersonvianna-color-primary--dark;
   }
 
   .breadcrumb-item,
   .breadcrumb-link {
-    color: $hemersonvianna-color-primary--dark-plus;
+    color: $hemersonvianna-color-primary--dark;
   }
 
   .categories {
-    background: $hemersonvianna-color-primary--dark-plus;
+    background: $hemersonvianna-color-primary--dark;
     border-color: $hemersonvianna-color-social;
   }
 
@@ -181,7 +181,7 @@
   }
 
   .categories-count {
-    background: $hemersonvianna-color-primary--dark-plus;
+    background: $hemersonvianna-color-primary--dark;
     color: $hemersonvianna-color-social;
   }
 

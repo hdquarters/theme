@@ -3,13 +3,13 @@
     background: $github-color-primary--dark;
 
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $github-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $github-color-primary--dark;
     }
   }
 
   .page-home .header {
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $github-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $github-color-primary--dark;
     }
   }
 
@@ -46,13 +46,13 @@
 
   .banner {
     svg {
-      fill: $github-color-primary--dark-plus;
+      fill: $github-color-primary--dark;
     }
   }
 
   .banner-description {
     p {
-      color: $github-color-primary--dark-plus;
+      color: $github-color-primary--dark;
     }
   }
 
@@ -98,7 +98,7 @@
 
   .search-button {
     path {
-      fill: $github-color-primary--dark-plus;
+      fill: $github-color-primary--dark;
     }
   }
 
@@ -113,6 +113,6 @@
   }
 
   .nc-cards--highlight {
-    background: $github-color-primary--dark-plus;
+    background: $github-color-primary--dark;
   }
 }

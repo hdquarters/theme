@@ -3,13 +3,13 @@
     background: $following-color-primary--dark;
 
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $following-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $following-color-primary--dark;
     }
   }
 
   .page-home .header {
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $following-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $following-color-primary--dark;
     }
   }
 
@@ -46,13 +46,13 @@
 
   .banner {
     svg {
-      fill: $following-color-primary--dark-plus;
+      fill: $following-color-primary--dark;
     }
   }
 
   .banner-description {
     p {
-      color: $following-color-primary--dark-plus;
+      color: $following-color-primary--dark;
     }
   }
 
@@ -98,7 +98,7 @@
 
   .search-button {
     path {
-      fill: $following-color-primary--dark-plus;
+      fill: $following-color-primary--dark;
     }
   }
 
@@ -113,6 +113,6 @@
   }
 
   .nc-cards--highlight {
-    background: $following-color-primary--dark-plus;
+    background: $following-color-primary--dark;
   }
 }

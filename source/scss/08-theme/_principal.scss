@@ -3,13 +3,13 @@
     background: $nerdcalistenico-color-primary--dark;
 
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $nerdcalistenico-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $nerdcalistenico-color-primary--dark;
     }
   }
 
   .page-home .header {
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $nerdcalistenico-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $nerdcalistenico-color-primary--dark;
     }
   }
 
@@ -47,12 +47,12 @@
     background: $nerdcalistenico-color-primary--dark;
 
     svg {
-      fill: $nerdcalistenico-color-primary--dark-plus;
+      fill: $nerdcalistenico-color-primary--dark;
     }
   }
 
   .banner-description {
-    background: $nerdcalistenico-color-primary--dark-plus;
+    background: $nerdcalistenico-color-primary--dark;
 
     p {
       color: $nerdcalistenico-color-primary--light;

@@ -1,17 +1,17 @@
 .saborinstintivo {
-  background: $saborinstintivo-color-social;
+  background: $saborinstintivo-background;
 
   .header {
     background: $saborinstintivo-color-primary--dark;
 
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $saborinstintivo-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $saborinstintivo-color-primary--dark;
     }
   }
 
   .page-home .header {
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $saborinstintivo-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $saborinstintivo-color-primary--dark;
     }
   }
 
@@ -49,13 +49,13 @@
   .banner {
     background: $saborinstintivo-color-primary;
     svg {
-      fill: $saborinstintivo-color-primary--dark-plus;
+      fill: $saborinstintivo-color-primary--dark;
     }
   }
 
   .banner-description {
     p {
-      color: $saborinstintivo-color-primary--dark-plus;
+      color: $saborinstintivo-color-primary--dark;
     }
   }
 
@@ -101,7 +101,7 @@
 
   .search-button {
     path {
-      fill: $saborinstintivo-color-primary--dark-plus;
+      fill: $saborinstintivo-color-primary--dark;
     }
   }
 
@@ -116,7 +116,7 @@
   }
 
   .nc-cards--highlight {
-    background: $saborinstintivo-color-primary--dark-plus;
+    background: $saborinstintivo-color-primary--dark;
   }
 
   .nc-card {
@@ -125,12 +125,12 @@
     }
 
     .nc-card-link {
-      background: $saborinstintivo-color-primary--dark-plus;
+      background: $saborinstintivo-color-primary--dark;
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     }
 
     .nc-card-figure {
-      background: $saborinstintivo-color-primary--dark-plus;
+      background: $saborinstintivo-color-primary--dark;
       box-shadow: inset 42px 0 0 $saborinstintivo-color-primary--dark,
         0 2px 1px rgba(0, 0, 0, 0.4);
     }
@@ -140,7 +140,7 @@
     }
 
     .nc-card-image {
-      background: $saborinstintivo-color-primary--dark-plus;
+      background: $saborinstintivo-color-primary--dark;
       box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
 
       &:hover {
@@ -149,7 +149,7 @@
     }
 
     .nc-card-readTime {
-      background: $saborinstintivo-color-primary--dark-plus;
+      background: $saborinstintivo-color-primary--dark;
     }
 
     .nc-card-date {
@@ -162,16 +162,16 @@
   }
 
   .breadcrumb-icon path {
-    fill: $saborinstintivo-color-primary--dark-plus;
+    fill: $saborinstintivo-color-primary--dark;
   }
 
   .breadcrumb-item,
   .breadcrumb-link {
-    color: $saborinstintivo-color-primary--dark-plus;
+    color: $saborinstintivo-color-primary--dark;
   }
 
   .categories {
-    background: $saborinstintivo-color-primary--dark-plus;
+    background: $saborinstintivo-color-primary--dark;
     border-color: $saborinstintivo-color-social;
   }
 
@@ -181,7 +181,7 @@
   }
 
   .categories-count {
-    background: $saborinstintivo-color-primary--dark-plus;
+    background: $saborinstintivo-color-primary--dark;
     color: $saborinstintivo-color-social;
   }
 

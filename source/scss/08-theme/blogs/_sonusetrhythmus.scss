@@ -1,17 +1,17 @@
 .sonusetrhythmus {
-  background: $sonusetrhythmus-color-social;
+  background: $sonusetrhythmus-background;
 
   .header {
     background: $sonusetrhythmus-color-primary--dark;
 
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $sonusetrhythmus-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $sonusetrhythmus-color-primary--dark;
     }
   }
 
   .page-home .header {
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $sonusetrhythmus-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $sonusetrhythmus-color-primary--dark;
     }
   }
 
@@ -49,13 +49,13 @@
   .banner {
     background: $sonusetrhythmus-color-primary;
     svg {
-      fill: $sonusetrhythmus-color-primary--dark-plus;
+      fill: $sonusetrhythmus-color-primary--dark;
     }
   }
 
   .banner-description {
     p {
-      color: $sonusetrhythmus-color-primary--dark-plus;
+      color: $sonusetrhythmus-color-primary--dark;
     }
   }
 
@@ -101,7 +101,7 @@
 
   .search-button {
     path {
-      fill: $sonusetrhythmus-color-primary--dark-plus;
+      fill: $sonusetrhythmus-color-primary--dark;
     }
   }
 
@@ -116,7 +116,7 @@
   }
 
   .nc-cards--highlight {
-    background: $sonusetrhythmus-color-primary--dark-plus;
+    background: $sonusetrhythmus-color-primary--dark;
   }
 
   .nc-card {
@@ -125,12 +125,12 @@
     }
 
     .nc-card-link {
-      background: $sonusetrhythmus-color-primary--dark-plus;
+      background: $sonusetrhythmus-color-primary--dark;
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     }
 
     .nc-card-figure {
-      background: $sonusetrhythmus-color-primary--dark-plus;
+      background: $sonusetrhythmus-color-primary--dark;
       box-shadow: inset 42px 0 0 $sonusetrhythmus-color-primary--dark,
         0 2px 1px rgba(0, 0, 0, 0.4);
     }
@@ -140,7 +140,7 @@
     }
 
     .nc-card-image {
-      background: $sonusetrhythmus-color-primary--dark-plus;
+      background: $sonusetrhythmus-color-primary--dark;
       box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
 
       &:hover {
@@ -149,7 +149,7 @@
     }
 
     .nc-card-readTime {
-      background: $sonusetrhythmus-color-primary--dark-plus;
+      background: $sonusetrhythmus-color-primary--dark;
     }
 
     .nc-card-date {
@@ -162,16 +162,16 @@
   }
 
   .breadcrumb-icon path {
-    fill: $sonusetrhythmus-color-primary--dark-plus;
+    fill: $sonusetrhythmus-color-primary--dark;
   }
 
   .breadcrumb-item,
   .breadcrumb-link {
-    color: $sonusetrhythmus-color-primary--dark-plus;
+    color: $sonusetrhythmus-color-primary--dark;
   }
 
   .categories {
-    background: $sonusetrhythmus-color-primary--dark-plus;
+    background: $sonusetrhythmus-color-primary--dark;
     border-color: $sonusetrhythmus-color-social;
   }
 
@@ -181,7 +181,7 @@
   }
 
   .categories-count {
-    background: $sonusetrhythmus-color-primary--dark-plus;
+    background: $sonusetrhythmus-color-primary--dark;
     color: $sonusetrhythmus-color-social;
   }
 

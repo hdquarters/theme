@@ -10,7 +10,9 @@
   z-index: 4;
 }
 
-.mainMenu-item { position: relative; }
+.mainMenu-item {
+  position: relative;
+}
 
 .search-button {
   background: $color-white;
@@ -27,7 +29,7 @@
   display: flex;
   justify-content: center;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     top: inherit;
     bottom: -35px;
     left: 50%;
@@ -40,11 +42,13 @@
     width: 22px;
   }
 
-  path { fill: $color-primary--dark-plus  ; }
+  path {
+    fill: $color-primary--dark;
+  }
 }
 
 .search-button--mobile {
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     display: none;
   }
 }
@@ -52,7 +56,7 @@
 .search-button--desktop {
   display: none;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     display: block;
   }
 }
@@ -66,12 +70,14 @@
   right: 10px;
   outline: none;
 
-  path { fill: #fff; }
+  path {
+    fill: #fff;
+  }
 }
 
 .search-input {
-  @include x-rem-fallback( font-size, $font-size-large);
-  background: rgba(255,255,255,0.7);
+  @include x-rem-fallback(font-size, $font-size-large);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 6px;
   border: 0;
   color: $color-typography--dark;
@@ -88,17 +94,19 @@
   width: 90%;
 }
 
-.search-result { margin-bottom: 10px; }
+.search-result {
+  margin-bottom: 10px;
+}
 
 .search-result-link {
-  background: rgba(0,0,0,1);
+  background: rgba(0, 0, 0, 1);
   display: block;
   padding: 10px;
   text-decoration: none;
 }
 
 .search-result-title {
-  @include x-rem-fallback( font-size, $font-size-regular);
+  @include x-rem-fallback(font-size, $font-size-regular);
   color: $color-typography--light;
   display: block;
   font-weight: 700;
@@ -107,10 +115,10 @@
 }
 
 .search-result-text {
-  @include x-rem-fallback( font-size, $font-size-small);
-  color: rgba(255,255,255,0.6);
+  @include x-rem-fallback(font-size, $font-size-small);
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 10px;
-  text-shadow: 0 0 1px rgba(0,0,0,1);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 1);
 }
 
 .search-result-keyword {

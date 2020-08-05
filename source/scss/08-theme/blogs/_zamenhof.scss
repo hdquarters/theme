@@ -1,17 +1,17 @@
 .zamenhof {
-  background: $zamenhof-color-social;
+  background: $zamenhof-background;
 
   .header {
     background: $zamenhof-color-primary--dark;
 
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $zamenhof-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $zamenhof-color-primary--dark;
     }
   }
 
   .page-home .header {
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $zamenhof-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $zamenhof-color-primary--dark;
     }
   }
 
@@ -49,13 +49,13 @@
   .banner {
     background: $zamenhof-color-primary;
     svg {
-      fill: $zamenhof-color-primary--dark-plus;
+      fill: $zamenhof-color-primary--dark;
     }
   }
 
   .banner-description {
     p {
-      color: $zamenhof-color-primary--dark-plus;
+      color: $zamenhof-color-primary--dark;
     }
   }
 
@@ -101,7 +101,7 @@
 
   .search-button {
     path {
-      fill: $zamenhof-color-primary--dark-plus;
+      fill: $zamenhof-color-primary--dark;
     }
   }
 
@@ -116,7 +116,7 @@
   }
 
   .nc-cards--highlight {
-    background: $zamenhof-color-primary--dark-plus;
+    background: $zamenhof-color-primary--dark;
   }
 
   .nc-card {
@@ -125,12 +125,12 @@
     }
 
     .nc-card-link {
-      background: $zamenhof-color-primary--dark-plus;
+      background: $zamenhof-color-primary--dark;
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     }
 
     .nc-card-figure {
-      background: $zamenhof-color-primary--dark-plus;
+      background: $zamenhof-color-primary--dark;
       box-shadow: inset 42px 0 0 $zamenhof-color-primary--dark,
         0 2px 1px rgba(0, 0, 0, 0.4);
     }
@@ -140,7 +140,7 @@
     }
 
     .nc-card-image {
-      background: $zamenhof-color-primary--dark-plus;
+      background: $zamenhof-color-primary--dark;
       box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
 
       &:hover {
@@ -149,7 +149,7 @@
     }
 
     .nc-card-readTime {
-      background: $zamenhof-color-primary--dark-plus;
+      background: $zamenhof-color-primary--dark;
     }
 
     .nc-card-date {
@@ -162,16 +162,16 @@
   }
 
   .breadcrumb-icon path {
-    fill: $zamenhof-color-primary--dark-plus;
+    fill: $zamenhof-color-primary--dark;
   }
 
   .breadcrumb-item,
   .breadcrumb-link {
-    color: $zamenhof-color-primary--dark-plus;
+    color: $zamenhof-color-primary--dark;
   }
 
   .categories {
-    background: $zamenhof-color-primary--dark-plus;
+    background: $zamenhof-color-primary--dark;
     border-color: $zamenhof-color-social;
   }
 
@@ -181,7 +181,7 @@
   }
 
   .categories-count {
-    background: $zamenhof-color-primary--dark-plus;
+    background: $zamenhof-color-primary--dark;
     color: $zamenhof-color-social;
   }
 

@@ -1,17 +1,17 @@
 .foconocapital {
-  background: $foconocapital-color-social;
+  background: $foconocapital-background;
 
   .header {
     background: $foconocapital-color-primary--dark;
 
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $foconocapital-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $foconocapital-color-primary--dark;
     }
   }
 
   .page-home .header {
     @media (min-width: $screen-desktop) {
-      box-shadow: 0 4px 0 $foconocapital-color-primary--dark-plus;
+      box-shadow: 0 4px 0 $foconocapital-color-primary--dark;
     }
   }
 
@@ -49,13 +49,13 @@
   .banner {
     background: $foconocapital-color-primary;
     svg {
-      fill: $foconocapital-color-primary--dark-plus;
+      fill: $foconocapital-color-primary--dark;
     }
   }
 
   .banner-description {
     p {
-      color: $foconocapital-color-primary--dark-plus;
+      color: $foconocapital-color-primary--dark;
     }
   }
 
@@ -101,7 +101,7 @@
 
   .search-button {
     path {
-      fill: $foconocapital-color-primary--dark-plus;
+      fill: $foconocapital-color-primary--dark;
     }
   }
 
@@ -116,7 +116,7 @@
   }
 
   .nc-cards--highlight {
-    background: $foconocapital-color-primary--dark-plus;
+    background: $foconocapital-color-primary--dark;
   }
 
   .nc-card {
@@ -125,12 +125,12 @@
     }
 
     .nc-card-link {
-      background: $foconocapital-color-primary--dark-plus;
+      background: $foconocapital-color-primary--dark;
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     }
 
     .nc-card-figure {
-      background: $foconocapital-color-primary--dark-plus;
+      background: $foconocapital-color-primary--dark;
       box-shadow: inset 42px 0 0 $foconocapital-color-primary--dark,
         0 2px 1px rgba(0, 0, 0, 0.4);
     }
@@ -140,7 +140,7 @@
     }
 
     .nc-card-image {
-      background: $foconocapital-color-primary--dark-plus;
+      background: $foconocapital-color-primary--dark;
       box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
 
       &:hover {
@@ -149,7 +149,7 @@
     }
 
     .nc-card-readTime {
-      background: $foconocapital-color-primary--dark-plus;
+      background: $foconocapital-color-primary--dark;
     }
 
     .nc-card-date {
@@ -162,16 +162,16 @@
   }
 
   .breadcrumb-icon path {
-    fill: $foconocapital-color-primary--dark-plus;
+    fill: $foconocapital-color-primary--dark;
   }
 
   .breadcrumb-item,
   .breadcrumb-link {
-    color: $foconocapital-color-primary--dark-plus;
+    color: $foconocapital-color-primary--dark;
   }
 
   .categories {
-    background: $foconocapital-color-primary--dark-plus;
+    background: $foconocapital-color-primary--dark;
     border-color: $foconocapital-color-social;
   }
 
@@ -181,7 +181,7 @@
   }
 
   .categories-count {
-    background: $foconocapital-color-primary--dark-plus;
+    background: $foconocapital-color-primary--dark;
     color: $foconocapital-color-social;
   }
 
