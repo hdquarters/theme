@@ -12,7 +12,6 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 2em;
-  padding-top: 1em;
   position: relative;
   transition: transform 100ms ease-in-out;
 
@@ -37,8 +36,12 @@
   }
 }
 
+.nc-cards--highlight {
+  padding: 10px 0;
+}
+
 .nc-cards--highlight .nc-card {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .page-home .nc-card {
@@ -184,7 +187,7 @@
 }
 
 .nc-card-thumbnail {
-  box-shadow: inset 100px 0 0 #fbfbfb;
+  box-shadow: inset 100px 2px 0 #fbfbfb;
   max-height: 97px;
   overflow: hidden;
   padding-left: 42px;
