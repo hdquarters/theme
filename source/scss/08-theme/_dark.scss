@@ -1,0 +1,203 @@
+.header {
+  background: $color-primary--dark;
+
+  @media (min-width: $screen-desktop) {
+    box-shadow: 0 4px 0 $color-primary--dark;
+  }
+}
+
+.page-home .header {
+  @media (min-width: $screen-desktop) {
+    box-shadow: 0 4px 0 $color-primary--dark;
+  }
+}
+
+.header-top {
+  background: $color-primary--dark;
+}
+
+.header-bottom {
+  background: $color-primary--dark;
+
+  @media (min-width: $screen-desktop) {
+    background: $color-white;
+  }
+}
+
+.button-menu_main {
+  color: $color-primary--dark;
+
+  svg {
+    fill: $color-primary--dark;
+  }
+}
+
+.socialMenu-link {
+  svg {
+    fill: $color-primary--light;
+  }
+}
+
+.card-title,
+.nc-card-title {
+  color: $color-text;
+}
+
+.banner {
+  background: $color-primary;
+  svg {
+    fill: $color-primary--dark;
+  }
+}
+
+.banner-description {
+  p {
+    color: $color-primary--dark;
+  }
+}
+
+.search {
+  background: $color-rgba;
+}
+
+.page-title,
+.page-title--section,
+.page-subtitle,
+.page-subtitle-2,
+.page-subtitle--section,
+.page-subtitle--section-link {
+  color: $color-text;
+}
+
+.mainMenu-link:hover {
+  svg {
+    fill: $color-primary--dark;
+  }
+}
+
+.mainMenu-link.on {
+  svg {
+    fill: $color-primary--dark;
+  }
+}
+
+.categories-link {
+  color: $color-primary--dark;
+}
+
+.article-header,
+.article-title {
+  background: $color-primary--dark;
+}
+
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+  color: $color-primary--light;
+}
+
+.author-description h3 {
+  color: $color-primary--dark;
+}
+
+.search-button {
+  path {
+    fill: $color-primary--dark;
+  }
+}
+
+.logotype-link {
+  path {
+    fill: $color-primary;
+
+    @media (min-width: $screen-desktop) {
+      fill: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.nc-cards--highlight {
+  background: $color-primary--dark;
+}
+
+.nc-card {
+  .nc-card-title {
+    color: $color-primary--light;
+  }
+
+  .nc-card-link {
+    background: $color-primary--dark;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .nc-card-figure {
+    background: $color-primary--dark;
+    box-shadow: inset 42px 0 0 $color-primary, 0 2px 1px rgba(0, 0, 0, 0.4);
+  }
+
+  .nc-card-thumbnail {
+    box-shadow: inset 100px 0 0 $color-primary;
+  }
+
+  .nc-card-image {
+    background: $color-primary--dark;
+    box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
+
+    &:hover {
+      background: $color-primary--light;
+    }
+  }
+
+  .nc-card-readTime {
+    background: $color-primary--dark;
+  }
+
+  .nc-card-date {
+    color: $color-primary--light;
+  }
+
+  .nc-card-date-year {
+    color: $color-primary;
+  }
+}
+
+.breadcrumb,
+.banner-description,
+.header-bottom,
+.mainMenu,
+.search-button {
+  background: $color-accent;
+}
+
+.breadcrumb-icon path {
+  fill: $color-primary--dark;
+}
+
+.breadcrumb-item,
+.breadcrumb-link {
+  color: $color-primary--dark;
+}
+
+.categories {
+  background: $color-primary--dark;
+}
+
+.categories-link {
+  background: $background;
+  color: $color-primary--light;
+  border-color: $background;
+}
+
+.categories-count {
+  background: $color-primary--dark;
+  color: $color-primary--light;
+}
+
+.categories-title,
+.categories-title-count {
+  color: $color-primary--light;
+}
+
+.categories .text {
+  color: $color-primary--light;
+}
