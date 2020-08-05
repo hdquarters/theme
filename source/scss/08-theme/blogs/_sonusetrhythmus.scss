@@ -178,8 +178,9 @@
   }
 
   .categories-link {
-    background: $sonusetrhythmus-color-primary--light;
-    border-color: $sonusetrhythmus-color-primary--light;
+    background: $sonusetrhythmus-background;
+    color: $sonusetrhythmus-color-primary--light;
+    border-color: $sonusetrhythmus-background;
   }
 
   .categories-count {

@@ -178,8 +178,9 @@
   }
 
   .categories-link {
-    background: $saborinstintivo-color-primary--light;
-    border-color: $saborinstintivo-color-primary--light;
+    background: $saborinstintivo-background;
+    color: $saborinstintivo-color-primary--light;
+    border-color: $saborinstintivo-background;
   }
 
   .categories-count {

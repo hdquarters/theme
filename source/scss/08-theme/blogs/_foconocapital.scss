@@ -178,8 +178,9 @@
   }
 
   .categories-link {
-    background: $foconocapital-color-primary--light;
-    border-color: $foconocapital-color-primary--light;
+    background: $foconocapital-background;
+    color: $foconocapital-color-primary--light;
+    border-color: $foconocapital-background;
   }
 
   .categories-count {

@@ -178,8 +178,9 @@
   }
 
   .categories-link {
-    background: $zamenhof-color-primary--light;
-    border-color: $zamenhof-color-primary--light;
+    background: $zamenhof-background;
+    color: $zamenhof-color-primary--light;
+    border-color: $zamenhof-background;
   }
 
   .categories-count {

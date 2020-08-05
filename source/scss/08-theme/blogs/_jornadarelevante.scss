@@ -178,8 +178,9 @@
   }
 
   .categories-link {
-    background: $jornadarelevante-color-primary--light;
-    border-color: $jornadarelevante-color-primary--light;
+    background: $jornadarelevante-background;
+    color: $jornadarelevante-color-primary--light;
+    border-color: $jornadarelevante-background;
   }
 
   .categories-count {

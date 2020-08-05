@@ -178,8 +178,9 @@
   }
 
   .categories-link {
-    background: $imhomovies-color-primary--light;
-    border-color: $imhomovies-color-primary--light;
+    background: $imhomovies-background;
+    color: $imhomovies-color-primary--light;
+    border-color: $imhomovies-background;
   }
 
   .categories-count {
