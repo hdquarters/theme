@@ -41,8 +41,8 @@
   @include x-rem-fallback(margin-top, 1);
   @include x-rem-fallback(margin-bottom, 2);
 
-  background: #fff;
   border-radius: 4px 4px 0 0;
+  color: rgba(255, 255, 255, 0.2);
   padding: 10px;
   line-height: $font-line-height-regular;
 
@@ -53,14 +53,14 @@
 }
 
 .article-meta-date {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.4);
   text-transform: lowercase;
 }
 
 .article-meta-read {
   @include x-rem-fallback(font-size, 1.4);
 
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .article-content {
@@ -187,7 +187,7 @@
   h2 code,
   p code,
   li code {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 4px;
     color: $color-typography;
     padding: 0 5px;

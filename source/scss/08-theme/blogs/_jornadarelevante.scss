@@ -96,7 +96,7 @@
   .article-content h2,
   .article-content h3,
   .article-content h4 {
-    color: $jornadarelevante-color-primary--dark;
+    color: $jornadarelevante-color-primary--light;
   }
 
   .author-description h3 {
@@ -180,10 +180,6 @@
   .breadcrumb-item,
   .breadcrumb-link {
     color: $jornadarelevante-color-primary--dark;
-  }
-
-  .breadcrumb-link:hover {
-    color: $jornadarelevante-color-primary--light;
   }
 
   .categories {
