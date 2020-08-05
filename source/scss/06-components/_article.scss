@@ -79,8 +79,8 @@
   }
 
   blockquote {
-    border-left: 5px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.4);
+    border-left: 5px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.4);
     font-size: 1em;
     font-family: "Georgia", serif;
     margin: 0 0 20px;
@@ -172,7 +172,7 @@
   h2 code,
   p code,
   li code {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     color: $color-typography;
     padding: 0 5px;
