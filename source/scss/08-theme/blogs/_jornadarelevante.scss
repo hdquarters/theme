@@ -37,13 +37,13 @@
 
   .socialMenu-link {
     svg {
-      fill: $jornadarelevante-color-social;
+      fill: $jornadarelevante-color-primary--light;
     }
   }
 
   .card-title,
   .nc-card-title {
-    color: $jornadarelevante-color-article-title;
+    color: $jornadarelevante-color-text;
   }
 
   .banner {
@@ -69,7 +69,7 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $jornadarelevante-color-article-title;
+    color: $jornadarelevante-color-text;
   }
 
   .mainMenu-link:hover {
@@ -121,7 +121,7 @@
 
   .nc-card {
     .nc-card-title {
-      color: $jornadarelevante-color-social;
+      color: $jornadarelevante-color-primary--light;
     }
 
     .nc-card-link {
@@ -131,12 +131,12 @@
 
     .nc-card-figure {
       background: $jornadarelevante-color-primary--dark;
-      box-shadow: inset 42px 0 0 $jornadarelevante-color-primary--dark,
+      box-shadow: inset 42px 0 0 $jornadarelevante-color-primary,
         0 2px 1px rgba(0, 0, 0, 0.4);
     }
 
     .nc-card-thumbnail {
-      box-shadow: inset 100px 0 0 $jornadarelevante-color-primary--dark;
+      box-shadow: inset 100px 0 0 $jornadarelevante-color-primary;
     }
 
     .nc-card-image {
@@ -144,7 +144,7 @@
       box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
 
       &:hover {
-        background: $jornadarelevante-color-social;
+        background: $jornadarelevante-color-primary--light;
       }
     }
 
@@ -153,7 +153,7 @@
     }
 
     .nc-card-date {
-      color: $jornadarelevante-color-social;
+      color: $jornadarelevante-color-primary--light;
     }
 
     .nc-card-date-year {
@@ -167,30 +167,29 @@
 
   .breadcrumb-item,
   .breadcrumb-link {
-    color: $jornadarelevante-color-primary--dark;
+    color: $jornadarelevante-color-primary--light;
   }
 
   .categories {
     background: $jornadarelevante-color-primary--dark;
-    border-color: $jornadarelevante-color-social;
   }
 
   .categories-link {
-    background: $jornadarelevante-color-social;
-    border-color: $jornadarelevante-color-social;
+    background: $jornadarelevante-color-primary--light;
+    border-color: $jornadarelevante-color-primary--light;
   }
 
   .categories-count {
     background: $jornadarelevante-color-primary--dark;
-    color: $jornadarelevante-color-social;
+    color: $jornadarelevante-color-primary--light;
   }
 
   .categories-title,
   .categories-title-count {
-    color: $jornadarelevante-color-social;
+    color: $jornadarelevante-color-primary--light;
   }
 
   .categories .text {
-    color: $jornadarelevante-color-social;
+    color: $jornadarelevante-color-primary--light;
   }
 }

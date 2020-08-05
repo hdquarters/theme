@@ -37,13 +37,13 @@
 
   .socialMenu-link {
     svg {
-      fill: $hemersonvianna-color-social;
+      fill: $hemersonvianna-color-primary--light;
     }
   }
 
   .card-title,
   .nc-card-title {
-    color: $hemersonvianna-color-article-title;
+    color: $hemersonvianna-color-text;
   }
 
   .banner {
@@ -69,7 +69,7 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $hemersonvianna-color-article-title;
+    color: $hemersonvianna-color-text;
   }
 
   .mainMenu-link:hover {
@@ -121,7 +121,7 @@
 
   .nc-card {
     .nc-card-title {
-      color: $hemersonvianna-color-social;
+      color: $hemersonvianna-color-primary--light;
     }
 
     .nc-card-link {
@@ -131,12 +131,12 @@
 
     .nc-card-figure {
       background: $hemersonvianna-color-primary--dark;
-      box-shadow: inset 42px 0 0 $hemersonvianna-color-primary--dark,
+      box-shadow: inset 42px 0 0 $hemersonvianna-color-primary,
         0 2px 1px rgba(0, 0, 0, 0.4);
     }
 
     .nc-card-thumbnail {
-      box-shadow: inset 100px 0 0 $hemersonvianna-color-primary--dark;
+      box-shadow: inset 100px 0 0 $hemersonvianna-color-primary;
     }
 
     .nc-card-image {
@@ -144,7 +144,7 @@
       box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
 
       &:hover {
-        background: $hemersonvianna-color-social;
+        background: $hemersonvianna-color-primary--light;
       }
     }
 
@@ -153,7 +153,7 @@
     }
 
     .nc-card-date {
-      color: $hemersonvianna-color-social;
+      color: $hemersonvianna-color-primary--light;
     }
 
     .nc-card-date-year {
@@ -167,30 +167,29 @@
 
   .breadcrumb-item,
   .breadcrumb-link {
-    color: $hemersonvianna-color-primary--dark;
+    color: $hemersonvianna-color-primary--light;
   }
 
   .categories {
     background: $hemersonvianna-color-primary--dark;
-    border-color: $hemersonvianna-color-social;
   }
 
   .categories-link {
-    background: $hemersonvianna-color-social;
-    border-color: $hemersonvianna-color-social;
+    background: $hemersonvianna-color-primary--light;
+    border-color: $hemersonvianna-color-primary--light;
   }
 
   .categories-count {
     background: $hemersonvianna-color-primary--dark;
-    color: $hemersonvianna-color-social;
+    color: $hemersonvianna-color-primary--light;
   }
 
   .categories-title,
   .categories-title-count {
-    color: $hemersonvianna-color-social;
+    color: $hemersonvianna-color-primary--light;
   }
 
   .categories .text {
-    color: $hemersonvianna-color-social;
+    color: $hemersonvianna-color-primary--light;
   }
 }

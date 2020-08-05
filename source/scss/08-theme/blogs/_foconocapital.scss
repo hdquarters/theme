@@ -37,13 +37,13 @@
 
   .socialMenu-link {
     svg {
-      fill: $foconocapital-color-social;
+      fill: $foconocapital-color-primary--light;
     }
   }
 
   .card-title,
   .nc-card-title {
-    color: $foconocapital-color-article-title;
+    color: $foconocapital-color-text;
   }
 
   .banner {
@@ -69,7 +69,7 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $foconocapital-color-article-title;
+    color: $foconocapital-color-text;
   }
 
   .mainMenu-link:hover {
@@ -121,7 +121,7 @@
 
   .nc-card {
     .nc-card-title {
-      color: $foconocapital-color-social;
+      color: $foconocapital-color-primary--light;
     }
 
     .nc-card-link {
@@ -131,12 +131,12 @@
 
     .nc-card-figure {
       background: $foconocapital-color-primary--dark;
-      box-shadow: inset 42px 0 0 $foconocapital-color-primary--dark,
+      box-shadow: inset 42px 0 0 $foconocapital-color-primary,
         0 2px 1px rgba(0, 0, 0, 0.4);
     }
 
     .nc-card-thumbnail {
-      box-shadow: inset 100px 0 0 $foconocapital-color-primary--dark;
+      box-shadow: inset 100px 0 0 $foconocapital-color-primary;
     }
 
     .nc-card-image {
@@ -144,7 +144,7 @@
       box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
 
       &:hover {
-        background: $foconocapital-color-social;
+        background: $foconocapital-color-primary--light;
       }
     }
 
@@ -153,7 +153,7 @@
     }
 
     .nc-card-date {
-      color: $foconocapital-color-social;
+      color: $foconocapital-color-primary--light;
     }
 
     .nc-card-date-year {
@@ -167,30 +167,29 @@
 
   .breadcrumb-item,
   .breadcrumb-link {
-    color: $foconocapital-color-primary--dark;
+    color: $foconocapital-color-primary--light;
   }
 
   .categories {
     background: $foconocapital-color-primary--dark;
-    border-color: $foconocapital-color-social;
   }
 
   .categories-link {
-    background: $foconocapital-color-social;
-    border-color: $foconocapital-color-social;
+    background: $foconocapital-color-primary--light;
+    border-color: $foconocapital-color-primary--light;
   }
 
   .categories-count {
     background: $foconocapital-color-primary--dark;
-    color: $foconocapital-color-social;
+    color: $foconocapital-color-primary--light;
   }
 
   .categories-title,
   .categories-title-count {
-    color: $foconocapital-color-social;
+    color: $foconocapital-color-primary--light;
   }
 
   .categories .text {
-    color: $foconocapital-color-social;
+    color: $foconocapital-color-primary--light;
   }
 }

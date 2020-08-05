@@ -35,12 +35,12 @@
 
   .socialMenu-link {
     svg {
-      fill: $nerdcalistenico-color-social;
+      fill: $nerdcalistenico-color-primary--light;
     }
   }
 
   .box--article-title {
-    color: $nerdcalistenico-color-article-title;
+    color: $nerdcalistenico-color-text;
   }
 
   .banner {
@@ -65,7 +65,7 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $nerdcalistenico-color-article-title;
+    color: $nerdcalistenico-color-text;
   }
 
   .mainMenu-link:hover {

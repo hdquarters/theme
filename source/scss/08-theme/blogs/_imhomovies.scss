@@ -37,13 +37,13 @@
 
   .socialMenu-link {
     svg {
-      fill: $imhomovies-color-social;
+      fill: $imhomovies-color-primary--light;
     }
   }
 
   .card-title,
   .nc-card-title {
-    color: $imhomovies-color-article-title;
+    color: $imhomovies-color-text;
   }
 
   .banner {
@@ -69,7 +69,7 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $imhomovies-color-article-title;
+    color: $imhomovies-color-text;
   }
 
   .mainMenu-link:hover {
@@ -121,7 +121,7 @@
 
   .nc-card {
     .nc-card-title {
-      color: $imhomovies-color-social;
+      color: $imhomovies-color-primary--light;
     }
 
     .nc-card-link {
@@ -131,12 +131,12 @@
 
     .nc-card-figure {
       background: $imhomovies-color-primary--dark;
-      box-shadow: inset 42px 0 0 $imhomovies-color-primary--dark,
+      box-shadow: inset 42px 0 0 $imhomovies-color-primary,
         0 2px 1px rgba(0, 0, 0, 0.4);
     }
 
     .nc-card-thumbnail {
-      box-shadow: inset 100px 0 0 $imhomovies-color-primary--dark;
+      box-shadow: inset 100px 0 0 $imhomovies-color-primary;
     }
 
     .nc-card-image {
@@ -144,7 +144,7 @@
       box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
 
       &:hover {
-        background: $imhomovies-color-social;
+        background: $imhomovies-color-primary--light;
       }
     }
 
@@ -153,7 +153,7 @@
     }
 
     .nc-card-date {
-      color: $imhomovies-color-social;
+      color: $imhomovies-color-primary--light;
     }
 
     .nc-card-date-year {
@@ -167,30 +167,29 @@
 
   .breadcrumb-item,
   .breadcrumb-link {
-    color: $imhomovies-color-primary--dark;
+    color: $imhomovies-color-primary--light;
   }
 
   .categories {
     background: $imhomovies-color-primary--dark;
-    border-color: $imhomovies-color-social;
   }
 
   .categories-link {
-    background: $imhomovies-color-social;
-    border-color: $imhomovies-color-social;
+    background: $imhomovies-color-primary--light;
+    border-color: $imhomovies-color-primary--light;
   }
 
   .categories-count {
     background: $imhomovies-color-primary--dark;
-    color: $imhomovies-color-social;
+    color: $imhomovies-color-primary--light;
   }
 
   .categories-title,
   .categories-title-count {
-    color: $imhomovies-color-social;
+    color: $imhomovies-color-primary--light;
   }
 
   .categories .text {
-    color: $imhomovies-color-social;
+    color: $imhomovies-color-primary--light;
   }
 }

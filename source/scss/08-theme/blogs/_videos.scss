@@ -35,13 +35,13 @@
 
   .socialMenu-link {
     svg {
-      fill: $videos-color-social;
+      fill: $videos-color-primary--light;
     }
   }
 
   .card-title,
   .nc-card-title {
-    color: $videos-color-article-title;
+    color: $videos-color-text;
   }
 
   .banner {
@@ -66,7 +66,7 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $videos-color-article-title;
+    color: $videos-color-text;
   }
 
   .mainMenu-link:hover {

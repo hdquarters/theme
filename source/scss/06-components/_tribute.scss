@@ -11,11 +11,11 @@
   margin-bottom: 2em;
   padding-top: 1em;
 
-  @media(min-width:$screen-tablet-portrait) {
+  @media (min-width: $screen-tablet-portrait) {
     width: x-gridsystem-width(6);
   }
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     width: x-gridsystem-width(4);
   }
 }
@@ -27,7 +27,7 @@
   padding: 10px;
   position: relative;
 
-  @media(min-width:$screen-tablet-portrait) {
+  @media (min-width: $screen-tablet-portrait) {
     min-height: 146px;
   }
 }
@@ -51,7 +51,7 @@
 }
 
 .box--tribute-date {
-  @include x-rem-fallback(font-size,1.4);
+  @include x-rem-fallback(font-size, 1.4);
 
   color: $color-typography;
   display: block;
@@ -60,13 +60,13 @@
 }
 
 .box--tribute-description {
-  @include x-rem-fallback(font-size,$font-size-small);
+  @include x-rem-fallback(font-size, $font-size-small);
   color: $color-typography;
 }
 
 .box--tribute-name {
-  @include x-rem-fallback(font-size,$font-size-regular);
-  color: $imhomovies-color-article-title;
+  @include x-rem-fallback(font-size, $font-size-regular);
+  color: $imhomovies-color-text;
   font-weight: 700;
   overflow: hidden;
   white-space: normal;
@@ -89,7 +89,7 @@
 
 .box--tribute-birthDate,
 .box--tribute-deathDate {
-  @include x-rem-fallback(font-size,1.4);
+  @include x-rem-fallback(font-size, 1.4);
 
   color: $color-typography;
   display: flex;
@@ -105,7 +105,7 @@
 // Highlight
 
 .highlight-dates {
-  @include x-rem-fallback(font-size,1.7);
+  @include x-rem-fallback(font-size, 1.7);
 
   align-items: center;
   display: flex;
@@ -114,7 +114,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     margin-top: 0;
     min-width: 220px;
   }
@@ -165,16 +165,17 @@
   float: left;
   margin-right: 4px;
 
-  path { fill: #e1e1e1; }
+  path {
+    fill: #e1e1e1;
+  }
 }
 
 .highlight-title {
-  @include x-rem-fallback(font-size,1.3);
-  color: #B7C2B8;
-  border-bottom: 1px solid #F8F8F8;
+  @include x-rem-fallback(font-size, 1.3);
+  color: #b7c2b8;
+  border-bottom: 1px solid #f8f8f8;
   margin-bottom: 20px;
   padding-bottom: 5px;
   text-align: center;
   text-transform: uppercase;
 }
-

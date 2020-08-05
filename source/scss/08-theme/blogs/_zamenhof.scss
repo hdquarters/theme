@@ -37,13 +37,13 @@
 
   .socialMenu-link {
     svg {
-      fill: $zamenhof-color-social;
+      fill: $zamenhof-color-primary--light;
     }
   }
 
   .card-title,
   .nc-card-title {
-    color: $zamenhof-color-article-title;
+    color: $zamenhof-color-text;
   }
 
   .banner {
@@ -69,7 +69,7 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $zamenhof-color-article-title;
+    color: $zamenhof-color-text;
   }
 
   .mainMenu-link:hover {
@@ -121,7 +121,7 @@
 
   .nc-card {
     .nc-card-title {
-      color: $zamenhof-color-social;
+      color: $zamenhof-color-primary--light;
     }
 
     .nc-card-link {
@@ -131,12 +131,12 @@
 
     .nc-card-figure {
       background: $zamenhof-color-primary--dark;
-      box-shadow: inset 42px 0 0 $zamenhof-color-primary--dark,
+      box-shadow: inset 42px 0 0 $zamenhof-color-primary,
         0 2px 1px rgba(0, 0, 0, 0.4);
     }
 
     .nc-card-thumbnail {
-      box-shadow: inset 100px 0 0 $zamenhof-color-primary--dark;
+      box-shadow: inset 100px 0 0 $zamenhof-color-primary;
     }
 
     .nc-card-image {
@@ -144,7 +144,7 @@
       box-shadow: 5px 4px 2px -4px rgba(0, 0, 0, 0.4);
 
       &:hover {
-        background: $zamenhof-color-social;
+        background: $zamenhof-color-primary--light;
       }
     }
 
@@ -153,7 +153,7 @@
     }
 
     .nc-card-date {
-      color: $zamenhof-color-social;
+      color: $zamenhof-color-primary--light;
     }
 
     .nc-card-date-year {
@@ -167,30 +167,29 @@
 
   .breadcrumb-item,
   .breadcrumb-link {
-    color: $zamenhof-color-primary--dark;
+    color: $zamenhof-color-primary--light;
   }
 
   .categories {
     background: $zamenhof-color-primary--dark;
-    border-color: $zamenhof-color-social;
   }
 
   .categories-link {
-    background: $zamenhof-color-social;
-    border-color: $zamenhof-color-social;
+    background: $zamenhof-color-primary--light;
+    border-color: $zamenhof-color-primary--light;
   }
 
   .categories-count {
     background: $zamenhof-color-primary--dark;
-    color: $zamenhof-color-social;
+    color: $zamenhof-color-primary--light;
   }
 
   .categories-title,
   .categories-title-count {
-    color: $zamenhof-color-social;
+    color: $zamenhof-color-primary--light;
   }
 
   .categories .text {
-    color: $zamenhof-color-social;
+    color: $zamenhof-color-primary--light;
   }
 }

@@ -35,13 +35,13 @@
 
   .socialMenu-link {
     svg {
-      fill: $profile-color-social;
+      fill: $profile-color-primary--light;
     }
   }
 
   .card-title,
   .nc-card-title {
-    color: $profile-color-article-title;
+    color: $profile-color-text;
   }
 
   .banner {
@@ -66,7 +66,7 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $profile-color-article-title;
+    color: $profile-color-text;
   }
 
   .mainMenu-link:hover {
