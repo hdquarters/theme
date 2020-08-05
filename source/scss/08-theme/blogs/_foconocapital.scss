@@ -113,7 +113,7 @@
       fill: $foconocapital-color-primary;
 
       @media (min-width: $screen-desktop) {
-        fill: #ececec;
+        fill: rgba(0,0,0,0.2);
       }
     }
   }
@@ -168,7 +168,11 @@
     fill: $foconocapital-color-primary--dark;
   }
 
-  .breadcrumb {
+  .breadcrumb,
+  .banner-description,
+  .header-bottom,
+  .mainMenu,
+  .search-button {
     background: $foconocapital-color-accent;
   }
 

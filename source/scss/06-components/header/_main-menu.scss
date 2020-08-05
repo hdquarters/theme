@@ -77,20 +77,26 @@
   text-decoration: none;
 
   svg {
-    fill: #ececec;
+    fill: #212121;
+    opacity: 0.4;
   }
 }
 
 .mainMenu-text {
   @include x-rem-fallback(font-size, 1.2);
 
-  color: #9697ae;
+  color: rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
 }
 
 .mainMenu-link.on .mainMenu-text,
 .mainMenu-link:hover .mainMenu-text {
-  color: #343544;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.mainMenu-link.on svg,
+.mainMenu-link:hover svg {
+  opacity: 1;
 }
 
 .on .mainMenu-link.on .mainMenu-text,

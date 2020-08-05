@@ -113,7 +113,7 @@
       fill: $saborinstintivo-color-primary;
 
       @media (min-width: $screen-desktop) {
-        fill: #ececec;
+        fill: rgba(0,0,0,0.2);
       }
     }
   }
@@ -164,7 +164,11 @@
     }
   }
 
-  .breadcrumb {
+  .breadcrumb,
+  .banner-description,
+  .header-bottom,
+  .mainMenu,
+  .search-button {
     background: $saborinstintivo-color-accent;
   }
 
