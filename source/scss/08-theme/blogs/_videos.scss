@@ -66,7 +66,7 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $videos-color-text;
+    color: $videos-color-primary--dark;
   }
 
   .mainMenu-link:hover {
@@ -114,5 +114,10 @@
 
   .nc-cards--highlight {
     background: $videos-color-primary--dark;
+  }
+
+  .breadcrumb {
+    background: none;
+    padding: 0;
   }
 }

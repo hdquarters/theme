@@ -173,8 +173,12 @@
     color: $noobdaera8bits-color-primary--dark;
   }
 
+  .breadcrumb-link:hover {
+    color: $noobdaera8bits-color-primary--light;
+  }
+
   .categories {
-    background: $noobdaera8bits-color-primary--light;
+    background: $noobdaera8bits-color-primary--dark;
   }
 
   .categories-link {

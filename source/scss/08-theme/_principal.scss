@@ -65,7 +65,7 @@
   .page-subtitle-2,
   .page-subtitle--section,
   .page-subtitle--section-link {
-    color: $nerdcalistenico-color-text;
+    color: $nerdcalistenico-color-primary;
   }
 
   .mainMenu-link:hover {
@@ -84,5 +84,10 @@
     path {
       fill: $nerdcalistenico-color-primary;
     }
+  }
+
+  .breadcrumb {
+    background: none;
+    padding: 0;
   }
 }

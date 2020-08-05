@@ -170,6 +170,10 @@
 
   .breadcrumb-item,
   .breadcrumb-link {
+    color: $saborinstintivo-color-primary--dark;
+  }
+
+  .breadcrumb-link:hover {
     color: $saborinstintivo-color-primary--light;
   }
 
