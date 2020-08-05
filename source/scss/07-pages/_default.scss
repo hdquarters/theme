@@ -105,8 +105,8 @@
   }
 
   .button-menu_main {
-    background: rgba(255, 255, 255, 0.9);
-    color: $color-primary--dark;
+    background: rgba(0, 0, 0, 0.9);
+    color: $color-primary--light;
     height: 100%;
     position: fixed;
     left: inherit;
@@ -117,7 +117,7 @@
     z-index: 2;
 
     svg {
-      fill: $color-primary--dark;
+      fill: $color-primary--light;
       margin-top: 7px;
     }
   }
@@ -184,6 +184,9 @@
     .mainMenu-link {
       background: #f9f9f9;
       border: 1px solid $color-white;
+      display: flex;
+      height: 100%;
+      align-items: center;
 
       &.on,
       &:hover {
