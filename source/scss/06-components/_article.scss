@@ -3,8 +3,13 @@
   width: 100%;
 }
 
+.article-header {
+  margin: 0 -10px;
+}
+
 .article-title {
   @include x-rem-fallback(font-size, $font-size-xxx-large);
+  color: #fff;
   display: table;
   line-height: 1;
   font-weight: 800;
@@ -28,11 +33,12 @@
   @include x-rem-fallback(margin-top, 1);
   @include x-rem-fallback(margin-bottom, 2);
 
+  padding: 0 10px;
   line-height: $font-line-height-regular;
 }
 
 .article-meta-date {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.2);
   text-transform: lowercase;
 }
 
