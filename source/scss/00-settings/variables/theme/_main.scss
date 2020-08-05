@@ -6,8 +6,19 @@ $color-primary--dark: #26333A;
 $color-primary: #607D8B;
 $color-primary--light: #C3CDD2;
 
+$color-white: #fff;
+$color-secundary: $color-white;
+$color-secundary--light: $color-white;
+
 $color-accent: #CDDC39;
 $color-text: #fff;
 $color-rgba: rgba(96, 125, 139, 0.9);
 
+$color-typography--dark:  #757575;
 $color-typography: rgba(255,255,255,0.4);
+$color-typography--light: $color-white;
+
+$color-typography--gray_light: #d7d7d7;
+
+$color-typography--link-dark: $color-accent;
+$color-typography--link-light: $color-accent;

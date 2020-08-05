@@ -6,8 +6,19 @@ $color-primary--dark: #08406b;
 $color-primary: #2196f3;
 $color-primary--light: #aed7fa;
 
+$color-white: #fff;
+$color-secundary: $color-white;
+$color-secundary--light: $color-white;
+
 $color-accent: #00bcd4;
 $color-text: #fff;
 $color-rgba: rgba(33, 150, 243, 0.9);
 
-$color-typography: rgba(255,255,255,0.4);
+$color-typography--dark: #757575;
+$color-typography: rgba(255, 255, 255, 0.4);
+$color-typography--light: $color-white;
+
+$color-typography--gray_light: #d7d7d7;
+
+$color-typography--link-dark: $color-accent;
+$color-typography--link-light: $color-accent;
