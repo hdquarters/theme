@@ -27,6 +27,7 @@
     @media (min-width: $screen-desktop) {
       box-shadow: 0 0 0px 5000px rgba(0, 0, 0, 0.4),
         0 0 8px 2px rgba(0, 0, 0, 0.4);
+      margin-bottom: 13px;
       overflow: hidden;
       padding: 0;
       transform: scale(1.04);
@@ -188,7 +189,7 @@
 }
 
 .nc-card-thumbnail {
-  box-shadow: inset 100px 2px 0 #fbfbfb;
+  box-shadow: inset 100px 1px 0 #fbfbfb;
   max-height: 97px;
   overflow: hidden;
   padding-left: 42px;
