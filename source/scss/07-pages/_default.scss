@@ -15,6 +15,7 @@
 
 .banner-description {
   background: $color-background;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4);
   padding: 5px 10px;
   text-align: center;
 
@@ -183,7 +184,7 @@
   .mainMenu-list--other {
     .mainMenu-link {
       background: $color-background;
-      border: 1px solid $color-white;
+      border: 1px solid #333;
       display: flex;
       height: 100%;
       align-items: center;
@@ -193,6 +194,10 @@
         background: $color-primary--dark;
         color: $color-white;
       }
+    }
+
+    .mainMenu-text {
+      color: rgba(255, 255, 255, 0.4);
     }
   }
 

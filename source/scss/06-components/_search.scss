@@ -107,7 +107,7 @@
 
 .search-result-title {
   @include x-rem-fallback(font-size, $font-size-regular);
-  color: $color-typography--light;
+  color: $color-accent;
   display: block;
   font-weight: 700;
   margin-bottom: 5px;
@@ -122,6 +122,6 @@
 }
 
 .search-result-keyword {
-  border-bottom: 1px solid $color-typography--light;
+  border-bottom: 1px solid $color-accent;
   font-weight: bold;
 }
