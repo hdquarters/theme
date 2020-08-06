@@ -14,7 +14,7 @@
 }
 
 .banner-description {
-  background: #fff;
+  background: $color-background;
   padding: 5px 10px;
   text-align: center;
 
@@ -182,7 +182,7 @@
 
   .mainMenu-list--other {
     .mainMenu-link {
-      background: #f9f9f9;
+      background: $color-background;
       border: 1px solid $color-white;
       display: flex;
       height: 100%;

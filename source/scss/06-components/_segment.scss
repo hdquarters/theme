@@ -40,7 +40,7 @@
   }
 
   &:active {
-    background: #fbfbfb;
+    background: rgba(255,255,255,0.4);
   }
 }
 
@@ -48,7 +48,7 @@
   @include x-rem-fallback(font-size, $font-size-regular);
 
   border-radius: 4px 4px 0 0;
-  color: #fff;
+  color: rgba(255,255,255,0.4);;
   display: block;
   font-weight: 700;
   padding: 10px;

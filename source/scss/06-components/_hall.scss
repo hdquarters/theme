@@ -85,7 +85,7 @@
     }
 
     span {
-      box-shadow: 0 1px 2px 0 #ccc;
+      box-shadow: 0 1px 2px 0 #000;
       border-radius: 4px;
       color: #5a6772;
       display: flex;
@@ -109,7 +109,7 @@
         strong {
           @include x-rem-fallback(font-size, 1.2);
 
-          color: #5a6772;
+          color: $color-typography;
           font-weight: 700;
           display: block;
           margin-top: 4px;
@@ -118,7 +118,7 @@
         a {
           @include x-rem-fallback(font-size, 1.2);
 
-          color: #61a7b9;
+          color: $color-accent;
           line-height: 1;
           text-decoration: none;
 

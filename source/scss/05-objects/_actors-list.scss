@@ -19,7 +19,7 @@
     }
 
     a {
-      box-shadow: 0 1px 2px 0 #ccc;
+      box-shadow: 0 1px 2px 0 #000;
       border-radius: 4px;
       display: flex;
       flex-direction: row;
@@ -42,7 +42,7 @@
         strong {
           @include x-rem-fallback(font-size,1.2);
 
-          color: #5a6772;
+          color: $color-accent;
           display: block;
           line-height: 1;
         }

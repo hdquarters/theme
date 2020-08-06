@@ -19,7 +19,7 @@
     }
 
     a {
-      box-shadow: 0 1px 2px 0 #ccc;
+      box-shadow: 0 1px 2px 0 #000;
       border-radius: 4px;
       display: flex;
       flex-direction: row;
@@ -43,7 +43,7 @@
         strong {
           @include x-rem-fallback(font-size,1.2);
 
-          color: #5a6772;
+          color: $color-typography;
           display: block;
           line-height: 1;
           margin-top: 2px;
@@ -54,7 +54,7 @@
 }
 
 .spotify {
-  background: #ddd;
+  background: #000;
   height: 200px;
   margin-bottom: 10px;
   max-width: 100%;
