@@ -14,14 +14,14 @@
     list-style: none;
     margin-bottom: 10px;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       width: x-gridsystem-width(4);
     }
 
     a {
-      box-shadow: 0 1px 2px 0 #ccc;
+      box-shadow: 0 1px 2px 0 #000;
       border-radius: 4px;
-      color: #61a7b9;
+      color: $color-accent;
       display: flex;
       flex-direction: row;
       padding: 10px;
@@ -41,21 +41,21 @@
       }
 
       em {
-        @include x-rem-fallback(font-size,1.7);
+        @include x-rem-fallback(font-size, 1.7);
 
         font-style: normal;
 
         span {
-          @include x-rem-fallback(font-size,1.4);
+          @include x-rem-fallback(font-size, 1.4);
 
           font-weight: 700;
           margin-bottom: 5px;
         }
 
         strong {
-          @include x-rem-fallback(font-size,1.2);
+          @include x-rem-fallback(font-size, 1.2);
 
-          color: #5a6772;
+          color: $color-typography;
           display: block;
           line-height: 1;
         }
@@ -63,7 +63,6 @@
     }
   }
 }
-
 
 .professionals-list {
   margin-left: -10px;
@@ -81,7 +80,7 @@
     list-style: none;
     margin-bottom: 10px;
 
-    @media(min-width:$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       width: x-gridsystem-width(4);
     }
 
@@ -103,12 +102,12 @@
       }
 
       em {
-        @include x-rem-fallback(font-size,1.7);
+        @include x-rem-fallback(font-size, 1.7);
 
         font-style: normal;
 
         strong {
-          @include x-rem-fallback(font-size,1.2);
+          @include x-rem-fallback(font-size, 1.2);
 
           color: #5a6772;
           font-weight: 700;
@@ -117,7 +116,7 @@
         }
 
         a {
-          @include x-rem-fallback(font-size,1.2);
+          @include x-rem-fallback(font-size, 1.2);
 
           color: #61a7b9;
           line-height: 1;

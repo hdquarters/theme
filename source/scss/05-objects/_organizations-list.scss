@@ -3,7 +3,7 @@
   margin-right: -10px;
   padding: 0.5em 0;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
@@ -11,14 +11,14 @@
 }
 
 .organizations-link {
-  box-shadow: 0 1px 2px 0 #ccc;
+  box-shadow: 0 1px 2px 0 #000;
   border-radius: 4px;
   display: inline-block;
   padding: 10px;
   text-decoration: none;
   width: 100%;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     align-items: center;
     display: flex;
     min-height: 134px;
@@ -38,13 +38,13 @@
 
   .organizations-item {
     .organizations-link {
-      @media(min-width:$screen-desktop) {
+      @media (min-width: $screen-desktop) {
         min-height: 85px;
       }
     }
   }
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     width: x-gridsystem-width(4);
   }
 }
@@ -52,7 +52,7 @@
 .organizations-title {
   font-size: 20px;
   font-size: 2rem;
-  color: #282838;
+  color: $color-accent;
   display: block;
   font-weight: 700;
 }
@@ -60,14 +60,14 @@
 .organizations-description {
   font-size: 17px;
   font-size: 1.7rem;
-  color: #50616c;
+  color: $color-typography;
   display: block;
 }
 
 .organizations-figure {
   float: left;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     float: inherit;
   }
 }
@@ -78,7 +78,7 @@
 }
 
 .organizations-item--full {
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     width: x-gridsystem-width(12);
   }
 }

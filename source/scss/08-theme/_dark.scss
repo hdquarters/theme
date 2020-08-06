@@ -161,8 +161,15 @@
   }
 }
 
+.banner-description {
+  background: $color-background;
+
+  p {
+    color: $color-typography;
+  }
+}
+
 .breadcrumb,
-.banner-description,
 .header-bottom,
 .mainMenu,
 .search-button {

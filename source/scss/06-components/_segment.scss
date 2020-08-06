@@ -13,18 +13,18 @@
   @include x-column(12);
   margin-bottom: 10px;
 
-  @media(min-width:$screen-tablet-small) {
+  @media (min-width: $screen-tablet-small) {
     width: x-gridsystem-width(6);
   }
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     width: x-gridsystem-width(4);
   }
 }
 
 .segment-link {
   border-radius: 4px;
-  box-shadow: 0 1px 2px 0 #ccc;
+  box-shadow: 0 1px 2px 0 #000;
   color: $color-white;
   display: block;
   min-height: 150px;
@@ -35,13 +35,17 @@
     opacity: 0.4;
   }
 
-  &:hover { box-shadow: inset 0 0 2px rgba(0,0,0,0.2); }
+  &:hover {
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  }
 
-  &:active { background: #fbfbfb; }
+  &:active {
+    background: #fbfbfb;
+  }
 }
 
 .segment-title {
-  @include x-rem-fallback(font-size,$font-size-regular);
+  @include x-rem-fallback(font-size, $font-size-regular);
 
   border-radius: 4px 4px 0 0;
   color: #fff;
@@ -51,23 +55,40 @@
   text-align: center;
 }
 
-.hemerson_vianna.segment-title { background: #31114e; }
-.imho_movies.segment-title { background: #4e1111; }
-.zamenhof.segment-title { background: #113a4e; }
-.foconocapital.segment-title { background: #114e21; }
-.sabor_instintivo.segment-title { background: #4e4a11; }
-.jornadarelevante.segment-title { background: #734a16; }
-.sonusetrhythmus.segment-title { background: #65135b; }
-.foradabolha.segment-title { background: #464848; }
-.noobdaera8bits.segment-title { background: #0a3c40; }
+.hemerson_vianna.segment-title {
+  background: #31114e;
+}
+.imho_movies.segment-title {
+  background: #4e1111;
+}
+.zamenhof.segment-title {
+  background: #113a4e;
+}
+.foconocapital.segment-title {
+  background: #114e21;
+}
+.sabor_instintivo.segment-title {
+  background: #4e4a11;
+}
+.jornadarelevante.segment-title {
+  background: #734a16;
+}
+.sonusetrhythmus.segment-title {
+  background: #65135b;
+}
+.foradabolha.segment-title {
+  background: #464848;
+}
+.noobdaera8bits.segment-title {
+  background: #0a3c40;
+}
 
 .segment-description {
-  @include x-rem-fallback(font-size,$font-size-small);
+  @include x-rem-fallback(font-size, $font-size-small);
   color: $color-typography;
   display: block;
   padding: 10px;
 }
-
 
 // blogs
 .blogs-item {
@@ -75,35 +96,39 @@
   margin-bottom: 20px;
   padding: 10px;
 
-  &:hover { box-shadow: inset 0 0 2px $color-secundary; }
+  &:hover {
+    box-shadow: inset 0 0 2px $color-secundary;
+  }
 }
 
 .blogs-link {
   text-decoration: none;
 
-  &:hover { text-decoration: none; }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .blogs-all {
-  @include x-rem-fallback(font-size,$font-size-regular);
+  @include x-rem-fallback(font-size, $font-size-regular);
   text-align: right;
 }
 
 .blogs-title {
-  @include x-rem-fallback(font-size,$font-size-regular);
+  @include x-rem-fallback(font-size, $font-size-regular);
   color: $color-typography--dark;
   display: block;
   font-weight: 700;
 }
 
 .blogs-date {
-  @include x-rem-fallback(font-size,$font-size-small);
+  @include x-rem-fallback(font-size, $font-size-small);
   color: $color-typography;
   display: block;
 }
 
 .blogs-description {
-  @include x-rem-fallback(font-size,$font-size-small);
+  @include x-rem-fallback(font-size, $font-size-small);
   color: $color-typography;
   display: block;
 }

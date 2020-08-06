@@ -43,7 +43,7 @@ const content = getTexts(projectName);
         <li class="categories-item">
           <a href="<%- url_for(category.path) %>" class="categories-link">
             <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>
-            &nbsp; <%- name %>
+            <%- name %>
             <span class="categories-count"><%= category.posts.length %></span>
           </a>
         </li>
