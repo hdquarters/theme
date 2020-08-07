@@ -6,7 +6,7 @@
   position: relative;
   width: 100%;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     border-bottom: none;
   }
 }
@@ -14,26 +14,29 @@
 .page-home .header {
   box-shadow: none;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     border-bottom: none;
   }
 }
 
-body, .header { transition: all 0.6s ease-in; }
+body,
+.header {
+  transition: all 0.6s ease-in;
+}
 
 .header-elements {
   display: flex;
   flex-direction: row;
   justify-content: center;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     justify-content: space-between;
     padding-bottom: 0;
   }
 }
 
 .header-bottom .header-elements {
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-bottom: 10px;
   }
 }
@@ -48,7 +51,7 @@ body, .header { transition: all 0.6s ease-in; }
   transition: left 200ms ease-in-out;
   z-index: 3;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding: 4px 0;
     box-shadow: none;
     min-height: inherit;
@@ -62,14 +65,14 @@ body, .header { transition: all 0.6s ease-in; }
 .header-bottom {
   padding: 10px 0;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding: 0;
   }
 }
 
 .button-menu_main {
   align-items: center;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
   border: 0;
   cursor: pointer;
   display: flex;
@@ -82,17 +85,16 @@ body, .header { transition: all 0.6s ease-in; }
   top: 0;
   text-transform: uppercase;
 
-  @media(min-width:$screen-desktop) {
-		display: none;
-	}
+  @media (min-width: $screen-desktop) {
+    display: none;
+  }
 }
-
 
 // Logotype
 // --------------------------------------------------------------------------
 .logotype {
   @include x-rem-fallback(font-size, 2.4);
-  color: $color-typography--link_light;
+  color: $color-primary;
   float: left;
   line-height: 1;
   padding: 0 1rem;
@@ -100,7 +102,7 @@ body, .header { transition: all 0.6s ease-in; }
   text-align: left;
   text-transform: uppercase;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     align-self: center;
     padding-left: 0;
     padding-right: 0;
@@ -109,14 +111,26 @@ body, .header { transition: all 0.6s ease-in; }
 }
 
 .logotype-link {
-	color: $color-typography--link_light;
-	text-decoration: none;
+  color: $color-primary;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  padding: 4px;
+  border-radius: 4px;
 
   path {
     fill: $color-primary;
 
-    @media(min-width:$screen-desktop) {
-      fill: #ececec;
+    @media (min-width: $screen-desktop) {
+      fill: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &:hover {
+    path {
+      @media (min-width: $screen-desktop) {
+        fill: rgba(0, 0, 0, 0.6);
+      }
     }
   }
 }

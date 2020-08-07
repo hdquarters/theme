@@ -136,7 +136,13 @@
   }
 
   .nc-card-thumbnail {
-    box-shadow: inset 100px 1px 0 $color-primary;
+    box-shadow: inset 42px 0 0 $color-primary;
+  }
+
+  &:hover {
+    .nc-card-thumbnail {
+      box-shadow: inset 42px 115px 0 $color-primary;
+    }
   }
 
   .nc-card-image {
@@ -183,6 +189,7 @@
 .breadcrumb-item,
 .breadcrumb-link {
   color: $color-primary--dark;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .categories {
@@ -207,4 +214,19 @@
 
 .categories .text {
   color: $color-primary--light;
+}
+
+.socialMenu-link svg {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.banner {
+  border-bottom: 1px solid #000;
+}
+
+.mainMenu-item--spacing {
+  @media (min-width: $screen-desktop) {
+    color: rgba(255, 255, 255, 0.4);
+    text-shadow: none;
+  }
 }

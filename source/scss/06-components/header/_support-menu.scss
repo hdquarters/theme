@@ -3,7 +3,7 @@
 .supportMenu {
   display: none;
 
-  @media(min-width:$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     display: inherit;
   }
 }
@@ -23,10 +23,14 @@
 
 .supportMenu-link {
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .supportMenu-text {
-  @include x-rem-fallback(font-size,$font-size-small);
+  @include x-rem-fallback(font-size, $font-size-small);
 
   color: #fff;
   line-height: 24px;
