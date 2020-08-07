@@ -1,6 +1,7 @@
 .article {
   position: relative;
   width: 100%;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .article-header {
@@ -44,12 +45,12 @@
   @include x-rem-fallback(margin-bottom, 2);
 
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 4px 4px 0 0;
   color: rgba(255, 255, 255, 0.2);
   padding: 10px;
   line-height: $font-line-height-regular;
 
   @media (min-width: $screen-tablet-portrait) {
+    border-radius: 4px 4px 0 0;
     width: 728px;
     margin: 0 auto;
   }
@@ -159,6 +160,7 @@
   table,
   iframe {
     @include x-rem-fallback(margin-bottom, 2);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   }
 
   table {
@@ -222,12 +224,13 @@
 .sonusetrhythmus .article-content blockquote {
   border: 2px solid #000;
   border-radius: 4px;
-  color: rgba(83, 42, 42, 0.4);
+  color: rgba(255, 255, 255, 0.4);
   font-size: 1em;
   height: 300px;
   margin: 0 0 20px;
   overflow: scroll;
   padding: 10px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 // load more

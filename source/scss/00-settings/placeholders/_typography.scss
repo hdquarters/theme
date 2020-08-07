@@ -8,43 +8,43 @@
 
 %heading-1 {
   @extend %heading;
-  @include x-rem-fallback(font-size,$font-size-xxx-large);
-  line-height: $font-line-height-xxx-large;
+  @include x-rem-fallback(font-size, $font-size-xxx-large);
+  line-height: 1.2;
 }
 
 %heading-2 {
   @extend %heading;
-  @include x-rem-fallback(font-size,$font-size-xx-large);
-  line-height: $font-line-height-xx-large;
+  @include x-rem-fallback(font-size, $font-size-xx-large);
+  line-height: 1.2;
 }
 
 %heading-3 {
   @extend %heading;
-  @include x-rem-fallback(font-size,$font-size-x-large);
-  line-height: $font-line-height-xx-large;
+  @include x-rem-fallback(font-size, $font-size-x-large);
+  line-height: 1.2;
 }
 
 %heading-4 {
   @extend %heading;
-  @include x-rem-fallback(font-size,$font-size-large);
-  line-height: $font-line-height-large;
+  @include x-rem-fallback(font-size, $font-size-large);
+  line-height: 1.2;
 }
 
 %heading-5 {
   @extend %heading;
-  @include x-rem-fallback(font-size,$font-size-regular);
-  line-height: $font-line-height-regular;
+  @include x-rem-fallback(font-size, $font-size-regular);
+  line-height: 1.2;
 }
 
 %heading-6 {
   @extend %heading;
-  @include x-rem-fallback(font-size,$font-size-small);
-  line-height: $font-line-height-small;
+  @include x-rem-fallback(font-size, $font-size-small);
+  line-height: 1.2;
 }
 
 // Texto
 // --------------------------------------------------------------------------
 %text {
-  @include x-rem-fallback(font-size,$font-size-regular);
-  line-height: $font-line-height-regular;
+  @include x-rem-fallback(font-size, $font-size-regular);
+  line-height: 1.2;
 }
