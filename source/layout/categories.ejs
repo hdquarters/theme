@@ -51,7 +51,7 @@ const content = getTexts(projectName);
       <li class="categories-item">
         <a class="categories-link js-scroll" href="#" data-target="js-category-<%- url_for(category.path).split('/')[3] %>">
           <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>
-          &nbsp; <%- name %>
+          <%- name %>
           <span class="categories-count"><%= category.posts.length %></span>
         </a>
       </li>
