@@ -106,8 +106,7 @@
   }
 
   .button-menu_main {
-    background: rgba(0, 0, 0, 0.9);
-    color: $color-primary--light;
+    background: rgba(255,255,255,0.5);
     height: 100%;
     position: fixed;
     left: inherit;
@@ -118,7 +117,6 @@
     z-index: 2;
 
     svg {
-      fill: $color-primary--light;
       margin-top: 7px;
     }
   }
