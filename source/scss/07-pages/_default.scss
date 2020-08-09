@@ -29,7 +29,12 @@
 .wrapper {
   min-height: 100vh;
   overflow: hidden;
+  padding-top: 55px;
   width: 100%;
+
+  @media (min-width: $screen-desktop) {
+    padding-top: 0;
+  }
 }
 
 .content {
@@ -114,7 +119,7 @@
     top: 0;
     padding: 0;
     width: 15%;
-    z-index: 2;
+    z-index: 3;
 
     svg {
       margin-top: 7px;
