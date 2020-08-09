@@ -1,0 +1,67 @@
+<%
+const getTexts = name => {
+  switch(name) {
+    case 'imhomovies':
+      return {
+        categoriesTitle: 'Confira as opiniões segmentadas pelas suas categorias'
+      }
+    case 'sonusetrhythmus':
+      return {
+        categoriesTitle: 'Confira os artistas segmentados pelas suas categorias'
+      }
+    case 'saborinstintivo':
+      return {
+        categoriesTitle: 'Confira as receitas segmentadas pelas suas categorias'
+      }
+    case 'jornadarelevante':
+      return {
+        categoriesTitle: 'Confira as jornadas segmentadas pelas suas categorias'
+      }
+    case 'noobdaera8bits':
+      return {
+        categoriesTitle: 'Confira os jogos segmentados pelas suas categorias'
+      }
+    case 'videos':
+      return {
+        categoriesTitle: 'Confira os vídeos segmentados pelas suas categorias'
+      }
+    case 'profile':
+      return {
+        categoriesTitle: 'Confira as preferências segmentadas pelas suas categorias'
+      }
+    case 'following':
+      return {
+        categoriesTitle: 'Confira os items segmentados pelas suas categorias'
+      }
+    case 'github':
+      return {
+        categoriesTitle: 'Confira os projetos segmentados pelas suas organizações'
+      }
+    default:
+      return {
+        categoriesTitle: 'Confira os artigos segmentados pelas suas categorias'
+      }
+  }
+};
+const content = getTexts(projectName);
+%>
+
+<div class="categories">
+  <p class="text"><%- content.categoriesTitle %></p>
+  <ul class="categories-list">
+  <% site.categories.sort('name').map(category => {
+    const icon = category.name.replace(/ /g, '').toLowerCase();
+    const name = category.name.toLowerCase();
+  %>
+    <% if (!category.parent) { %>
+      <li class="categories-item">
+        <a class="categories-link js-scroll" href="#" data-target="js-category-<%- url_for(category.path).split('/')[3] %>">
+          <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>
+          <%- name %>
+          <span class="categories-count"><%= category.posts.length %></span>
+        </a>
+      </li>
+    <% } %>
+  <% }) %>
+  </ul>
+</div>

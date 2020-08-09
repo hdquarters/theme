@@ -1,66 +1,55 @@
 <%
 const googleads1 = `../partials/googleads/${projectName}/2-categories-1.ejs`;
-
 const getTexts = name => {
   switch(name) {
     case 'imhomovies':
       return {
         title: 'Categorias',
-        categoriesTitle: 'Confira as opiniões segmentadas pelas suas categorias',
         slug: 'filme'
       }
     case 'sonusetrhythmus':
       return {
         title: 'Categorias',
-        categoriesTitle: 'Confira os artistas segmentados pelas suas categorias',
         slug: 'artista'
       }
     case 'saborinstintivo':
       return {
         title: 'Categorias',
-        categoriesTitle: 'Confira as receitas segmentadas pelas suas categorias',
         slug: 'receita'
       }
     case 'jornadarelevante':
       return {
         title: 'Categorias',
-        categoriesTitle: 'Confira as jornadas segmentadas pelas suas categorias',
         slug: 'jornada'
       }
     case 'noobdaera8bits':
       return {
         title: 'Categorias',
-        categoriesTitle: 'Confira os jogos segmentados pelas suas categorias',
         slug: 'jogo'
       }
     case 'videos':
       return {
         title: 'Categorias',
-        categoriesTitle: 'Confira os vídeos segmentados pelas suas categorias',
         slug: 'vídeo'
       }
     case 'profile':
       return {
         title: 'Preferências',
-        categoriesTitle: 'Confira as preferências segmentadas pelas suas categorias',
         slug: 'resultado'
       }
     case 'following':
       return {
         title: 'Categorias',
-        categoriesTitle: 'Confira os items segmentados pelas suas categorias',
         slug: 'resultado'
       }
     case 'github':
       return {
         title: 'Projetos',
-        categoriesTitle: 'Confira os projetos segmentados pelas suas organizações',
         slug: 'projeto'
       }
     default:
       return {
         title: 'Artigos',
-        categoriesTitle: 'Confira os artigos segmentados pelas suas categorias',
         slug: 'artigo'
       }
   }
@@ -70,25 +59,7 @@ const content = getTexts(projectName);
 
 <h1 class="page-title"><%- content.title %></h1>
 
-<div class="categories">
-  <p class="text"><%- content.categoriesTitle %></p>
-  <ul class="categories-list">
-  <% site.categories.sort('name').map(category => {
-    const icon = category.name.replace(/ /g, '').toLowerCase();
-    const name = category.name.toLowerCase();
-  %>
-    <% if (!category.parent) { %>
-      <li class="categories-item">
-        <a class="categories-link js-scroll" href="#" data-target="js-category-<%- url_for(category.path).split('/')[3] %>">
-          <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>
-          <%- name %>
-          <span class="categories-count"><%= category.posts.length %></span>
-        </a>
-      </li>
-    <% } %>
-  <% }) %>
-  </ul>
-</div>
+<%- include('../partials/body/categories-scroll.ejs', { projectName }) %>
 
 <%- include(googleads1) %>
 
