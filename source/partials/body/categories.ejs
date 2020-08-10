@@ -62,9 +62,10 @@ const content = getTexts(projectName);
   <ul class="categories-list">
     <% site.categories.sort('name').map(category => {
       const icon = category.name.replace(/ /g, '').toLowerCase()
-      const name = category.name.toLowerCase()
+      const name = category.name.toLowerCase();
+      const removeName = projectName === 'profile' ? 'dailylog' : '';
     %>
-      <% if (!category.parent) { %>
+      <% if (!category.parent && name !== removeName) { %>
         <li class="categories-item">
           <a href="<%- url_for(category.path) %>" class="categories-link">
             <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>

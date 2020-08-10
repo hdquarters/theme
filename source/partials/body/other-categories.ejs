@@ -22,9 +22,10 @@ const content = getTexts(projectName);
   <ul class="categories-list">
   <% site.categories.sort('name').map(category => { %>
     <%
-      if (page.category !== category.name && !category.parent) {
-        const icon = category.name.replace(/ /g, '').toLowerCase();
-        const name = category.name.toLowerCase();
+      const icon = category.name.replace(/ /g, '').toLowerCase();
+      const name = category.name.toLowerCase();
+      const removeName = projectName === 'profile' ? 'dailylog' : '';
+      if (page.category !== category.name && !category.parent && name !== removeName) {
     %>
       <li class="categories-item">
         <a href="<%- url_for(category.path) %>" class="categories-link <%- url_for(category.path).split('/')[3] %>">
