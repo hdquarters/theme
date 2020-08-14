@@ -26,9 +26,10 @@ const content = getTexts(projectName);
       const name = category.name.toLowerCase();
       const removeName = projectName === 'profile' ? 'dailylog' : '';
       if (page.category !== category.name && !category.parent && name !== removeName) {
+        const link = replaceLink || false;
     %>
       <li class="categories-item">
-        <a href="<%- replaceLink ? url_for(category.path.replace(replaceLink.before, replaceLink.after)) : url_for(category.path) %>" class="categories-link <%- url_for(category.path).split('/')[3] %>">
+        <a href="<%- link ? url_for(category.path.replace(link.before, link.after)) : url_for(category.path) %>" class="categories-link <%- url_for(category.path).split('/')[3] %>">
           <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>
           <%- name %>
           <span class="categories-count"><%= category.posts.length %></span>
