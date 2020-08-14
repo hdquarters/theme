@@ -1,7 +1,7 @@
 <%
 const getTexts = name => {
   switch(name) {
-    case 'profiel':
+    case 'profile':
       return {
         title: 'Outras preferências'
       }
@@ -28,7 +28,7 @@ const content = getTexts(projectName);
       if (page.category !== category.name && !category.parent && name !== removeName) {
     %>
       <li class="categories-item">
-        <a href="<%- url_for(category.path) %>" class="categories-link <%- url_for(category.path).split('/')[3] %>">
+        <a href="<%- replaceLink ? url_for(category.path.replace(replaceLink.before, replaceLink.after)) : url_for(category.path) %>" class="categories-link <%- url_for(category.path).split('/')[3] %>">
           <svg width="16" height="16"><use xlink:href="#<%- icon %>" /></svg>
           <%- name %>
           <span class="categories-count"><%= category.posts.length %></span>
