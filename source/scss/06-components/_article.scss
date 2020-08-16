@@ -78,6 +78,7 @@
 
 .article-content {
   word-break: break-word;
+  padding-bottom: 10px;
 
   h2 {
     @include x-rem-fallback(font-size, $font-size-xx-large);
