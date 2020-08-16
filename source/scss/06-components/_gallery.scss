@@ -13,13 +13,7 @@
     width: x-gridsystem-width(6);
 
     @media(min-width:$screen-tablet-portrait) {
-      min-height: 200px;
-      max-height: 200px;
-    }
-
-    &.lightbox {
-      min-height: inherit;
-      max-height: inherit;
+      width: 20%;
     }
   }
 }
