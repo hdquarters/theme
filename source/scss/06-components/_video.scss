@@ -35,7 +35,7 @@
   @media (min-width: $screen-tablet-portrait) {
     margin: 0.5%;
     width: 49%;
-    padding-bottom: 25%;
+    padding-bottom: 28%;
   }
 }
 
@@ -43,7 +43,7 @@
   @extend .video;
 
   @media (min-width: $screen-tablet-portrait) {
-    padding-bottom: 20%;
+    padding-bottom: 18.75%;
     width: 32.3%;
   }
 }
@@ -52,7 +52,7 @@
   @extend .video;
 
   @media (min-width: $screen-tablet-portrait) {
-    padding-bottom: 30%;
+    padding-bottom: 56.25%;
     width: 100%;
   }
 }
