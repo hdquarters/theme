@@ -100,9 +100,9 @@
 
   <!-- canonical -->
   <% if (is_home()){ %>
-  <link rel="canonical" href="<%- theme.theme_url %>">
+  <link rel="canonical" href="<%- theme.theme_url.replace('nerdcalistenico.com.br', 'host_to_replace') %>">
   <% } else { %>
-  <link rel="canonical" href="<%- url.replace('index.html', '') %>">
+  <link rel="canonical" href="<%- url.replace('index.html', '').replace('nerdcalistenico.com.br', 'host_to_replace') %>">
   <% } %>
   <% if (theme.rss){ %>
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
