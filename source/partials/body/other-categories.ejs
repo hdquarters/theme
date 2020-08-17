@@ -26,7 +26,7 @@ const content = getTexts(projectName);
       const name = category.name.toLowerCase();
       const removeName = projectName === 'profile' ? 'dailylog' : '';
       if (page.category !== category.name && !category.parent && name !== removeName) {
-        const link = replaceLink || false;
+        const link = replaceLink ? replaceLink : false;
     %>
       <li class="categories-item">
         <a href="<%- link ? url_for(category.path.replace(link.before, link.after)) : url_for(category.path) %>" class="categories-link <%- url_for(category.path).split('/')[3] %>">
