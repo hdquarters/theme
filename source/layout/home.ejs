@@ -7,7 +7,7 @@ include('../../../node_modules/@hdquarters/theme/source/layout/home.ejs', { proj
 %>
 
 <% if (!is_home()) { %>
-  <%- include('../partials/body/other-categories.ejs', {projectName}) %>
+  <%- include('../partials/body/other-categories.ejs', {projectName, replaceLink: false }) %>
   <%- include(googleads1) %>
   <h2 class="page-subtitle--section"><%= page.category %></h2>
 <% } else { %>
