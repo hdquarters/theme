@@ -102,18 +102,49 @@ include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { proj
   <% } %>
 </article>
 
+<%
+const getRandomNumbers = (min, max) => {
+  const limit = 6;
+  const len = max < limit ? max : limit;
+  let numbers = [];
+  let number;
+  if (len === max) {
+    numbers = [...Array(max).keys()]
+  } else {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    while (numbers.length < limit) {
+      number = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!numbers.includes(number)) {
+        numbers.push(number);
+      }
+    }
+  }
+  return numbers;
+}
+%>
 <% let category = ''; post.categories.each((item, id) => { if (id === 0) { category = item.name } }); %>
+<%
+  const items = [];
+  site.posts.each((post, idx) => {
+    if (post.path.indexOf(`/${category.replace(/[^\w\-]+/g, '-').toLowerCase()}/`) >= 0 && post.title !== page.title) {
+      items.push(post);
+    }
+    if (idx === site.posts.length -1) {
+%>
 <h2 class="page-subtitle--section">Relacionados</h2>
 <div class="nc-cards">
-  <% let idx = 0; site.posts.sort('date').each((post) => { %>
-    <% if (post.path.indexOf(`/${category.replace(/[^\w\-]+/g, '-').toLowerCase()}/`) >= 0 && post.title !== page.title) { %>
-      <% idx++ %>
-      <% if (idx <= 6) { %>
-        <%- include('../partials/body/card.ejs', {projectName, post, index: true, hasTag}) %>
+  <% let idxx = 0; items.map((post, idPost) => { %>
+      <% if (idxx < 6 && getRandomNumbers(0, items.length).includes(idPost)) { %>
+        <%- include('../partials/body/card.ejs', {projectName, post, index: true, hasTag }) %>
+        <% idxx++ %>
       <% } %>
-    <% } %>
   <% }) %>
 </div>
-<% if (idx === 0) { %>
+<%
+    }
+  })
+%>
+<% if (items.length === 0) { %>
   <p style="font-size: 2rem; padding: 0 10px;">Nenhum item da mesma categoria</p>
 <% } %>
