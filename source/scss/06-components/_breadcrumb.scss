@@ -35,7 +35,7 @@
   display: flex;
   color: rgba(0, 0, 0, 0.4);
   font-weight: 400;
-  line-height: $font-line-height-small;
+  line-height: 1.2;
 }
 
 .breadcrumb-link {
@@ -43,7 +43,7 @@
   color: rgba(0, 0, 0, 0.6);
   display: inline-block;
   font-weight: 700;
-  line-height: $font-line-height-small;
+  line-height: 1.2;
   text-decoration: none;
 
   &:hover {

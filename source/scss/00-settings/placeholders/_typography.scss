@@ -9,37 +9,37 @@
 %heading-1 {
   @extend %heading;
   @include x-rem-fallback(font-size, $font-size-xxx-large);
-  line-height: 1.2;
+  line-height: 1;
 }
 
 %heading-2 {
   @extend %heading;
   @include x-rem-fallback(font-size, $font-size-xx-large);
-  line-height: 1.2;
+  line-height: 1;
 }
 
 %heading-3 {
   @extend %heading;
   @include x-rem-fallback(font-size, $font-size-x-large);
-  line-height: 1.2;
+  line-height: 1;
 }
 
 %heading-4 {
   @extend %heading;
   @include x-rem-fallback(font-size, $font-size-large);
-  line-height: 1.2;
+  line-height: 1;
 }
 
 %heading-5 {
   @extend %heading;
   @include x-rem-fallback(font-size, $font-size-regular);
-  line-height: 1.2;
+  line-height: 1;
 }
 
 %heading-6 {
   @extend %heading;
   @include x-rem-fallback(font-size, $font-size-small);
-  line-height: 1.2;
+  line-height: 1;
 }
 
 // Texto
