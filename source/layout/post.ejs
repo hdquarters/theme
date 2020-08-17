@@ -105,12 +105,15 @@ include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { proj
 <% let category = ''; post.categories.each((item, id) => { if (id === 0) { category = item.name } }); %>
 <h2 class="page-subtitle--section">Relacionados</h2>
 <div class="nc-cards">
-  <% let idx = 1; site.posts.sort('date').each((post) => { %>
+  <% let idx = 0; site.posts.sort('date').each((post) => { %>
     <% if (post.path.indexOf(`/${category.replace(/[^\w\-]+/g, '-').toLowerCase()}/`) >= 0 && post.title !== page.title) { %>
+      <% idx++ %>
       <% if (idx <= 6) { %>
         <%- include('../partials/body/card.ejs', {projectName: 'profile', post, index: true, hasTag: true}) %>
       <% } %>
-      <% idx++ %>
     <% } %>
   <% }) %>
 </div>
+<% if (idx === 0) { %>
+  <p style="font-size: 2rem; padding: 0 10px;">Nenhum item da mesma categoria</p>
+<% } %>
