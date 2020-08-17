@@ -79,7 +79,7 @@ include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { proj
   <%- include(googleads1) %>
   <div class="article-content">
     <% if(hasImageLarge) { %>
-    <img class="article-content-image_large" src="/<%- project %>/assets/img/site/articles/large/<%- page.thumbnail %>.jpg" alt="<%- page.title %>" width="728" height="262">
+    <img class="article-content-image_large" src="/<%- project %>/assets/img/site/articles/large/<%- page.thumbnail %>.jpg" alt="<%- page.title %>" width="728" height="262" loading="lazy">
     <% } %>
     <%- post.content %>
   </div>
@@ -87,7 +87,7 @@ include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { proj
   <%- include(googleads2) %>
   <section class="author">
     <figure class="author-image">
-      <img src="https://nerdcalistenico.com.br/assets/img/site/global/hemerson-vianna.jpg" width="120" height="120" />
+      <img src="https://nerdcalistenico.com.br/assets/img/site/global/hemerson-vianna.jpg" width="120" height="120" loading="lazy" />
     </figure>
     <div class="author-description">
       <p>Autor</p>
