@@ -92,7 +92,7 @@ const shared = `https://nerdcalistenico.com.br/${projectName}/assets/img/site/gl
     </figure>
     <a class="nc-card-link" href="<%- post.externalLink ? post.externalLink : url_for(post.path) %>">
       <dl class="nc-card-description">
-        <dt class="nc-card-title"><%- truncate(post.title, {length: 77, omission: '...'}) %></dt>
+        <dt class="nc-card-title"><%- truncate(post.title, {length: 70, omission: '...'}) %></dt>
         <% if (post.date && !!post.noDate !== true) { %>
         <dd class="nc-card-readTime"><%- calcRT(post.content); %> de leitura</dd>
         <dd class="nc-card-date">
