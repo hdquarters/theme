@@ -76,7 +76,7 @@
 .nc-card-figure {
   align-items: flex-end;
   background: #fff;
-  box-shadow: inset 42px 0 0 #fbfbfb, 0 2px 1px #f3f3f3;
+  box-shadow: inset 34px 0 0 #fbfbfb, 0 2px 1px #f3f3f3;
   display: flex;
   min-height: 110px;
   padding: 0 2px 0 10px;
@@ -136,6 +136,7 @@
   font-weight: 800;
   line-height: 1;
   width: 100%;
+  word-break: break-word;
 }
 
 .nc-card-category {
@@ -199,10 +200,10 @@
 }
 
 .nc-card-thumbnail {
-  box-shadow: inset 42px 0 0 #fbfbfb;
+  box-shadow: inset 34px 0 0 #fbfbfb;
   max-height: 97px;
   overflow: hidden;
-  padding-left: 42px;
+  padding-left: 34px;
 
   &:hover .nc-card-thumbnail-image {
     transform: scale(1.5);
