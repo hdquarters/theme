@@ -100,6 +100,31 @@
   width: 100%;
 }
 
+// Draft
+.draft {
+  background: red;
+  color: #fff;
+  font-size: 4rem;
+  margin-left: calc(-50vw + 50%);
+  min-width: 100vw;
+  padding: 4rem;
+  text-align: center;
+  text-shadow: 0 2px 2px #900;
+  width: 100vw;
+}
+
+.draft--card {
+  position: absolute;
+  bottom: 0;
+  font-size: 2rem;
+  background: red;
+  right: 0;
+  color: #fff;
+  border-radius: 4px;
+  text-shadow: 0 2px 2px #900;
+  padding: 10px;
+}
+
 // ON
 .on {
   .wrapper {

@@ -133,16 +133,16 @@
 
   .nc-card-figure {
     background: $color-primary--dark;
-    box-shadow: inset 42px 0 0 $color-primary, 0 2px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 34px 0 0 $color-primary, 0 2px 1px rgba(0, 0, 0, 0.4);
   }
 
   .nc-card-thumbnail {
-    box-shadow: inset 42px 0 0 $color-primary;
+    box-shadow: inset 34px 0 0 $color-primary;
   }
 
   &:hover {
     .nc-card-thumbnail {
-      box-shadow: inset 42px 115px 0 $color-primary;
+      box-shadow: inset 34px 115px 0 $color-primary;
     }
   }
 
