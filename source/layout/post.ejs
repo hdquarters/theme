@@ -125,9 +125,18 @@ const getRandomNumbers = (min, max) => {
 %>
 <% let category = ''; post.categories.each((item, id) => { if (id === 0) { category = item.name } }); %>
 <%
+  const convertToSlug = (text) => {
+    const a = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ·/_,:;'
+    const b = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh------'
+    const p = new RegExp(a.split('').join('|'), 'g')
+    return text.toString().toLowerCase().trim()
+      .replace(p, c => b.charAt(a.indexOf(c))) // Replace special chars
+      .replace(/&/g, '-and-') // Replace & with 'and'
+      .replace(/[\s\W-]+/g, '-') // Replace spaces, non-word characters and dashes with a single dash (-)
+  }
   const items = [];
   site.posts.each((post, idx) => {
-    if (post.path.indexOf(`/${category.replace(/[^\w\-]+/g, '-').toLowerCase()}/`) >= 0 && post.title !== page.title) {
+    if (post.path.indexOf(`/${convertToSlug(category.toLowerCase())}/`) >= 0 && post.title !== page.title) {
       items.push(post);
     }
     if (idx === site.posts.length -1) {
