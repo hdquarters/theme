@@ -23,7 +23,8 @@ $sl-iframe-border-large: 0 none !default;
 
 $add-vendor-prefixes: true !default;
 
-body.hidden-scroll {
+body.hidden-scroll,
+html.has-lightbox {
   overflow: hidden;
 }
 
