@@ -40,6 +40,10 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
     <%
       let name = projectName;
 
+      if(projectName === 'design') {
+        name = 'arte-e-design';
+      }
+
       if(projectName === 'profile') {
         name = 'perfil';
       }

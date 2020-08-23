@@ -90,6 +90,11 @@
               </a>
             </li>
             <li class="mainMenu-item">
+              <a class="mainMenu-link <%= projectName === 'design' ? 'on' : ''%>" href="<%= __('menu_site.design.url') %>" itemprop="url">
+                <span class="mainMenu-text" itemprop="name"><%- __('menu_site.design.name') %></span>
+              </a>
+            </li>
+            <li class="mainMenu-item">
               <a class="mainMenu-link <%= projectName === 'github' ? 'on' : ''%>" href="<%= __('menu_site.github.url') %>" itemprop="url">
                 <span class="mainMenu-text" itemprop="name"><%= __('menu_site.github.name') %></span>
               </a>
