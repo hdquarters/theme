@@ -139,14 +139,16 @@
 
   .button-menu_main {
     background: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    position: fixed;
+    display: flex;
+    justify-content: center;
+    height: 70px;
     left: inherit;
     right: 0;
     top: 0;
     padding: 0;
+    transition: all 0.5s ease-out;
     width: 15%;
-    z-index: 3;
+    z-index: 4;
 
     svg {
       margin-top: 7px;
@@ -155,10 +157,6 @@
 
   .button-menu_main-text {
     display: block;
-    padding-top: 10px;
-    position: absolute;
-    top: 20px;
-    text-align: center;
     width: 100%;
   }
 
@@ -171,14 +169,24 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
     left: 0;
     transition: left 200ms ease-in-out;
-    width: 85%;
+    width: 100%;
+  }
+
+  .header-top {
+    padding-right: 15%;
+  }
+
+  .mainMenu {
+    background: $color-background;
   }
 
   .mainMenu-list {
+    background: $color-accent;
     display: flex;
     flex-wrap: wrap;
     align-self: flex-start;
     padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
   }
 
@@ -212,6 +220,10 @@
   }
 
   .mainMenu-list--other {
+    background: $color-background;
+    padding-top: 0;
+    padding-bottom: 0;
+
     .mainMenu-link {
       background: $color-background;
       border: 1px solid #333;

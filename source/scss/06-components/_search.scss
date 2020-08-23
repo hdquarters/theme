@@ -19,12 +19,12 @@
   background: $color-white;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 0 2px #000;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.4);
   cursor: pointer;
   outline: none;
   position: fixed;
   top: 10px;
-  right: 10px;
+  left: 10px;
   z-index: 1;
   width: 34px;
   height: 34px;
@@ -88,7 +88,7 @@
 }
 
 .search-input {
-  @include x-rem-fallback(font-size, $font-size-large);
+  @include x-rem-fallback(font-size, 1.7);
   background: rgba(255, 255, 255, 0.7);
   border-radius: 6px;
   border: 0;
