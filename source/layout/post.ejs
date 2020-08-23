@@ -83,7 +83,7 @@ include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { proj
   <%- include(googleads1) %>
   <div class="article-content">
     <% if(hasImageLarge) { %>
-    <img class="article-content-image_large" src="/<%- project %>/assets/img/site/articles/large/<%- page.thumbnail %>.jpg" alt="<%- page.title %>" width="728" height="262" loading="lazy">
+    <img class="article-content-image_large loader" src="/<%- project %>/assets/img/site/articles/large/<%- page.thumbnail %>.jpg" alt="<%- page.title %>" width="728" height="262" loading="lazy">
     <% } %>
     <%- post.content %>
   </div>
