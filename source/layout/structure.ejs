@@ -40,6 +40,10 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
     <%
       let name = projectName;
 
+      if(projectName === 'github') {
+        name = 'projetos';
+      }
+      
       if(projectName === 'design') {
         name = 'arte-e-design';
       }
@@ -52,6 +56,6 @@ include('../../../node_modules/@hdquarters/theme/source/layout/structure.ejs', {
         name = 'seguindo';
       }
     %>
-    <script src="/<%- name %>/assets/js/site/scripts.js?v23.0"></script>
+    <script src="/<%- name %>/assets/js/site/scripts.js?v24.0"></script>
   </body>
 </html>

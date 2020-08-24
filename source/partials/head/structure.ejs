@@ -111,6 +111,10 @@
   <%
     let name = projectName;
 
+    if(projectName === 'github') {
+      name = 'projetos';
+    }
+    
     if(projectName === 'design') {
       name = 'arte-e-design';
     }
@@ -123,7 +127,7 @@
       name = 'seguindo';
     }
   %>
-  <link rel="stylesheet" href="/<%- name %>/assets/scss/site/style.css?v=23.0">
+  <link rel="stylesheet" href="/<%- name %>/assets/scss/site/style.css?v=24.0">
 
   <%- include('./google-analytics.ejs') %>
   <%- include('./googleads.ejs') %>

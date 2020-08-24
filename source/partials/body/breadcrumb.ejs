@@ -2,6 +2,11 @@
   let project = projectName;
   let slugName = slug
 
+  if(projectName === 'github') {
+    slugName = 'projetos';
+    project = 'projetos';
+  }
+  
   if(projectName === 'design') {
     slugName = 'arte-e-design';
     project = 'arte-e-design';

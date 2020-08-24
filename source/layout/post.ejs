@@ -4,6 +4,10 @@ include('../../../node_modules/@hdquarters/theme/source/layout/post.ejs', { proj
 <%
     let project = projectName;
 
+    if(projectName === 'github') {
+      project = 'projetos';
+    }
+
     if(projectName === 'design') {
       project = 'arte-e-design';
     }
